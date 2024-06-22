@@ -1,3 +1,4 @@
+/* global.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,13 +18,55 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #F8CA39;
+}
+
+h1 {
+  font-optical-sizing: auto;
+  line-height: 150px;
+  font-family: cursive;
+}
+
+h2 {
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 67.2px;
+  font-family: cursive;
+}
+
+h3 {
+  font-optical-sizing: auto;
+  line-height: 31.6px;
+  font-weight: 700;
+  font-size: 26px;
+  font-family: var(--font-nunito), sans-serif; /* Default to Nunito */
+}
+
+h4 {
+  font-optical-sizing: auto;
+  line-height: 20.6px;
+  font-weight: 700;
+  font-size: 16px;
+  font-family: var(--font-nunito), sans-serif; /* Default to Nunito */
+}
+
+h5 {
+  font-optical-sizing: auto;
+  line-height: 17.2px;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: var(--font-nunito), sans-serif; /* Default to Nunito */
+}
+
+p {
+  font-optical-sizing: auto;
+  font-family: cursive;
+  color: #FBFFE7;
+}
+
+button {
+  font-family: cursive;
 }
 
 @layer utilities {
