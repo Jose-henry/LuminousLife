@@ -30,7 +30,7 @@ export default function FooterDiv() {
                     <p className="text-[#F3E5D2] text-[14px]">FOLLOW US ON</p>
                     <h3 className="text-[#F3E5D2] text-[28px]">INSTAGRAM</h3>
                 </div>
-                <div className="border-r-[1px] border-r-[#F3E5D2] flex flex-col items-center justify-center gap-2">
+                <div className="flex flex-col items-center justify-center gap-2">
                     <Link href="https://www.linkedin.com/company/luminous-life-foundation/">
                         <Image src="/assets/linkedin.svg" alt="Star icon" width={102} height={102}></Image>
                     </Link>
