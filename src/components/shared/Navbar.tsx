@@ -23,16 +23,7 @@ export function FloatingNavDemo() {
     },
   ];
   return (
-    <div className="relative  w-full">
       <FloatingNav navItems={navItems} />
-      <DummyContent />
-    </div>
   );
 }
-const DummyContent = () => {
-  return (
-    <div className="grid grid-cols-1 h-[40rem] w-full bg-white dark:bg-black relative border border-neutral-200 dark:border-white/[0.2] rounded-md">
-      <div className="inset-0 absolute bg-grid-black/[0.1] dark:bg-grid-white/[0.2]" />
-    </div>
-  );
-};
+

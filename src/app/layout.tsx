@@ -38,6 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} ${salsa.variable} ${nunito.variable}`}>
+      <header>
+        <FloatingNavDemo />
+      </header>
         {children}
       </body>
     </html>
