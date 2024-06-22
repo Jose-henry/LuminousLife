@@ -24,9 +24,9 @@ export default function IntroDiv() {
             >
                 <div className="bg-[#6F2B1E73] h-[793px] w-full absolute"></div>
                 <div className="h-[589px] w-full px-[20px] flex z-10">
-                    <div className="w-[878px] h-full">
+                    <div className="w-[878px] h-full flex items-center">
                         <h1
-                            className="text-[128px] text-[#FBFFE7] font-black relative"
+                            className="text-[110px] text-[#FBFFE7] font-black relative"
                             style={{ textShadow: '5px 5px 9px rgba(0, 0, 0, 0.7)', display: 'inline-flex', alignItems: 'center' }}
                         >
                             Empowering Communities with Solar Energy

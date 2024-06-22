@@ -9,7 +9,7 @@ export default function FooterDiv() {
         <Image src="/assets/footer-img.svg" alt="Sun Illustration" width={500} height={502} className="rounded-tl-[48px]"></Image>
         <div className="w-[885px] h-full">
             <div className="w-full h-[233px] relative">
-                <div className="w-[100px] absolute top-[70px] left-[70px] flex flex-col gap-2">
+                <div className="w-[100px] absolute top-[70px] left-[70px] flex flex-col gap-2" style={{ fontFamily: `var(--font-nunito), sans-serif` }}>
                     <Link href="/home" className="text-[14px] font-semibold text-[#F3E5D2] hover:underline">HOME</Link>
                     <Link href="/about" className="text-[14px] font-semibold text-[#F3E5D2] hover:underline">ABOUT</Link>
                     <Link href="/contact" className="text-[14px] font-semibold text-[#F3E5D2] hover:underline">CONTACT US</Link>

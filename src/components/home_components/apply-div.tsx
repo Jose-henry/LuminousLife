@@ -16,19 +16,19 @@ export default function ApplyDiv() {
             <div className="w-[867px] h-[324px] flex">
                 <div className="w-[540px] h-full flex flex-col justify-between">
                     <div className=" flex flex-col justify-between">
-                        <h2 className="text-[32px] text-[#773529]">Apply Now</h2>
+                        <h2 className="text-[32px] text-[#773529]">Become a Member</h2>
                         <h3 className="w-[322px] h-[170px] text-[#622D25]">We’re excited to have you join our team! Click the button below to fill out the volunteer application form</h3>
                     </div>
                     <Link href="/apply">
                         <div
                             onClick={handleClick}
-                            className="bg-[#E5C9A2] w-[200px] h-[56px] rounded-[24px] flex items-center justify-center gap-2 hover:bg-[#ECCA9C]"
+                            className="bg-[#E5C9A2] w-[230px] h-[56px] rounded-[24px] flex items-center justify-center gap-2 hover:bg-[#ECCA9C]"
                             style={{
                                 boxShadow: isClicked ? "none" : "5px 5px 0 0 #773529",
                                 transition: "box-shadow 0.2s ease"
                             }}
                         >
-                            <p className="text-[24px] text-[#371511] font-bold">Apply Now</p>
+                            <p className="text-[24px] text-[#371511] font-bold">Volunteer Now</p>
                             <Image src="/assets/arrow.svg" alt="sun" height={24} width={24} />
                         </div>
                     </Link>
