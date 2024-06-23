@@ -13,7 +13,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full overflow-x-hidden">
       <IntroDiv/>
         <div>
         <AboutDiv/>

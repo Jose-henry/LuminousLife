@@ -23,7 +23,7 @@ body {
 
 h1 {
   font-optical-sizing: auto;
-  line-height: 130px;
+  line-height: 120px;
   font-family: cursive;
 }
 
@@ -40,7 +40,7 @@ h3 {
   line-height: 31.6px;
   font-weight: 700;
   font-size: 26px;
-  font-family: var(--font-nunito), sans-serif; /* Default to Nunito */
+  font-family: cursive;
 }
 
 h4 {
@@ -48,7 +48,7 @@ h4 {
   line-height: 20.6px;
   font-weight: 700;
   font-size: 16px;
-  font-family: var(--font-nunito), sans-serif; /* Default to Nunito */
+  font-family: cursive;
 }
 
 h5 {
@@ -56,7 +56,7 @@ h5 {
   line-height: 17.2px;
   font-weight: 700;
   font-size: 15px;
-  font-family: var(--font-nunito), sans-serif; /* Default to Nunito */
+  font-family: cursive;
 }
 
 p {

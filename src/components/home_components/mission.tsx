@@ -1,40 +1,77 @@
+"use client";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function MissionDiv() {
+    const [topPosition, setTopPosition] = useState("1600px");
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (typeof window !== 'undefined') {
+                if (window.innerWidth < 640) {
+                    setTopPosition("1550px");
+                } else {
+                    setTopPosition("1600px");
+                }
+
+                // Check for small screen condition (1300px or less)
+                setIsSmallScreen(window.innerWidth <= 1405);
+            }
+        };
+
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
     return (
-        <div  style={{ boxShadow: "5px 5px 0 0 #773529" }} className="w-[1400px] h-[466px] border-[2px] border-[#622D25] rounded-[48px] absolute top-[1916.42px] flex justify-center items-center left-[50%] transform -translate-x-1/2 bg-[#FBF6EF] z-20">
-            <div className="h-[370px] w-[1360px] flex justify-between">
-                <div className="w-[565px] h-[370px] border-[2px] border-[#622D25] bg-[#773529] rounded-3xl flex flex-col items-center justify-center gap-[22px]">
-                    <h2 className="text-[#FBFFE7]">Our Mission</h2>
-                    <h3 className="text-[#FBFFE7] w-[450px] text-center">Empowering underserved communities in Nigeria through sustainable energy solutions and fostering overall well-being</h3>
-                </div>
-                <div className="w-[675px] h-[370px] flex flex-col justify-between">
-                    <h2 className="text-[#622D25] text-center">Our Values</h2>
-                    <div className="h-[219px] flex items-center justify-center">
-                        <div className="w-[450px] h-full flex flex-wrap justify-center gap-[12px]">
-                            <div className="w-[148px] h-[101px] border-[2px] border-[#000000] bg-[#FFFFFF] rounded-[24px] flex justify-center items-center">
-                                <div className="flex gap-[12px] items-center">
-                                    <Image src="/assets/equity.svg" width={24} height={24} alt="Equity logo"></Image>
-                                    <h4 className="text-[#622D25]">Equity</h4>
-                                </div>
+        <div
+            style={{
+                boxShadow: isSmallScreen ? "none" : "5px 5px 0 0 #773529",
+                top: topPosition,
+                borderRadius: isSmallScreen ? "0" : "48px", // Conditionally remove border radius
+                borderLeft: !isSmallScreen ? "2px solid #622D25" : "none", // Apply border only on large screens
+                borderRight: !isSmallScreen ? "2px solid #622D25" : "none", // Apply border only on large screens
+            }}
+            className="w-full max-w-[1400px] h-[466px] border-[2px] border-[#622D25] rounded-[48px] absolute grid grid-cols-1 md:grid-cols-2 justify-center items-center bg-[#FBF6EF] left-[50%] transform -translate-x-1/2 p-10 gap-[5%]"
+        >
+            <div className="w-full h-full bg-[#773529] rounded-[48px] flex flex-col items-center justify-center gap-4 md:gap-6">
+                <h2 className="text-[#FBFFE7] text-2xl md:text-3xl">Our Mission</h2>
+                <h3 className="text-[#FBFFE7] text-lg md:text-[21px] max-w-[450px] text-center font-medium">
+                    Empowering underserved communities in Nigeria through sustainable energy solutions and fostering overall well-being
+                </h3>
+            </div>
+            <div className="w-full h-full flex flex-col">
+                <h2 className="text-[#622D25] text-2xl md:text-3xl text-center">Our Values</h2>
+                <div className="flex items-center justify-center mt-4 md:mt-6 h-full">
+                    <div className="w-full h-[80%] grid grid-cols-1 md:grid-cols-2 justify-center gap-4 md:gap-6">
+                        <div className="h-full rounded-[24px] flex justify-center items-center md:border-[2px] md:border-[#ffff] bg-transparent md:bg-[#FFFFFF]">
+                            <div className="flex gap-2 items-center">
+                                <Image src="/assets/equity.svg" width={24} height={24} alt="Equity logo" />
+                                <h4 className="text-[#622D25] text-sm">Equity</h4>
                             </div>
-                            <div className="w-[290px] h-[101px] border-[2px] border-[#000000] bg-[#FFFFFF] rounded-[24px] flex justify-center items-center">
-                                <div className="flex gap-[12px] items-center">
-                                    <Image src="/assets/empowerment.svg" width={24} height={24} alt="Empowerment logo"></Image>
-                                    <h4 className="text-[#622D25]">Empowerment</h4>
-                                </div>
+                        </div>
+                        <div className="h-full rounded-[24px] flex justify-center items-center md:border-[2px] md:border-[#ffff] bg-transparent md:bg-[#FFFFFF]">
+                            <div className="flex gap-2 items-center">
+                                <Image src="/assets/empowerment.svg" width={24} height={24} alt="Empowerment logo" />
+                                <h4 className="text-[#622D25] text-sm">Empowerment</h4>
                             </div>
-                            <div className="w-[283px] h-[101px] border-[2px] border-[#000000] bg-[#FFFFFF] rounded-[24px] flex justify-center items-center ">
-                                <div className="flex gap-[8px] items-center">
-                                    <Image src="/assets/equity.svg" width={24} height={24} alt="Transparency logo"></Image>
-                                    <h5 className="text-[#622D25]">Transparency and Accountability</h5>
-                                </div>
+                        </div>
+                        <div className="h-full rounded-[24px] flex justify-center items-center md:border-[2px] md:border-[#ffff] bg-transparent md:bg-[#FFFFFF]">
+                            <div className="flex gap-2 items-center justify-center w-[90%]">
+                                <Image src="/assets/transparency.svg" width={24} height={24} alt="Transparency logo" />
+                                <h4 className="text-[#622D25] text-sm text-center">Transparency and Accountability</h4>
                             </div>
-                            <div className="w-[148px] h-[101px] border-[2px] border-[#000000] bg-[#FFFFFF] rounded-[24px] flex justify-center items-center">
-                            <div className="flex gap-[3px] items-center">
-                                    <Image src="/assets/sustainability.svg" width={24} height={24} alt="Sustainability logo"></Image>
-                                    <h5 className="text-[#622D25]">Empowerment</h5>
-                                </div>
+                        </div>
+                        <div className="h-full rounded-[24px] flex justify-center items-center md:border-[2px] md:border-[#ffff] bg-transparent md:bg-[#FFFFFF]">
+                            <div className="flex gap-2 items-center">
+                                <Image src="/assets/sustainability.svg" width={24} height={24} alt="Sustainability logo" />
+                                <h4 className="text-[#622D25] text-sm">Sustainability</h4>
                             </div>
                         </div>
                     </div>

@@ -2,10 +2,38 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Topbar from "../shared/Topbar";
 
 export default function IntroDiv() {
     const [isClicked, setIsClicked] = useState(false);
+    const [bgIndex, setBgIndex] = useState(0);
+    const [fade, setFade] = useState(false);
+
+    // Image paths
+    const images = [
+        "/assets/intro (1).jpg",
+        "/assets/intro (2).jpg",
+        "/assets/intro (3).jpg",
+        "/assets/intro (4).jpg",
+        "/assets/intro (5).jpg",
+        "/assets/intro (6).jpg"
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            // Trigger fade out
+            setFade(true);
+
+            // Change the background image after fade out is complete
+            setTimeout(() => {
+                setBgIndex((prevIndex) => (prevIndex + 1) % images.length);
+                setFade(false);
+            }, 1000); // 1 second fade duration
+        }, 6000); // 6 seconds total interval (5 seconds display + 1 second fade)
+
+        return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, [images.length]);
 
     const handleClick = () => {
         setIsClicked(true);
@@ -13,35 +41,39 @@ export default function IntroDiv() {
     };
 
     return (
-        <div className="w-full h-[1435px]">
-            <div className="h-[96px] bg-[#622D25] flex items-center gap-[12px] px-[20px] py-[10px]">
-                <Image src="/assets/logo.svg" width={83} height={73} alt="Logo icon" />
-                <h3 className="text-[C] .logotext text-[#FBFFE7]">Luminous Life Foundation</h3>
-            </div>
-            <div
-                className="h-[793px] bg-cover bg-center flex items-center relative"
-                style={{ backgroundImage: `url("/assets/intro-bg.png")` }}
-            >
-                <div className="bg-[#6F2B1E73] h-[793px] w-full absolute"></div>
-                <div className="h-[589px] w-full px-[20px] flex z-10">
-                    <div className="w-[878px] h-full flex items-center">
-                        <h1
-                            className="text-[110px] text-[#FBFFE7] font-black relative"
-                            style={{ textShadow: '5px 5px 9px rgba(0, 0, 0, 0.7)', display: 'inline-flex', alignItems: 'center' }}
-                        >
-                            Empowering Communities with Solar Energy
+        <div className="w-full h-auto">
+            <Topbar />
+            <div className="min-h-[715px] relative overflow-hidden flex items-center">
+                {/* Background image with transition */}
+                <div
+                    className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${fade ? 'opacity-0' : 'opacity-100'}`}
+                    style={{
+                        backgroundImage: `url("${images[bgIndex]}")`
+                    }}
+                ></div>
+                {/* Background overlay */}
+                <div className="absolute inset-0 bg-[#6F2B1E73]"></div>
+                {/* Content */}
+                <div className="min-h-[589px] relative z-10 px-4 sm:px-6 md:px-10 lg:px-[60px] grid grid-cols-1 md:grid-cols-2">
+                    <div className="h-full flex items-center justify-center md:justify-start">
+                        <div className="flex items-center justify-center md:justify-start text-center md:text-left">
+                            <h1
+                                className="text-[60px] sm:text-[60px] md:text-[80px] lg:text-[100px] text-[#FBFFE7] font-black relative inline-block"
+                                style={{ textShadow: '5px 5px 9px rgba(0, 0, 0, 0.7)' }}
+                            >
+                                Empowering Communities with Solar Energy.
+                            </h1>
                             <Image
                                 src="/assets/sun.svg"
                                 alt="sun icon"
                                 height={120}
                                 width={120}
-                                style={{ display: 'inline-block', padding: 0, margin: 0 }}
-                                className="absolute bottom-0 left-[430px]"
+                                className="ml-[1px] relative top-2 md:top-4 lg:top-6"
                             />
-                        </h1>
+                        </div>
                     </div>
-                    <div className="self-end flex flex-col items-center justify-center gap-4">
-                        <h3 className="text-[#FBFFE7] text-center" style={{ fontFamily: 'cursive' }}>
+                    <div className="self-center md:self-end flex flex-col items-center justify-center gap-4">
+                        <h3 className="text-[#FBFFE7] text-center font-cursive text-base sm:text-base md:text-lg lg:text-xl xl:text-xl">
                             Bringing Sustainable Solutions to Light!
                         </h3>
                         <Link href="/donate">
