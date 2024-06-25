@@ -6,29 +6,17 @@
     text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.7);
 }
 
+.heroContainer {
+    overflow-x: hidden;
+}
+
 .p {
     color: #FBF6EF;
     font-size: 20px;
     font-weight: 600;
     text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.7);
     text-align: center;
-}
-
-.donateBtn {
-    border-width: 2px;
-    border-color: #622D25;
-    border-radius: 24px;
-    width: 200px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 24px;
-    background-color: #E5C9A2;
-    box-shadow: 5px 5px 0px 0px #773529;
-    font-family: cursive;
-    font-weight: 600;
-    font-size: 15px;
+    margin-bottom: 25px;
 }
 
 .div2 {

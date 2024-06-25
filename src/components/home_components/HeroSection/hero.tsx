@@ -1,9 +1,8 @@
 "use client";
-import Image from "next/image";
 import styles from "./hero.module.css"; // Import CSS module
 import Topbar from "../TopBar/topBar";
-import Link from "next/link";
 import { useState, useEffect } from 'react';
+import StyledButton from "@/components/Button/button";
 
 const Hero: React.FC = () => {
     const [slideIndex, setSlideIndex] = useState(0);
@@ -53,27 +52,30 @@ const Hero: React.FC = () => {
 
     return (
         <div className={styles.heroContainer}>
-            <Topbar/>
-            <div className={`relative w-full h-full overflow-hidden`}>
-                <div className={`flex transition-transform duration-1000 ease-in-out transform ${transitioning ? 'translate-x-0' : '-translate-x-full'}`}
+            <Topbar />
+            <div className="relative w-full h-full">
+                {/* Background Slider */}
+                <div className={`absolute inset-0 z-0 flex transition-transform duration-1000 ease-in-out`}
                     style={{
-                        width: `${images.length * 100}%`,
-                        transform: `translateX(-${(slideIndex * (100 / images.length))}%)`
+                        transform: `translateX(-${slideIndex * 100}%)`
                     }}>
                     {images.map((image, index) => (
-                        <div key={index} className="w-full h-full bg-cover bg-center flex justify-center items-center"
+                        <div key={index} className="w-full h-full flex-shrink-0 bg-cover bg-center"
                             style={{
                                 backgroundImage: `url("${image}")`
                             }}>
-                            <div className={styles.div2}>
-                                <h1 className={styles.h1}>Empowering Communities with Solar Energy!</h1>
-                                <div className={styles.div3}>
-                                    <p className={styles.p}>Bringing Sustainable Solutions to Light!</p>
-                                    <Link href="/donate" className={styles.donateBtn}>Donate Now</Link>
-                                </div>
-                            </div>
                         </div>
                     ))}
+                </div>
+                {/* Static Content */}
+                <div className={`relative z-10 flex flex-col justify-center items-center w-full h-full`}>
+                    <div className={styles.div2}>
+                        <h1 className={styles.h1}>Empowering Communities with Solar Energy!</h1>
+                        <div className={styles.div3}>
+                            <p className={styles.p}>Bringing Sustainable Solutions to Light!</p>
+                            <StyledButton btnText="Donate Now" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
