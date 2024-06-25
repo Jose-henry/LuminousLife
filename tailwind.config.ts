@@ -1,4 +1,3 @@
-// tailwind.config.js
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -17,7 +16,7 @@ const config: Config = {
       },
       animation: {
         marquee: 'marquee 50s linear infinite',
-      },
+      }
     },
   },
   plugins: [],

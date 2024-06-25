@@ -1,0 +1,417 @@
+.main_container {
+    border-width: 2px;
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+    box-shadow: 5px 5px 0px 0px #773529;
+    border-color: #622D25;
+    border-radius: 48px;
+    background-color: #FBF6EF;
+    padding: 30px;
+    position: relative;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+}
+
+.mission_div {
+    border-radius: 24px;
+    padding: 20px;
+    background-color: #773529;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+.value_div {
+    border-radius: 24px;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+}
+
+.values_wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 5%;
+}
+
+.value_div1 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1%;
+}
+
+.value_div2 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1%;
+}
+
+.value1_div, .value2_div, .value3_div, .value4_div {
+    background-color: #FFFFFF;
+    border: 2px solid black;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+.mission_text {
+    font-size: 40px;
+    color: #F3E5D2;
+}
+
+.mission_statement {
+    font-size: 20px;
+    color: #F3E5D2;
+    text-align: center;
+    line-height: 35px;
+}
+
+.value_text {
+    font-size: 40px;
+    color: #622D25;
+}
+
+.value1, .value2, .value3, .value4 {
+    color: #622D25;
+    font-size: 15px; 
+}
+
+.extra {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.slant2 {
+    position: absolute;
+    z-index: -3;
+    top: 250px;
+    right: 30px;
+}
+
+.text {
+    color: #622D25;
+    opacity: 40%;
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 100px;
+    padding-left: 5%;
+}
+
+@media screen and (max-width: 1390px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 1305px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1028px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 1168px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .mission_text, .value_text {
+        font-size: 35px;
+    }
+
+    .mission_statement {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1125px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .mission_text, .value_text {
+        font-size: 33px;
+    }
+
+    .value1, .value2, .value3, .value4 {
+        font-size: 14px; 
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+
+    .value1, .value2, .value3, .value4 {
+        font-size: 13px; 
+    }
+}
+
+@media screen and (max-width: 1007px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+
+    .value1, .value2, .value3, .value4 {
+        font-size: 12.5px; 
+    }
+}
+
+@media screen and (max-width: 970px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .wrapper {
+        gap: 7%;
+    }
+}
+
+
+@media screen and (max-width: 966px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+
+    .value1_div, .value2_div, .value3_div, .value4_div {
+        gap: 1px;
+    }
+
+    .extra {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 955px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .slant2 {
+        top: 100px;
+    }
+}
+
+@media screen and (max-width: 903px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .slant2 {
+        top: 70px;
+    }
+}
+
+
+@media screen and (max-width: 901px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .value4_div, .value1_div {
+        flex-direction: column;
+        justify-content: center;
+    } 
+}
+
+@media screen and (max-width: 876px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+
+    .mission_statement {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 854px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .wrapper {
+        gap: 5%;
+    }
+    
+}
+
+@media screen and (max-width: 765px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .wrapper {
+        gap: 3%;
+    }
+}
+
+@media screen and (max-width: 727px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .slant2 {
+        top: 50px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5%;
+    }
+
+    .extra {
+        width: fit-content;
+    }
+
+    .value4_div, .value1_div {
+        flex-direction: row;
+    }
+    
+    .value1_div, .value2_div, .value3_div, .value4_div {
+        gap: 3px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .main_container {
+        padding: 28px;
+    }
+}
+
+@media screen and (max-width: 492px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        font-size: 30px;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 417px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 261px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .text {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .value4_div, .value1_div {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .extra {
+        width: 140px;
+    }
+
+    .value_div1 {
+        grid-template-columns: 1.5fr 2fr;
+    }
+    
+    .value_div2 {
+        grid-template-columns: 2fr 1.5fr;
+    }
+
+    .mission_text, .value_text {
+        font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .wrapper {
+        gap: 1%;
+    }
+
+    .mission_div {
+        gap: 3px;
+    }
+
+    .value_text {
+        text-align: center;
+    }
+
+    .value_div1 {
+        grid-template-columns: 1fr;
+    }
+
+    .value_div2 {
+        grid-template-columns: 1fr;
+    }
+
+    .value4_div, .value1_div {
+        flex-direction: row;
+    }
+
+    .extra {
+        width: fit-content;
+    }
+
+    .values_wrapper {
+        gap: 1%;
+    }
+}
+
+@media screen and (max-width: 351px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .wrapper {
+        gap: 3%;
+    }
+
+    .main_container {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 327px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .wrapper {
+        gap: 1%;
+    }
+
+    .main_container {
+        padding: 15px;
+    }
+
+    .mission_statement {
+        font-size: 16px;
+    }
+
+    .mission_text, .value_text {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 327px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .extra {
+        width: 140px;
+    }
+}

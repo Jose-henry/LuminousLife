@@ -1,0 +1,126 @@
+.h1 {
+    color: #FBF6EF;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 140px;
+    text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.7);
+}
+
+.p {
+    color: #FBF6EF;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.donateBtn {
+    border-width: 2px;
+    border-color: #622D25;
+    border-radius: 24px;
+    width: 200px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background-color: #E5C9A2;
+    box-shadow: 5px 5px 0px 0px #773529;
+    font-family: cursive;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.div2 {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 150px 0;
+}
+
+.div3 {
+    align-self: flex-end;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 1085px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .h1 {
+        font-size: 80px;
+        line-height: 120px;
+    }
+
+    .p {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .h1 {
+        font-size: 70px;
+        line-height: 110px;
+    }
+
+    .p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .h1 {
+        font-size: 60px;
+        line-height: 100px;
+        text-align: center;
+    }
+
+    .div2 {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .div3 {
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
+    }
+
+    .p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .h1 {
+        font-size: 40px;
+        line-height: 90px;
+    }
+
+    .div2 {
+        width: 100%;
+    }
+
+    .p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .p {
+        font-size: 15px;
+    }
+
+    .h1 {
+        font-size: 38px;
+        line-height: 85px;
+    }
+}
+
