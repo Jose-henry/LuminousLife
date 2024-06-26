@@ -31,8 +31,8 @@
     border-color: #622D25;
     border-radius: 24px;
     background-color: #E5C9A2;
-    font-family: cursive;
-    font-weight: 600;
+    font-family: var(--font-nunito);
+    font-weight: 700;
     padding: 24px;
     display: flex;
     justify-content: center;

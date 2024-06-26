@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { FloatingNavDemo } from "@/components/shared/Navbar";
 import { Salsa, Nunito, Raleway } from 'next/font/google';
+import Topbar from "@/components/shared/TopBar/topBar";
 
 const salsa = Salsa({
   subsets: ['latin'],
@@ -38,9 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} ${salsa.variable} ${nunito.variable}`}>
-      <header>
-        <FloatingNavDemo />
-      </header>
+        <Topbar/>
         {children}
       </body>
     </html>

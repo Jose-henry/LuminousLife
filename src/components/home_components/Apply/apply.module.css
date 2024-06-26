@@ -1,0 +1,15 @@
+.main_container {
+    border: 2px solid #622D25;
+    box-shadow: 5px 5px 0px 0px #773529;
+    background-color: #FBF6EF;
+    border-radius: 48px;
+    position: relative;
+    width: 75%;
+    margin: auto;
+    margin-top: 180px;
+    padding: 30px;
+}
+
+.wrapper {
+    display: flex;
+}

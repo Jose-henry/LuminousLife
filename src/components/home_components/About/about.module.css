@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 50px;
     width: 90%;
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
 .wrapper {
@@ -83,6 +83,21 @@
     height: 100%;
     background-color: #6F2B1EB2;
     border-radius: 24px;
+}
+
+.arrow {
+    z-index: 10;
+}
+
+.arrow_div {
+    display: flex;
+    align-items: center;
+    gap: 2;
+}
+
+.extraImg {
+    border-radius: 24px;
+    border: 2px solid black;
 }
 
 @media screen and (max-width: 877px) {
@@ -226,6 +241,11 @@
     .main_container {
         padding-top: 60px;
     }
+
+    .extraImg {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 665px) {
@@ -277,6 +297,20 @@
     }
 }
 
+@media screen and (max-width: 365px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .arrow_div {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 366px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .div1 {
+        margin-bottom: 350px;
+    }
+}
+
 @media screen and (max-width: 349px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .div1 {
@@ -321,37 +355,67 @@
     }
 }
 
+@media screen and (max-width: 308px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .slant {
+        margin-top: 30px;
+    }
+}
+
 @media screen and (max-width: 292px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .div1 {
-        margin-bottom: 420px;
+        margin-bottom: 450px;
+    }
+
+    .slant {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .arrowImg {
+        width: 35px;
+        height: 35px;
+    }
+
+    .text3 {
+        line-height: normal;
     }
 }
 
 @media screen and (max-width: 289px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .div1 {
-        margin-bottom: 480px;
+        margin-bottom: 450px;
     }
 }
 
 @media screen and (max-width: 268px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .div1 {
-        margin-bottom: 540px;
+        margin-bottom: 500px;
     }
 }
 
 @media screen and (max-width: 253px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .div1 {
-        margin-bottom: 600px;
+        margin-bottom: 500px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .div1 {
+        margin-bottom: 530px;
     }
 }
 
 @media screen and (max-width: 241px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .div1 {
-        margin-bottom: 600px;
+        margin-bottom: 530px;
     }
 }

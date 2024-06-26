@@ -24,7 +24,7 @@ body {
 h1 {
   font-optical-sizing: auto;
   line-height: 120px;
-  font-family: cursive;
+  font-family: var(--font-nunito);
 }
 
 h2 {
@@ -32,7 +32,7 @@ h2 {
   font-weight: 700;
   font-size: 54px;
   line-height: 67.2px;
-  font-family: cursive;
+  font-family: var(--font-nunito);
 }
 
 h3 {
@@ -40,32 +40,16 @@ h3 {
   line-height: 31.6px;
   font-weight: 700;
   font-size: 26px;
-  font-family: cursive;
-}
-
-h4 {
-  font-optical-sizing: auto;
-  line-height: 20.6px;
-  font-weight: 700;
-  font-size: 16px;
-  font-family: cursive;
-}
-
-h5 {
-  font-optical-sizing: auto;
-  line-height: 17.2px;
-  font-weight: 700;
-  font-size: 15px;
-  font-family: cursive;
+  font-family: var(--font-nunito);
 }
 
 p {
   font-optical-sizing: auto;
-  font-family: cursive;
+  font-family: var(--font-nunito);
 }
 
 button {
-  font-family: cursive;
+  font-family: var(--font-nunito);
 }
 
 @layer utilities {

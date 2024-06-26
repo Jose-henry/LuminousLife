@@ -37,7 +37,6 @@ const Mission: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <Image src="/assets/slant2.svg" alt="Slant imae" width={400} height={400} className={styles.slant2}></Image>
         </div>
     );
 }

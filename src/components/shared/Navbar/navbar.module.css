@@ -1,0 +1,17 @@
+.main_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.link {
+    font-family: cursive;
+    font-family: var(--font-nunito);
+    font-size: 14px;
+    font-weight: 600;
+    color: #FBF6EF;
+}
+
+.link:hover {
+    text-decoration: underline;
+}

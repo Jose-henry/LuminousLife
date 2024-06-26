@@ -83,6 +83,7 @@
 .value1, .value2, .value3, .value4 {
     color: #622D25;
     font-size: 15px; 
+    font-weight: 600;
 }
 
 .extra {
