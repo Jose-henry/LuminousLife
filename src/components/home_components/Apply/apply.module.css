@@ -4,7 +4,7 @@
     background-color: #FBF6EF;
     border-radius: 48px;
     position: relative;
-    width: 75%;
+    width: 60%;
     margin: auto;
     margin-top: 180px;
     padding: 30px;
@@ -12,4 +12,30 @@
 
 .wrapper {
     display: flex;
+    gap: 10%;
+}
+
+.become {
+    color: #622D25;
+    font-size: 36px;
+}
+
+.form {
+    font-size: 20px;
+    line-height: 35px;
+    color: #622D25;
+}
+
+.applyText {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    position: relative;
+}
+
+
+.applyBtn {
+    position: absolute;
+    bottom: 60px;
+    left: 100px;
 }

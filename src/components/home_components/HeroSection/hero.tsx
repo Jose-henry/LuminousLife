@@ -2,6 +2,7 @@
 import styles from "./hero.module.css"; // Import CSS module
 import { useState, useEffect } from 'react';
 import StyledButton from "@/components/Button/button";
+import Link from "next/link";
 
 const Hero: React.FC = () => {
     const [slideIndex, setSlideIndex] = useState(0);
@@ -9,7 +10,7 @@ const Hero: React.FC = () => {
 
     // Image paths
     const images = [
-        "/assets/intro-bg.jpg",
+        /**"/assets/intro-bg.jpg",**/
         "/assets/intro (6).jpg",
     ];
 
@@ -65,10 +66,12 @@ const Hero: React.FC = () => {
                 <div className={`relative z-10 flex flex-col justify-center items-center w-full h-full`}>
                     <div className="absolute w-full h-full bg-[#6F2B1E73]"></div>
                     <div className={styles.div2}>
-                        <h1 className={styles.h1}>Empowering Communities with Solar Energy.</h1>
+                        <h1 className={styles.h1}>Empowering Communities with Solar Energy🌤️</h1>
                         <div className={styles.div3}>
                             <p className={styles.p}>Bringing Sustainable Solutions to Light!</p>
-                            <StyledButton btnText="Donate Now" />
+                            <Link href="/donate" className={styles.link_tag}>
+                                <StyledButton btnText="Donate Now" />
+                            </Link>
                         </div>
                     </div>
                 </div>

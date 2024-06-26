@@ -9,7 +9,7 @@ const About: React.FC = () => {
                 <div className={styles.div1}>
                     <div className={styles.div2}>
                         <h2 className={styles.text1}>Who we are</h2>
-                        <p className={styles.text2}>At The Light and Hope Initiative, we focus on delivering solar energy solutions to rural communities.</p>
+                        <p className={styles.text2}>At Luminous Life Foundation, we focus on delivering solar energy solutions to rural communities.</p>
                         <p className={styles.text5}>Our goal is to provide sustainable, renewable energy that empowers people, improves their quality of life, and fosters environmental stewardship.</p>
                     </div>
                     <div className={styles.div3}>
@@ -24,7 +24,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
                 <Image src="/assets/solar.svg" alt="Solar Image" width={430} height={240} className={styles.extraImg}></Image>
-                </div>
+            </div>
         </div>
     );
 }

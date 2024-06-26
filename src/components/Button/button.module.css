@@ -1,11 +1,3 @@
-.a {
-    height:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
 .a > .btn {
     transform: translateX(0%) translateY(0%);
     transition: 0.3s ease-in-out;
@@ -14,6 +6,14 @@
 .a:hover > .btn1 {
     transform: translateX(-5%) translateY(-24%);
     transition: 0.3s ease-in-out;
+}
+
+.a {
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .a:hover > .btn2 {
@@ -37,6 +37,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px 0px 0px #773529;
+}
+
+.btn:hover {
+    box-shadow: none;
 }
 
 .a:hover > .btn {
@@ -51,8 +56,4 @@
 .btn2 {
     background: #F8CA39;
     z-index:2;
-}
-.btn3 {
-    background: #622D25;
-    z-index:1;
 }
