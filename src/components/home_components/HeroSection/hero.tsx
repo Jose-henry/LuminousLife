@@ -10,8 +10,8 @@ const Hero: React.FC = () => {
 
     // Image paths
     const images = [
-        "/assets/lantern-bg.jpg",
-        "/assets/intro (6).jpg",
+        "/assets/lantern-bg.jpg"
+        /**"/assets/intro (6).jpg"**/
     ];
 
     useEffect(() => {

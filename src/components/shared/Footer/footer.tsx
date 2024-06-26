@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function FooterDiv() {
   return (
-    <div className="w-[1385px] h-[595px] border-[2px] border-[#371511] rounded-[48px] bg-[#773529] absolute top-[5935px] left-[50%] transform -translate-x-1/2 flex flex-col justify-between">
+    <div className="w-[1385px] h-[595px] border-[2px] border-[#371511] rounded-[48px] bg-[#773529] absolute top-[5000px] left-[50%] transform -translate-x-1/2 flex flex-col justify-between">
       <div className="w-full h-[502px] flex">
         <Image src="/assets/footer-img.svg" alt="Sun Illustration" width={500} height={502} className="rounded-tl-[48px]"></Image>
         <div className="w-[885px] h-full">

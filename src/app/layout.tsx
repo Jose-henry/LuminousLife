@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Salsa, Nunito, Raleway } from 'next/font/google';
 import Topbar from "@/components/shared/TopBar/topBar";
+import FooterDiv from "@/components/shared/Footer/footer";
 
 const salsa = Salsa({
   subsets: ['latin'],
@@ -12,7 +13,7 @@ const salsa = Salsa({
 // Configure Nunito
 const nunito = Nunito({
   subsets: ['latin'],
-  weight: ['400', '600', '700'], // Specify the weights you want
+  weight: ['400', '600', '700', '800', '900'], // Specify the weights you want
   style: ['normal', 'italic'], // Specify the styles you want
   variable: '--font-nunito',
 });
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body className={`${raleway.variable} ${salsa.variable} ${nunito.variable}`}>
         <Topbar/>
         {children}
+        <FooterDiv/>
       </body>
     </html>
   );

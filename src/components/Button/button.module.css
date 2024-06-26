@@ -26,13 +26,13 @@
     width:200px;
     height:25px;
     color: #622D25;
-    font-size: 15px;
+    font-size: 14px;
     border-width: 2px;
     border-color: #622D25;
     border-radius: 24px;
     background-color: #E5C9A2;
     font-family: var(--font-nunito);
-    font-weight: 700;
+    font-weight: 800;
     padding: 24px;
     display: flex;
     justify-content: center;

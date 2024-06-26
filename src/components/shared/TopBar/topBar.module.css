@@ -18,7 +18,7 @@
 
 .logoText {
     /* Styles for the logo text */
-    font-size: 16px;
+    font-size: 15px;
     margin-left: 10px;
     color: #FBF6EF;
 }
@@ -33,13 +33,13 @@
 @media screen and (max-width: 400px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .logoText {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 375px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .logoText {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
