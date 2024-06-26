@@ -18,6 +18,7 @@ const Apply: React.FC = () => {
                 </div>
                 <Image src="/assets/apply-img.svg" alt="Black" width={310} height={320}></Image>
             </div>
+            <Image src="/assets/apply2.svg" width={1100} height={900} alt="House" className={styles.extra}></Image>
         </div>
     );
 }
