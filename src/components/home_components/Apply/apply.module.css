@@ -4,9 +4,9 @@
     background-color: #FBF6EF;
     border-radius: 48px;
     position: relative;
-    width: 60%;
+    width: 900px;
     margin: auto;
-    margin-top: 180px;
+    margin-top: 130px;
     padding: 30px;
 }
 
@@ -17,11 +17,12 @@
 
 .become {
     color: #622D25;
-    font-size: 36px;
+    font-size: 34px;
+    margin-bottom: 10px;
 }
 
 .form {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 35px;
     color: #622D25;
 }
@@ -36,12 +37,119 @@
 
 .applyBtn {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     left: 100px;
 }
 
-.extra {
-    position: absolute;
-    top: 0;
-    z-index: -10;
+@media screen and (max-width: 1038px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .main_container {
+        width: 90%;
+    }
+
+    .form {
+        font-size: 18px;
+    }
+
+    .become {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 905px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+
+    .form {
+        font-size: 17px;
+    }
+
+    .become {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+
+    .form {
+        font-size: 16px;
+    }
+
+    .become {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .wrapper {
+        gap: 3%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .main_container {
+        width: 500px;
+        margin-top: 100px;
+    }
+
+    .wrapper {
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+        gap: 20px;
+    }
+
+    .applyBtn {
+        bottom: -30px;
+        left: 50%;
+    }
+
+    .form {
+        text-align: center;
+    }
+
+    .become {
+        text-align: center;
+    }
+
+    .applyImg2 {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .main_container {
+        width: 90%;
+    }
+
+    .form {
+        font-size: 15px;
+    }
+
+    .become {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .main_container {
+        padding: 20px;
+        padding-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .main_container {
+        padding: 15px;
+        padding-bottom: 25px;
+    }
+}
+
+.become {
+    font-size: 24px;
+    line-height: normal;
 }

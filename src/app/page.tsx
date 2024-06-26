@@ -6,6 +6,7 @@ import Impact from "@/components/home_components/Impact/impact";
 import PageText2 from "@/components/PageText/pageText2";
 import Testimonial from "@/components/home_components/Testimonial/testimonial";
 import Apply from "@/components/home_components/Apply/apply";
+import Large from "@/components/home_components/Large/large";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <PageText2/>
       <Testimonial/>
       <Apply/>
+      <Large/>
     </div>
   );
 }

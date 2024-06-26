@@ -10,15 +10,14 @@ const Apply: React.FC = () => {
                 <div className={styles.applyText}>
                     <div>
                         <h2 className={styles.become}>Become a Member</h2>
-                        <p className={styles.form}>We’re excited to have you join our team at Luminous Life Foundation! To volunteer, click the button below and fill out the volunteer application form.</p>
+                        <p className={styles.form}>We’re excited to have you join our team at Luminous Life Foundation! The more the merrier! To volunteer, click the button below and fill out the volunteer application form.</p>
                     </div>
                     <Link className={styles.applyBtn} href="/volunteer">
                         <StyledButton btnText="Volunteer Now"/>
                     </Link>
                 </div>
-                <Image src="/assets/apply-img.svg" alt="Black" width={310} height={320}></Image>
+                <Image src="/assets/apply-img.svg" alt="Black" width={310} height={320} className={styles.applyImg2}></Image>
             </div>
-            <Image src="/assets/apply2.svg" width={1100} height={900} alt="House" className={styles.extra}></Image>
         </div>
     );
 }
