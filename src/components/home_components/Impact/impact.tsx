@@ -8,7 +8,7 @@ const Impact: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ["0 1", "1.33 1"],
+        offset: ["start end", "end end"],
     });
     
     const scaleProgress = useTransform(scrollYProgress, [0,1], [0.5, 1]);
