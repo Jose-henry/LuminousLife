@@ -15,12 +15,7 @@ const About: React.FC = () => {
     const scaleProgress = useTransform(scrollYProgress, [0,1], [0.5, 1]);
     const opacityProgress = useTransform(scrollYProgress, [0,1], [0.8, 1]);
     return (
-        <motion.div 
-        ref={ref} 
-        style={{ 
-            scale: scaleProgress,
-            opacity: opacityProgress,
-        }} 
+       <div
         className={styles.wrapper}>
             <div className={styles.main_container}>
                 <div className={styles.div1}>
@@ -29,7 +24,7 @@ const About: React.FC = () => {
                         <p className={styles.text2}>At Luminous Life Foundation, we focus on delivering solar energy solutions to rural communities.</p>
                         <p className={styles.text5}>Our goal is to provide sustainable, renewable energy that empowers people, improves their quality of life, and fosters environmental stewardship.</p>
                     </div>
-                    <div className={styles.div3}>
+                    <div className={`${styles.div3}`}>
                         <div className={styles.arrow_div}>
                             <h2 className={styles.text3}>Get to Know Us</h2>
                             <Link href="/about" className={styles.arrow}>
@@ -42,7 +37,7 @@ const About: React.FC = () => {
                 </div>
                 <Image src="/assets/solar.svg" alt="Solar Image" width={430} height={240} className={styles.extraImg}></Image>
             </div>
-        </motion.div>
+        </div>
     );
 }
 
