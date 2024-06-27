@@ -5,6 +5,15 @@
     margin-top: 100px;
 }
 
+@keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 .topDiv {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -43,6 +52,25 @@
     justify-content: space-between;
     border-top: 1px solid #F3E5D2;
     border-bottom: 1px solid #F3E5D2;
+    position: relative;  /* Relative positioning */
+    overflow: hidden;    /* Hide overflowing content */
+    height: 30px;
+    width: 100%;         /* Full width of the parent */
+}
+
+
+.slide_content {
+  display: flex;       /* Flex layout for inline items */
+  position: absolute;  /* Absolute positioning */
+  white-space: nowrap; /* Prevent line breaks */
+  animation: slide 25s linear infinite; /* Apply the animation */
+  gap: 10px;
+  align-items: center;
+}
+
+.slide_content p {
+    font-size: 12px;
+    color: #F3E5D2;
 }
 
 .slide_info > p {
@@ -70,7 +98,7 @@
 }
 
 .rights {
-    font-size: 13px;
+    font-size: 12px;
     padding: 7px;
     color: #F3E5D2;
     padding-left: 12px;

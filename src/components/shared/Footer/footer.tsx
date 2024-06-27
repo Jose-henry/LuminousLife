@@ -29,7 +29,7 @@ export default function FooterDiv() {
             </div>
             <div className={styles.instagram}>
               <Link href="https://www.instagram.com/luminous_life_foundation?igsh=MzBpaWVrODV4Nmxs">
-              <Image src="/assets/Instagram.svg" alt="Message icon" height={50} width={50}></Image>
+                <Image src="/assets/Instagram.svg" alt="Message icon" height={50} width={50}></Image>
               </Link>
               <div>
                 <p>FOLLOW US ON</p>
@@ -38,7 +38,7 @@ export default function FooterDiv() {
             </div>
             <div className={styles.linkedin}>
               <Link href="https://www.linkedin.com/company/luminous-life-foundation/">
-              <Image src="/assets/Linkedin.svg" alt="Message icon" height={50} width={50}></Image>
+                <Image src="/assets/Linkedin.svg" alt="Message icon" height={50} width={50}></Image>
               </Link>
               <div>
                 <p>FIND US ON</p>
@@ -50,16 +50,18 @@ export default function FooterDiv() {
       </div>
       <div className={styles.bottomDiv}>
         <div className={styles.slide_info}>
-          <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
-          <p>Empowering Communities, Illuminating Futures</p>
-          <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
-          <p>Empowering Communities, Illuminating Futures</p>
-          <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
-          <p>Empowering Communities, Illuminating Futures</p>
-          <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
-          <p>Empowering Communities, Illuminating Futures</p>
-          <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
-          <p>Empowering Communities, Illuminating Futures</p>
+          <div className={styles.slide_content}>
+            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
+            <p>Empowering Communities, Illuminating Futures</p>
+            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
+            <p>Empowering Communities, Illuminating Futures</p>
+            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
+            <p>Empowering Communities, Illuminating Futures</p>
+            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
+            <p>Empowering Communities, Illuminating Futures</p>
+            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} />
+            <p>Empowering Communities, Illuminating Futures</p>
+          </div>
         </div>
         <p className={styles.rights}>&copy; Luminous Life Foundation. All Rights Reserved.</p>
       </div>
