@@ -15,7 +15,7 @@ const Mission: React.FC = () => {
                         <div className={styles.value_div1}>
                             <div className={styles.value1_div}>
                                 <Image src="/assets/equity.svg" alt="equity" width={24} height={24}></Image>
-                                <p className={styles.value1}>Equity</p>
+                                <p className={`${styles.value1}`}>Equity</p>
                             </div>
                             <div className={styles.value2_div}>
                                 <Image src="/assets/empowerment.svg" alt="empowerment" width={24} height={24}></Image>
