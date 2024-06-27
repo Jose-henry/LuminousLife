@@ -38,6 +38,7 @@
     gap: 20px;
     padding: 20px;
     position: relative;
+    border: 2px solid white;
 }
 
 .text1 {
@@ -92,11 +93,11 @@
 .arrow_div {
     display: flex;
     align-items: center;
-    gap: 2;
+    gap: 3px;
 }
 
 .extraImg {
-    border: 2px solid #622D25;
+    border: 2px solid white;
     border-radius: 20px;
 }
 

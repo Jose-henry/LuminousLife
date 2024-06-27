@@ -41,6 +41,11 @@
     left: 100px;
 }
 
+.applyImg2 {
+    border: 2.5px solid #622D25;
+    border-radius: 40px;
+}
+
 @media screen and (max-width: 1038px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .main_container {

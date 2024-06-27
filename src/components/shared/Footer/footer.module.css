@@ -2,12 +2,42 @@
     color: #F3E5D2;
     background-color: #773529;
     width: 100%;
+    margin-top: 100px;
 }
 
 .topDiv {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 20px 10px;
+}
+
+.extra {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.sun, .light {
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-left: 2px solid white;
+    padding-left: 20px;
 }
 
 .bottomDiv {
+}
+
+.socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .slide_info {
@@ -24,8 +54,54 @@
     padding: 7px;
 }
 
+.links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 2px solid white;
+    padding-bottom: 20px;
+}
+
+.a {
+    font-size: 13px;
+    color: #F3E5D2; 
+    font-family: var(--font-finlandacia);
+}
+
+.a:hover {
+    text-decoration: underline;
+}
+
 .rights {
     font-size: 13px;
     padding: 7px;
     color: #F3E5D2;
+    padding-left: 12px;
+}
+
+.socials p {
+    font-size: 13px;
+}
+
+.socials h3 {
+    font-size: 14px;
+    line-height: normal;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.instagram {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.linkedin {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }

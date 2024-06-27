@@ -8,6 +8,7 @@
     position: fixed;
     z-index: 30;
     top: 0;
+    border-bottom: 2px solid white;
 }
 
 .logoContainer {
