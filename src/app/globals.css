@@ -24,7 +24,7 @@ body {
 h1 {
   font-optical-sizing: auto;
   line-height: 120px;
-  font-family: var(--font-nunito);
+  font-family: var(--font-finlandacia);
 }
 
 h2 {
@@ -32,7 +32,7 @@ h2 {
   font-weight: 700;
   font-size: 54px;
   line-height: 67.2px;
-  font-family: var(--font-nunito);
+  font-family: var(--font-finlandacia);
 }
 
 h3 {
@@ -40,16 +40,16 @@ h3 {
   line-height: 31.6px;
   font-weight: 700;
   font-size: 26px;
-  font-family: var(--font-nunito);
+  font-family: var(--font-finlandacia);
 }
 
 p {
   font-optical-sizing: auto;
-  font-family: var(--font-nunito);
+  font-family: var(--font-finlandacia);
 }
 
 button {
-  font-family: var(--font-nunito);
+  font-family: var(--font-finlandacia);
 }
 
 @layer utilities {

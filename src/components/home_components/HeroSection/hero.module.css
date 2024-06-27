@@ -9,13 +9,13 @@
 
 .heroContainer {
     overflow-x: hidden;
-    margin-top: 55px;
+    margin-top: 56.5px;
 }
 
 .p {
     color: #FBF6EF;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.7);
     text-align: center;
     margin-bottom: 25px;
@@ -27,6 +27,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     padding: 165px 0;
+    gap: 10%;
 }
 
 .div3 {

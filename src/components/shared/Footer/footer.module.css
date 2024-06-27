@@ -1,0 +1,31 @@
+.footer_container {
+    color: #F3E5D2;
+    background-color: #773529;
+    width: 100%;
+}
+
+.topDiv {
+}
+
+.bottomDiv {
+}
+
+.slide_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #F3E5D2;
+    border-bottom: 1px solid #F3E5D2;
+}
+
+.slide_info > p {
+    font-size: 13px;
+    color: #F3E5D2;
+    padding: 7px;
+}
+
+.rights {
+    font-size: 13px;
+    padding: 7px;
+    color: #F3E5D2;
+}

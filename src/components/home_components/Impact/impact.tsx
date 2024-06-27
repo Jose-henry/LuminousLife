@@ -16,7 +16,7 @@ const Impact: React.FC = () => {
                     </div>
                     <div className={styles.impact_div2}>
                         <h3 className={styles.reached}>Communities Reached</h3>
-                        <h2 className={styles.value2}>50+</h2>
+                        <h2 className={styles.value2}>50<sup>+</sup></h2>
                         <p className={styles.reached_text}>We have provided solar energy solutions to over 50 communities across Nigeria, improving access to electricity and quality of life.</p>
                     </div>
                     <div className={styles.impact_div3}>

@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Salsa, Nunito, Raleway } from 'next/font/google';
+import {Nunito, Sansita } from 'next/font/google';
 import Topbar from "@/components/shared/TopBar/topBar";
 import FooterDiv from "@/components/shared/Footer/footer";
-
-const salsa = Salsa({
-  subsets: ['latin'],
-  weight: '400', // Salsa only has '400' weight
-  variable: '--font-salsa', // Define a CSS variable for the font
-});
 
 // Configure Nunito
 const nunito = Nunito({
@@ -18,13 +12,13 @@ const nunito = Nunito({
   variable: '--font-nunito',
 });
 
-// Configure Raleway
-const raleway = Raleway({
+const finlandacia = Sansita({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
-  variable: '--font-raleway',
+  weight: ['400', '700', '800', '900'],
+  style: ['normal'],
+  variable: '--font-finlandacia',
 });
+
 
 export const metadata: Metadata = {
   title: "Luminous Life Foundation",
@@ -38,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} ${salsa.variable} ${nunito.variable}`}>
+      <body className={`${finlandacia.variable} ${nunito.variable}`}>
         <Topbar/>
         {children}
         <FooterDiv/>
