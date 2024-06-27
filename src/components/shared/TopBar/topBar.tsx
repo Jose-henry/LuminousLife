@@ -15,7 +15,7 @@ const Topbar: React.FC = () => {
                     height={40}
                     alt="Logo icon"
                 />
-                <h3 className={styles.logoText}>
+                <h3 className={`${styles.logoText} hidden sm:block`}>
                     Luminous Life Foundation
                 </h3>
                 
