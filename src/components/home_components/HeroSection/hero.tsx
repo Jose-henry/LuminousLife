@@ -4,7 +4,9 @@ import { useState, useEffect } from 'react';
 import StyledButton from "@/components/Button/button";
 import Link from "next/link";
 
+
 const Hero: React.FC = () => {
+    
     const [slideIndex, setSlideIndex] = useState(0);
     const [transitioning, setTransitioning] = useState(false);
 
@@ -47,7 +49,8 @@ const Hero: React.FC = () => {
     };
 
     return (
-        <div className={styles.heroContainer}>
+        <div 
+        className={styles.heroContainer}>
             <div className="relative w-full h-full">
                 {/* Background Slider */}
                 <div className={`absolute inset-0 z-0 flex transition-transform duration-1000 ease-in-out`}

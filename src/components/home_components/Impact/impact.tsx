@@ -1,8 +1,26 @@
+"use client";
 import styles from "./impact.module.css"; // Import CSS module
+import { useScroll, motion, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 
 const Impact: React.FC = () => {
+    const ref = useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["0 1", "1.33 1"],
+    });
+    
+    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.5, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0,1], [0.8, 1]);
     return (
-        <div className={styles.main_container}>
+        <motion.div 
+        ref={ref} 
+        style={{ 
+            scale: scaleProgress,
+            opacity: opacityProgress,
+        }} 
+         className={styles.main_container}>
             <div className={styles.text_div}>
                 <h2 className={styles.our_impact}>Our Impact</h2>
                 <p className={styles.impact_text}>We are proud of the positive changes we bring to communities. Here are some of our key achievements in empowering lives through sustainable solar energy solutions.</p>
@@ -26,7 +44,7 @@ const Impact: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
