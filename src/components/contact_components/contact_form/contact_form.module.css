@@ -38,7 +38,7 @@
 
 .form input {
     width: 85%;
-    padding: 8px;
+    padding: 10px;
     border-radius: 4px;
 
     font-family: var(--font-finlandacia);
@@ -48,7 +48,7 @@
 
 .form textarea {
     width: 85%;
-    padding: 8px;
+    padding: 10px;
     height: 300px;
 
     border-radius: 4px;
@@ -61,7 +61,7 @@
     background-color: #E5C9A2;
 
     font-size: 12px;
-    padding: 10px;
+    padding: 12px;
     width: 85%;
     border-radius: 4px;
     box-shadow: 2px 2px 0px 0px #773529;
@@ -122,12 +122,10 @@
 
     .form input {
         width: 95%;
-        padding: 9.5px;
     }
     
     .form textarea {
         width: 95%;
-        padding: 9.5px;
     }
 
     .form button {
@@ -138,16 +136,17 @@
 @media screen and (max-width: 515px) {
     .form input {
         width: 100%;
-        padding: 10px;
+        padding: 11px;
     }
     
     .form textarea {
         width: 100%;
-        padding: 10px;
+        padding: 11px;
     }
 
     .form button {
         width: 100%;
+        padding: 12px;
     }
 }
 

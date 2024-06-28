@@ -10,7 +10,7 @@ const Topbar: React.FC = () => {
             <div className={styles.logoContainer}>
                 
                 <Image
-                    src="/assets/removed.svg"
+                    src="/assets/new.svg"
                     width={170}
                     height={170}
                     alt="Logo icon"
