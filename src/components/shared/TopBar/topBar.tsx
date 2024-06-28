@@ -10,14 +10,11 @@ const Topbar: React.FC = () => {
             <div className={styles.logoContainer}>
                 
                 <Image
-                    src="/assets/logo.svg"
-                    width={40}
-                    height={40}
+                    src="/assets/removed.svg"
+                    width={170}
+                    height={170}
                     alt="Logo icon"
                 />
-                <h3 className={`${styles.logoText}`}>
-                    Luminous Life Foundation
-                </h3>
                 
             </div>
             </Link>

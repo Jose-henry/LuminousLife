@@ -14,7 +14,7 @@ const About: React.FC = () => {
                         <p className={styles.text2}>At Luminous Life Foundation, we focus on delivering solar energy solutions to rural communities.</p>
                         <p className={styles.text5}>Our goal is to provide sustainable, renewable energy that empowers people, improves their quality of life, and fosters environmental stewardship.</p>
                     </div>
-                    <div className={`${styles.div3}`}>
+                    <div className={`${styles.div3} shadow-2xl shadow-[#B8860B]`}>
                         <div className={styles.arrow_div}>
                             <h2 className={styles.text3}>Get to Know Us</h2>
                             <Link href="/about" className={styles.arrow}>
@@ -25,7 +25,7 @@ const About: React.FC = () => {
                         <div className={styles.overlay}></div>
                     </div>
                 </div>
-                <Image src="/assets/solar.svg" alt="Solar Image" width={430} height={240} className={styles.extraImg}></Image>
+                <Image src="/assets/solar.svg" alt="Solar Image" width={430} height={240} className={`${styles.extraImg} shadow-2xl shadow-[#B8860B]`}></Image>
             </div>
         </div>
     );

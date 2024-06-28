@@ -44,6 +44,7 @@
 .applyImg2 {
     border: 2.5px solid #622D25;
     border-radius: 40px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 1038px) {

@@ -35,6 +35,7 @@
     background-color: #773529;
     border-radius: 20px;
     justify-content: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .impact_div2 {
@@ -42,6 +43,7 @@
     padding: 30px;
     border-radius: 20px;
     justify-content: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .impact_div3 {
@@ -52,6 +54,7 @@
     background-color: #773529;
     border-radius: 20px;
     justify-content: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .our_impact {

@@ -78,7 +78,7 @@ const Form: React.FC = () => {
           <button type="submit">Send Message</button>
           {status && <p>{status}</p>}
         </form>
-        <Image src="/assets/contact_sunset.svg" alt="" width={445} height={530} className={`border-[2px] rounded-[7px] self-center ${styles.contact_img}`} />
+        <Image src="/assets/contact_sunset.svg" alt="" width={445} height={530} className={`border-[2px] rounded-[7px] shadow-2xl shadow-[#B8860B] self-center ${styles.contact_img}`} />
       </div>
     </div>
   );

@@ -26,6 +26,8 @@
     gap: 5%;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .value_div {
@@ -56,12 +58,15 @@
 .value1_div, .value2_div, .value3_div, .value4_div {
     background-color: #FFFFFF;
     border: 2px solid black;
-    border-radius: 24px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 7px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
+
+
 
 .mission_text {
     font-size: 40px;
@@ -256,13 +261,10 @@
 
 @media screen and (max-width: 720px) {
     /* CSS rules for screens with a maximum width of 1000px */
+
     .text {
         margin-top: 70px;
     }
-}
-
-@media screen and (max-width: 720px) {
-    /* CSS rules for screens with a maximum width of 1000px */
 
     .wrapper {
         display: grid;
