@@ -265,6 +265,10 @@
         padding: 10px;
     }
 
+    .impact_div2 {
+        border: 1px solid black;
+    }
+
     .impact_div1 {
         border-radius: 16px;
         border-bottom-left-radius: 0px;

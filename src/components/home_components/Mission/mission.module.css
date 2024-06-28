@@ -292,6 +292,11 @@
         width: fit-content;
     }
 
+    .values_wrapper {
+        border: 1px solid black;
+        margin-bottom: 25px;
+    }
+
     .value4_div, .value1_div {
         flex-direction: row;
     }
