@@ -10,6 +10,7 @@
 .heroContainer {
     overflow-x: hidden;
     margin-top: 56.5px;
+    border: 1px solid black;
 }
 
 .p {
