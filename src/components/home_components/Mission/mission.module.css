@@ -56,7 +56,7 @@
 
 .value1_div, .value2_div, .value3_div, .value4_div {
     background-color: #FFFFFF;
-    border-radius: 13px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +64,25 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+.value1_div {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
 
+.value3_div {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.value2_div {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.value4_div {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
 
 .mission_text {
     font-size: 40px;

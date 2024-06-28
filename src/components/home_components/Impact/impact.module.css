@@ -28,19 +28,20 @@
 }
 
 .impact_div1 {
-    padding: 16px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: #773529;
-    border-radius: 20px;
+    border-radius: 16px;
     justify-content: center;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
 .impact_div2 {
     padding: 30px;
-    border-radius: 16px;
     justify-content: center;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
@@ -54,6 +55,8 @@
     border-radius: 16px;
     justify-content: center;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
 }
 
 .our_impact {
@@ -260,6 +263,18 @@
 
     .impact_div1, .impact_div2, .impact_div3 {
         padding: 10px;
+    }
+
+    .impact_div1 {
+        border-radius: 16px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .impact_div3 {
+        border-radius: 16px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
     }
 }
 
