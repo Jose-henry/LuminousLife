@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
       <div>
-
+        <p className="text-black">About</p>
       </div>
   );
 }
