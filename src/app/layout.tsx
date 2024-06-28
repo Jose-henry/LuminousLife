@@ -21,7 +21,14 @@ const finlandacia = Sansita({
 
 
 export const metadata: Metadata = {
-  title: "Luminous Life Foundation",
+  title: {
+    default: "Luminous Life Foundation",
+    template: "%s | Luminous Life Foundation",
+  },
+  icons: {
+    icon: "/favicon.png",
+  },
+  
   description: "An NGO Website",
 };
 

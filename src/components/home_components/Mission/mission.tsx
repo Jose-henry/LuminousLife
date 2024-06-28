@@ -1,9 +1,27 @@
+'use client';
 import Image from "next/image";
 import styles from "./mission.module.css"; // Import CSS module
+import { useScroll, motion, useTransform } from "framer-motion";
+import { useRef } from "react";
+
 
 const Mission: React.FC = () => {
+    const ref = useRef<HTMLDivElement>(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end end"],
+    });
+    
+    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.5, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0,1], [0.8, 1]);
     return (
-        <div className={styles.main_container}>
+        <motion.div 
+        ref={ref} 
+        style={{ 
+            scale: scaleProgress,
+            opacity: opacityProgress,
+        }} 
+         className={styles.main_container}>
             <div className={styles.wrapper}>
                 <div className={styles.mission_div}>
                     <h2 className={styles.mission_text}>Our Mission</h2>
@@ -15,7 +33,7 @@ const Mission: React.FC = () => {
                         <div className={styles.value_div1}>
                             <div className={styles.value1_div}>
                                 <Image src="/assets/equity.svg" alt="equity" width={24} height={24}></Image>
-                                <p className={styles.value1}>Equity</p>
+                                <p className={`${styles.value1}`}>Equity</p>
                             </div>
                             <div className={styles.value2_div}>
                                 <Image src="/assets/empowerment.svg" alt="empowerment" width={24} height={24}></Image>
@@ -37,7 +55,7 @@ const Mission: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
