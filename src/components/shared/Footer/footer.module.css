@@ -3,6 +3,7 @@
     background-color: #773529;
     width: 100%;
     margin-top: 100px;
+    border-top: 2px solid white;
 }
 
 @keyframes slide {
@@ -44,6 +45,7 @@
 .socials {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
 }
 
 .slide_info {
@@ -129,4 +131,208 @@
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+@media screen and (max-width: 765px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .sun, .light {
+        width: 80px;
+        height: 80px;
+    }
+
+    .instagram_icon, .message_icon, .linkedin_icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .socials p {
+        font-size: 12px;
+    }
+    
+    .socials h3 {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .small {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .sun, .light {
+        width: 70px;
+        height: 70px;
+    }
+
+    .instagram_icon, .message_icon, .linkedin_icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .socials p {
+        font-size: 12px;
+    }
+    
+    .socials h3 {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+
+    .instagram_icon, .message_icon, .linkedin_icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .socials p {
+        font-size: 11px;
+    }
+    
+    .socials h3 {
+        font-size: 11px;
+    }
+
+    .rights {
+        font-size: 11px;
+    }
+
+    .slide_content p {
+        font-size: 11px;
+    }
+
+    .a {
+        font-size: 12px;
+    }
+
+    .socials {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:590px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .sun, .light {
+        width: 60px;
+        height: 60px;
+    }
+
+    .instagram_icon, .message_icon, .linkedin_icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .message, .instagram, .linkedin {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .sun, .light {
+        width: 50px;
+        height: 50px;
+    }
+
+    .instagram_icon, .message_icon, .linkedin_icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .message, .instagram, .linkedin {
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .topDiv {
+        padding: 10px;
+        grid-template-columns: 0.8fr 2fr;
+    }
+}
+
+@media screen and (max-width:475px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .extra {
+        gap: 10px;
+    }
+
+    .sun, .light {
+        width: 40px;
+        height: 40px;
+    }
+
+    .instagram_icon, .message_icon, .linkedin_icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .socials p {
+        font-size: 10px;
+    }
+    
+    .socials h3 {
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width:425px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .socials p {
+        display: none;
+    }
+    
+    .socials h3 {
+        display: none;
+    }
+
+    .instagram_icon, .message_icon, .linkedin_icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .topDiv {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media screen and (max-width:305px) {
+    .sun, .light {
+        width: 30px;
+        height: 30px;
+    }
+
+    .instagram_icon, .message_icon, .linkedin_icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media screen and (max-width:260px) {
+    .a {
+        font-size: 11px;
+    }
+
+    .rights {
+        font-size: 11px;
+    }
+
+    .slide_content p {
+        font-size: 11px;
+    }
+
+    .sun, .light {
+        width: 25px;
+        height: 25px;
+    }
 }

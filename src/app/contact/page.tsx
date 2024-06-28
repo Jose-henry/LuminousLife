@@ -1,5 +1,11 @@
+import Form from "@/components/contact_components/contact_form/conatct_form";
+import Picture from "@/components/contact_components/picture";
+
 export default function Contact() {
   return (
-   <div>Contact</div>
+    <div>
+      <Picture/>
+      <Form/>
+    </div>
   );
 }
