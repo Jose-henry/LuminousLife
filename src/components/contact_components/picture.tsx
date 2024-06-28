@@ -10,6 +10,7 @@ const Picture: React.FC = () => {
             width: '100%',
             height: '500px', 
             borderBottom: '2px solid white',
+            marginTop: '58px',
         }}>
         </div>
         </div>
