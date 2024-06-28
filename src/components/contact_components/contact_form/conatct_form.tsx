@@ -1,6 +1,6 @@
 "use client";
+import { sendEmail } from '@/lib/actions/email.action';
 import styles from './contact_form.module.css';
-import axios from 'axios';
 import Image from 'next/image';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 
@@ -25,20 +25,17 @@ const Form: React.FC = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('');
-
-    try {
-      const response = await axios.post('/api/send_email', { name, email, message });
-      if (response.status === 200) {
-        setStatus('Email sent successfully!');
-        // Optionally reset the form here
-        setName('');
-        setEmail('');
-        setMessage('');
-      }
-    } catch (error) {
-      setStatus('Failed to send email.');
+        try {
+            await sendEmail({ name, email, message });
+            setStatus('success');
+            setName('');
+            setEmail('');
+            setMessage('');
+        } catch (error) {
+            setStatus('Failed to send email.');
+        }
     }
-  };
+   
 
   return (
     <div className={styles.main_container}>
@@ -87,4 +84,4 @@ const Form: React.FC = () => {
   );
 }
 
-export default Form;
+export default Form;

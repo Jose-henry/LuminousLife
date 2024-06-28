@@ -1,26 +1,11 @@
 'use client';
 import Image from "next/image";
 import styles from "./mission.module.css"; // Import CSS module
-import { useScroll, motion, useTransform } from "framer-motion";
-import { useRef } from "react";
 
 
 const Mission: React.FC = () => {
-    const ref = useRef<HTMLDivElement>(null)
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end end"],
-    });
-    
-    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.5, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0,1], [0.8, 1]);
     return (
-        <motion.div 
-        ref={ref} 
-        style={{ 
-            scale: scaleProgress,
-            opacity: opacityProgress,
-        }} 
+        <div
          className={styles.main_container}>
             <div className={styles.wrapper}>
                 <div className={styles.mission_div}>
@@ -55,7 +40,7 @@ const Mission: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }
 

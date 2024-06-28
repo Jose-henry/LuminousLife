@@ -3,20 +3,10 @@ import { useState } from "react";
 import Image from "next/image";
 import styles from "./testimonial.module.css"; // Import CSS module
 import TestimonialProp from "./testimonialProp";
-import { useScroll, motion, useTransform } from "framer-motion";
-import { useRef } from "react";
 
 
 const Testimonial: React.FC = () => {
 
-    const ref = useRef<HTMLDivElement>(null)
-    const { scrollYProgress } = useScroll({
-        target: ref,
-        offset: ["start end", "end end"],
-    });
-    
-    const scaleProgress = useTransform(scrollYProgress, [0,1], [0.5, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0,1], [0.8, 1]);
     // State to manage the current testimonial index
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -59,12 +49,7 @@ const Testimonial: React.FC = () => {
     };
 
     return (
-        <motion.div 
-        ref={ref} 
-        style={{ 
-            scale: scaleProgress,
-            opacity: opacityProgress,
-        }} 
+        <div 
         className={styles.main_container}>
             <Image src="/assets/testimonial-bg.svg" alt="testimonial background" width={450} height={450} className={styles.testimonial_bg} />
             <div className={styles.carousel_container}>
@@ -100,7 +85,7 @@ const Testimonial: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }
 
