@@ -3,6 +3,7 @@
     margin-right: auto;
     margin-top: -100px;
     z-index: -10;
+    margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1038px) {

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-      <div>
+      <div className="w-full h-full border-[2px] border-black pt-[100px]">
         <p className="text-black">About</p>
       </div>
   );
