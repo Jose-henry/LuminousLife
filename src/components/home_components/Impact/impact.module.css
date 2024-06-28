@@ -12,7 +12,7 @@
     padding: 30px;
     box-shadow: 5px 5px 0px 0px #773529;
     border-color: #622D25;
-    border-radius: 48px;
+    border-radius: 30px;
     background-color: #FBF6EF;
     border-width: 2px;
     display: flex;
@@ -28,7 +28,7 @@
 }
 
 .impact_div1 {
-    padding: 30px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -39,9 +39,8 @@
 }
 
 .impact_div2 {
-    border: 2px solid #443004;
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 16px;
     justify-content: center;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
@@ -52,7 +51,7 @@
     flex-direction: column;
     gap: 10px;
     background-color: #773529;
-    border-radius: 20px;
+    border-radius: 16px;
     justify-content: center;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
