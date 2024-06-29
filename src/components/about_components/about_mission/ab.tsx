@@ -64,22 +64,21 @@ const AB: React.FC = () => {
                     <div className={styles.div}>
                         <h3>Equity</h3>
                         <p>Access to reliable electricity is a fundamental right essential for healthcare, education, and economic empowerment, regardless of socio-economic status. 
-                        It enables crucial services, supports education and communication, and enhances overall quality of life, playing a pivotal role in fostering equitable development and human dignity.</p>
+                        </p>
                     </div>
                     <div className={styles.div}>
                         <h3>Empowerment</h3>
                         <p>We are committed to empowering communities by equipping them with the tools and resources needed to enhance their quality of life and take charge of their own development. 
-                        This approach aims to foster self-reliance, promote sustainable growth, and create opportunities for long-term prosperity within each community we serve.</p>
+                        </p>
                     </div>
                     <div className={styles.div}>
                         <h3>Sustainability</h3>
                         <p>Our commitment to sustainable energy solutions ensures lasting benefits for communities and the environment. 
-                        By prioritizing renewable energy and efficiency, we promote economic resilience, reduce environmental impact, and empower communities to thrive in a cleaner, more sustainable future.</p>
+                        By prioritizing renewable energy, we empower communities to thrive in a cleaner, more sustainable future.</p>
                     </div>
                     <div className={styles.div}>
                         <h3>Transparency</h3>
                         <p>Transparency and accountability are core principles that guide our actions and relationships. We uphold transparency by openly sharing information, making decisions based on integrity, and engaging stakeholders in honest dialogue.
-                        These principles ensure trust, promote effective collaboration, and empower us to achieve meaningful impact in our communities and beyond.
                         </p>
                     </div>
                 </div>
