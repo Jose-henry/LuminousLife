@@ -29,6 +29,7 @@ const NavBar: React.FC = () => {
                 <Link href="/" className={styles.link}>Home</Link>
                 <Link href="/about" className={styles.link}>About</Link>
                 <Link href="/projects" className={styles.link}>Projects</Link>
+                <Link href="/team" className={styles.link}>Teams</Link>
                 <Link href="/contact" className={styles.link}>Contact</Link>
             </div>
             {isMobile && (
@@ -69,6 +70,12 @@ const NavBar: React.FC = () => {
                         <div className={styles.design}>
                             <Link href="/projects" className={styles._link}>Projects</Link>
                             <Link href="/projecs">
+                                <img width="13" height="13" src="https://img.icons8.com/fluency-systems-filled/48/622d25/circled-right.png" alt="circled-right"/>
+                            </Link>
+                        </div>
+                        <div className={styles.design}>
+                            <Link href="/team" className={styles._link}>Teams</Link>
+                            <Link href="/team">
                                 <img width="13" height="13" src="https://img.icons8.com/fluency-systems-filled/48/622d25/circled-right.png" alt="circled-right"/>
                             </Link>
                         </div>

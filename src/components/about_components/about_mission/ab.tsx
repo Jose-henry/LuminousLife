@@ -23,6 +23,7 @@ const AB: React.FC = () => {
 
     return (
         <div className={styles.container}>
+            
             <div className={styles.wrapper}>
                 <div className={styles.about}>
                     <h2>About Luminous Life Foundation</h2>
@@ -58,6 +59,7 @@ const AB: React.FC = () => {
                     </div>
                 </div>
             </div>
+
             <div className={styles.values}>
                 <h2>Our Values</h2>
                 <div className={styles.value_container}>
@@ -84,159 +86,7 @@ const AB: React.FC = () => {
                 </div>
             </div>
 
-            <div className={styles.team_div}>
-                <div>
-                    <h2>Our Team (Managerial)</h2>
-                    <div className={styles.team}>
 
-                        <div className={styles.pic1}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Favour.jpg")',
-                                backgroundPosition: 'center bottom -120px',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <h3>Founder</h3>
-                                <p>Favour Oguibe</p>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-
-                <div>
-                    <h2>Our Team (Secetarial)</h2>
-                    <div className={styles.team}>
-
-                        <div className={styles.pic4}>
-                                <div className={styles.details}>
-                                <div style={{
-                                    width: '400px',
-                                    height: '400px',
-                                    marginBottom: '20px',
-                                    backgroundImage: 'url("/assets/Stephanie.jpg")',
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
-                                    borderTopLeftRadius: '3px',
-                                    borderTopRightRadius: '3px',
-                                    backgroundRepeat: 'no-repeat',
-                                }}></div>
-                                    <h3>General Secetary</h3>
-                                    <p>Stephanie</p>
-                                </div>
-                        </div>
-
-                        <div className={styles.pic5}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Joba.jpg")',
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <h3>Financial Secetary</h3>
-                                <p>Joba</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div>
-                    <h2>Our Team (Technical)</h2>
-                    <div className={styles.team}>
-
-
-                        <div className={styles.pic6}>
-                                    <div className={styles.details}>
-                                    <div style={{
-                                        width: '400px',
-                                        height: '400px',
-                                        marginBottom: '20px',
-                                        backgroundImage: 'url("/assets/Joseph.jpg")',
-                                        backgroundPosition: 'center',
-                                        backgroundSize: 'cover',
-                                        borderTopLeftRadius: '3px',
-                                        borderTopRightRadius: '3px',
-                                        backgroundRepeat: 'no-repeat',
-                                    }}></div>
-                                        <h3>Backend Developer</h3>
-                                        <p>Joseph Henry</p>
-                                    </div>
-                        </div>
-
-                        <div className={styles.pic7}>
-                                <div className={styles.details}>
-                                <div style={{
-                                    width: '400px',
-                                    height: '400px',
-                                    marginBottom: '20px',
-                                    backgroundImage: 'url("/assets/Fortune.jpg")',
-                                    backgroundPosition: 'center bottom -170px',
-                                    backgroundSize: 'cover',
-                                    borderTopLeftRadius: '3px',
-                                    borderTopRightRadius: '3px',
-                                    backgroundRepeat: 'no-repeat',
-                                }}></div>
-                                    <h3>Frontend Developer</h3>
-                                    <p>Fortune Oguibe</p>
-                                </div>
-                        </div>
-
-
-                        <div className={styles.pic8}>
-                                <div className={styles.details}>
-                                <div style={{
-                                    width: '400px',
-                                    height: '400px',
-                                    marginBottom: '20px',
-                                    backgroundImage: 'url("/assets/Priestly.jpg")',
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
-                                    borderTopLeftRadius: '3px',
-                                    borderTopRightRadius: '3px',
-                                    backgroundRepeat: 'no-repeat',
-                                }}></div>
-                                    <h3>Lead Product Designer</h3>
-                                    <p>Priestly</p>
-                                </div>
-                        </div>
-
-                        <div className={styles.pic9}>
-                                <div className={styles.details}>
-                                <div style={{
-                                    width: '400px',
-                                    height: '400px',
-                                    marginBottom: '20px',
-                                    backgroundImage: 'url("/assets/Onyinye.jpg")',
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
-                                    borderTopLeftRadius: '3px',
-                                    borderTopRightRadius: '3px',
-                                    backgroundRepeat: 'no-repeat',
-                                }}></div>
-                                    <h3>Assistant Product Designer</h3>
-                                    <p>Onyinye</p>
-                                </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
         </div>
     );
 }
