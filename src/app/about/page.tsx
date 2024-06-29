@@ -1,3 +1,4 @@
+import AB from "@/components/about_components/about_mission/ab";
 import { Metadata } from "next";
 
 
@@ -12,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-      <div className="w-full h-full border-[2px] border-black pt-[100px]">
-        <p className="text-black">About</p>
+      <div className="w-full pt-[10px] mb-[100px]">
+        <AB/>
       </div>
   );
 }

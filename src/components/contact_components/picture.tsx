@@ -4,7 +4,7 @@ const Picture: React.FC = () => {
     return (
         <div>
             <div style={{ 
-            backgroundImage: 'url("/assets/contact_img1.jpg")',
+            backgroundImage: 'url("/assets/office2.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             width: '100%',
