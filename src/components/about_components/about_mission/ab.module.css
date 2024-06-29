@@ -6,7 +6,7 @@
 .about {
     width: 80%;
     margin: auto;
-    padding: 150px 0px;
+    padding: 140px 0px;
 }
 
 .about h2 {
@@ -27,7 +27,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    transition: height 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
     height: var(--slide-height, auto);
 }
 
@@ -47,7 +47,7 @@
 
 .slide:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    transform: scale(1.05);
+    transform: scale(1.01);
 }
 
 .navigate {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Team() {
   return (
-      <div className="w-full pt-[10px] mb-[100px]">
+      <div className="w-full mb-[100px] mt-[50px]">
         <Picture/>
       </div>
   );

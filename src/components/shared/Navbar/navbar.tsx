@@ -28,7 +28,6 @@ const NavBar: React.FC = () => {
             <div className={styles.theLinks}>
                 <Link href="/" className={styles.link}>Home</Link>
                 <Link href="/about" className={styles.link}>About</Link>
-                <Link href="/projects" className={styles.link}>Projects</Link>
                 <Link href="/team" className={styles.link}>Teams</Link>
                 <Link href="/contact" className={styles.link}>Contact</Link>
             </div>
@@ -61,10 +60,6 @@ const NavBar: React.FC = () => {
                         </Link>
                         <Link href="/about" className={styles.design}>
                             <Link href="/about" className={styles._link}>About</Link>
-                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
-                        </Link>
-                        <Link href="/design" className={styles.design}>
-                            <Link href="/projects" className={styles._link}>Projects</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/team" className={styles.design}>

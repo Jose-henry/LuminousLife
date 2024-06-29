@@ -134,7 +134,7 @@ const Picture: React.FC = () => {
                                         borderTopRightRadius: '3px',
                                         backgroundRepeat: 'no-repeat',
                                     }}></div>
-                                        <h3>Backend Developer</h3>
+                                        <h3>Software Engineer</h3>
                                         <p>Joseph Henry</p>
                                     </div>
                         </div>
@@ -152,7 +152,7 @@ const Picture: React.FC = () => {
                                     borderTopRightRadius: '3px',
                                     backgroundRepeat: 'no-repeat',
                                 }}></div>
-                                    <h3>Frontend Developer</h3>
+                                    <h3>IT Specialist</h3>
                                     <p>Fortune Oguibe</p>
                                 </div>
                         </div>
@@ -171,7 +171,7 @@ const Picture: React.FC = () => {
                                     borderTopRightRadius: '3px',
                                     backgroundRepeat: 'no-repeat',
                                 }}></div>
-                                    <h3>Lead Product Designer</h3>
+                                    <h3>Product Designer</h3>
                                     <p>Priestly</p>
                                 </div>
                         </div>
@@ -189,7 +189,7 @@ const Picture: React.FC = () => {
                                     borderTopRightRadius: '3px',
                                     backgroundRepeat: 'no-repeat',
                                 }}></div>
-                                    <h3>Assistant Product Designer</h3>
+                                    <h3>Product Designer</h3>
                                     <p>Onyinye</p>
                                 </div>
                         </div>
@@ -214,7 +214,7 @@ const Picture: React.FC = () => {
                                 borderTopRightRadius: '3px',
                                 backgroundRepeat: 'no-repeat',
                             }}></div>
-                                <h3>Founder</h3>
+                                <h3>Senior Training Specialist</h3>
                                 <p>Gabriel Obiefule</p>
                             </div>
                         </div>
