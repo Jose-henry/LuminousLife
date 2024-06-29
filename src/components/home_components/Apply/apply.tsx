@@ -14,7 +14,7 @@ const Apply: React.FC = () => {
                         <h2 className={styles.become}>Become a Member</h2>
                         <p className={styles.form}>We’re excited to have you join our team at Luminous Life Foundation! The more the merrier! To volunteer, click the button below and fill out the volunteer application form. Together, we can light up the dark places!</p>
                     </div>
-                    <Link className={styles.applyBtn} href="/volunteer">
+                    <Link className={styles.applyBtn} href="https://forms.gle/xzP3CLSgd9cAS2EQ9">
                         <StyledButton btnText="Volunteer Now"/>
                     </Link>
                 </div>

@@ -55,36 +55,26 @@ const NavBar: React.FC = () => {
                         />
                     </div>
                     <div className={`${styles.small} ${menuOpen ? styles.show : ''}`}>
-                        <div className={styles.design}>
+                        <Link href="/" className={styles.design}>
                             <Link href="/" className={styles._link}>Home</Link>
-                            <Link href="/">
-                                <img width="13" height="13" src="https://img.icons8.com/fluency-systems-filled/48/622d25/circled-right.png" alt="circled-right"/>
-                            </Link>
-                        </div>
-                        <div className={styles.design}>
+                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
+                        </Link>
+                        <Link href="/about" className={styles.design}>
                             <Link href="/about" className={styles._link}>About</Link>
-                            <Link href="/about">
-                                <img width="13" height="13" src="https://img.icons8.com/fluency-systems-filled/48/622d25/circled-right.png" alt="circled-right"/>
-                            </Link>
-                        </div>
-                        <div className={styles.design}>
+                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
+                        </Link>
+                        <Link href="/design" className={styles.design}>
                             <Link href="/projects" className={styles._link}>Projects</Link>
-                            <Link href="/projecs">
-                                <img width="13" height="13" src="https://img.icons8.com/fluency-systems-filled/48/622d25/circled-right.png" alt="circled-right"/>
-                            </Link>
-                        </div>
-                        <div className={styles.design}>
+                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
+                        </Link>
+                        <Link href="/team" className={styles.design}>
                             <Link href="/team" className={styles._link}>Teams</Link>
-                            <Link href="/team">
-                                <img width="13" height="13" src="https://img.icons8.com/fluency-systems-filled/48/622d25/circled-right.png" alt="circled-right"/>
-                            </Link>
-                        </div>
-                        <div className={styles.design}>
+                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
+                        </Link>
+                        <Link href="/design" className={styles.design}>
                             <Link href="/contact" className={styles._link}>Contact</Link>
-                            <Link href="/contact">
-                                <img width="13" height="13" src="https://img.icons8.com/fluency-systems-filled/48/622d25/circled-right.png" alt="circled-right"/>
-                            </Link>
-                        </div>
+                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
+                        </Link>
                     </div>
                 </div>
             )}

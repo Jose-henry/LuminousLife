@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Luminous Life Foundation",
   },
   icons: {
-    icon: "/favicon.png",
+    icon: "/assets/sent.svg",
   },
   
   description: "An NGO Website",
