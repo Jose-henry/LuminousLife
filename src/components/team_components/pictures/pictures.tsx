@@ -234,7 +234,7 @@ const Picture: React.FC = () => {
                                 height: '400px',
                                 marginBottom: '20px',
                                 backgroundImage: 'url("/assets/Djones.jpg")',
-                                backgroundPosition: 'center bottom -120px',
+                                backgroundPosition: 'center bottom -145px',
                                 backgroundSize: 'cover',
                                 borderTopLeftRadius: '3px',
                                 borderTopRightRadius: '3px',
