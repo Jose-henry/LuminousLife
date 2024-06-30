@@ -27,7 +27,7 @@ const Form: React.FC = () => {
     setStatus('');
         try {
             await sendEmail({ name, email, message });
-            setStatus('success');
+            setStatus('Successfully sent!');
             setName('');
             setEmail('');
             setMessage('');
@@ -44,7 +44,7 @@ const Form: React.FC = () => {
         <p>We’d love to hear from you! Whether you have questions, feedback, or want to get involved, feel free to reach out.</p>
       </div>
       <div className={styles.form_container}>
-        <form onSubmit={handleSubmit} className={styles.form}>
+        <form  onSubmit={handleSubmit} className={styles.form}>
           <div>
             <label htmlFor="name">Name</label>
             <input
@@ -53,6 +53,7 @@ const Form: React.FC = () => {
               value={name}
               onChange={handleNameChange}
               required
+              autoComplete="off"
             />
           </div>
           <div>
@@ -63,6 +64,7 @@ const Form: React.FC = () => {
               value={email}
               onChange={handleEmailChange}
               required
+              autoComplete="off"
             />
           </div>
           <div>
@@ -76,9 +78,14 @@ const Form: React.FC = () => {
             />
           </div>
           <button type="submit">Send Message</button>
-          {status && <p>{status}</p>}
+          {status && <p className={styles.status}>
+            <span className='font-bold'>Message status: </span>
+            {status}</p>}
         </form>
-        <Image src="/assets/solar-panels.svg" alt="" width={700} height={700} className={`border-[2px] rounded-[7px] shadow-2xl shadow-[#B8860B] self-center ${styles.contact_img}`} />
+
+        <div className={styles.cont_img}>
+
+        </div>
       </div>
     </div>
   );

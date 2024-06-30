@@ -31,15 +31,15 @@
 
 .form label {
     font-family: var(--font-finlandacia);
-    color: #2D3648;
+    color: #222831;
     font-size: 14px;
     margin-bottom: 3px;
 }
 
 .form input {
     width: 85%;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 12px;
+    border-radius: 3px;
     font-family: var(--font-finlandacia);
     font-size: 13px;
     outline: none;
@@ -47,20 +47,31 @@
 
 .form textarea {
     width: 85%;
-    padding: 10px;
+    padding: 12px;
     height: 300px;
-
-    border-radius: 4px;
+    border-radius: 3px;
     font-size: 13px;
     font-family: var(--font-finlandacia);
     outline: none;
 }
 
+.cont_img {
+    height: 100%;
+    width: 100%;
+    background: url("/assets/how_1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    border: 2px solid white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+}
+
 .form button {
     background-color: #E5C9A2;
-
-    font-size: 12px;
-    padding: 12px;
+    font-size: 13px;
+    padding: 13px;
     width: 85%;
     border-radius: 4px;
     box-shadow: 2px 2px 0px 0px #773529;
@@ -70,6 +81,12 @@
 
 .form button:active {
     box-shadow: none;
+}
+
+.status {
+    font-size: 13px;
+    color: #402a23;
+    margin-top: 5px;
 }
 
 @media screen and (max-width: 1165px) {
@@ -115,7 +132,7 @@
         gap: 20px;
     }
 
-    .contact_img {
+    .cont_img {
         display: none;
     }
 
@@ -135,17 +152,15 @@
 @media screen and (max-width: 515px) {
     .form input {
         width: 100%;
-        padding: 11px;
     }
     
     .form textarea {
         width: 100%;
-        padding: 11px;
     }
 
     .form button {
         width: 100%;
-        padding: 12px;
+        padding: 13.5px;
     }
 }
 

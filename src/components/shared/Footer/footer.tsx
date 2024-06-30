@@ -14,6 +14,7 @@ export default function FooterDiv() {
           <div className={styles.links}>
             <Link href="/" className={styles.a}>Home</Link>
             <Link href="/about" className={styles.a}>About</Link>
+            <Link href="/team" className={styles.a}>Team</Link>
             <Link href="/contact" className={styles.a}>Contact</Link>
           </div>
           <div className={styles.socials}>

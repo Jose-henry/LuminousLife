@@ -1,12 +1,57 @@
 .wrapper {
     background-color: #FBF6EF;
     width: 100%;
+    position: relative;
+}
+
+.change {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #622D25;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.fade {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    margin-top: 45px;
+}
+
+.view_projects {
+    font-family: var(--font-finlandacia);
+    background-color: #622D25;
+    color: white;
+    width: 180px;
+    padding: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .about {
     width: 80%;
     margin: auto;
-    padding: 140px 0px;
+    padding: 130px 0px;
 }
 
 .about h2 {
@@ -18,9 +63,9 @@
 
 .about p {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     color: #622D25;
-    line-height: 35px;
+    line-height: 33px;
 }
 
 .slideContainer {
@@ -54,17 +99,21 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Aligns items to the end of the container */
-    margin-top: 20px;
-}
-
-.next {
-    cursor: pointer;
+    justify-content: center; /* Aligns items to the end of the container */
+    margin-top: 30px;
+    position: relative;
 }
 
 .prev {
+    position: absolute;
+    left: 0;
     cursor: pointer;
-    margin-right: auto; /* Ensures space between prev and next button */
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
 }
 
 .values h2 {
@@ -108,7 +157,7 @@
 
 .div p {
     color: #622D25;
-    line-height: 35px;
+    line-height: 30px;
     text-align: center;
 }
 

@@ -3,7 +3,8 @@ import "./globals.css";
 import {Nunito, Sansita } from 'next/font/google';
 import Topbar from "@/components/shared/TopBar/topBar";
 import FooterDiv from "@/components/shared/Footer/footer";
-
+import styles from './layout.module.css';
+import Image from "next/image";
 // Configure Nunito
 const nunito = Nunito({
   subsets: ['latin'],

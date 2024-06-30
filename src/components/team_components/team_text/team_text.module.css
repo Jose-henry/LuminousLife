@@ -1,0 +1,25 @@
+.container h3 {
+    color: #622D25;
+    font-size: 20px;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.volunteer {
+    font-family: var(--font-finlandacia);
+    font-size: 23px;
+    color: #132743;
+    text-decoration: underline;
+    font-size: 19px;
+}
+
+.volunteer:hover {
+    text-decoration: none;
+}
