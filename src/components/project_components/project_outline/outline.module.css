@@ -1,0 +1,37 @@
+.main_container {
+    width: 95%;
+    margin: auto;
+}
+
+.main_container h2 {
+    color: #402a23;
+    font-size: 35px;
+}
+
+.text {
+    color: #402a23;
+    font-size: 15px;
+}
+
+.the_projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 35px;
+    border-top: 1px solid #402a23;
+    padding-top: 25px;
+}
+
+.project {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3%;
+}
+
+.project div {
+    height: 350px;
+    width: 100%;
+    border: 1px solid #402a23;
+}

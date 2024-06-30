@@ -1,5 +1,6 @@
 import Gallery from "@/components/project_components/gallery_component/gallery";
 import Intro from "@/components/project_components/intro_component/intro";
+import Outline from "@/components/project_components/project_outline/outline";
 import { Metadata } from "next";
 
 
@@ -17,6 +18,7 @@ export default function Projects() {
       <div className="w-full mt-[58px]">
         <Intro/>
         <Gallery/>
+        <Outline/>
       </div>
   );
 }
