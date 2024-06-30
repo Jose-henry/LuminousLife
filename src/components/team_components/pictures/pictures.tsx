@@ -156,7 +156,7 @@ const Picture: React.FC = () => {
                                         <p>Joba</p>
                                     </div>
                                     <div className={styles.socials}>
-                                        <Link href="">
+                                        <Link href="http://linkedin.com/in/elisalome-oyefusi">
                                             <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
                                         </Link>
                                     </div>

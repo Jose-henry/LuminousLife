@@ -20,7 +20,7 @@ export default function FooterDiv() {
           <div className={styles.socials}>
             <div className={styles.message}>
               <Link href="/message">
-                <Image src="/assets/Message.svg" alt="Message icon" height={50} width={50} className={styles.message_icon}></Image>
+                <Image src="/assets/mail.svg" alt="Message icon" height={50} width={50} className={styles.message_icon}></Image>
               </Link>
               <div>
                 <p>SEND US A</p>

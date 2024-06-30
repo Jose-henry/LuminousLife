@@ -74,7 +74,7 @@ const AB: React.FC = () => {
                                 onClick={handlePrev}
                             />
                         )}
-                        <Link href="" className={styles.view_projects}>View Our Projects</Link>
+                        <Link href="/projects" className={styles.view_projects}>View Our Projects</Link>
                         <Image
                             src="/assets/next.svg"
                             alt="next icon"
