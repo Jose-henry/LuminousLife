@@ -19,6 +19,7 @@
 
 body {
   background-color: #F8CA39;
+  overflow-x: hidden;
 }
 
 h1 {

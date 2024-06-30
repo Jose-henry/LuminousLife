@@ -1,3 +1,4 @@
+import Project from "@/components/about_components/Projects/project";
 import AB from "@/components/about_components/about_mission/ab";
 import Donate from "@/components/about_components/donate/donate";
 import Story from "@/components/about_components/story/story";
@@ -19,6 +20,7 @@ export default function About() {
       <div className="w-full pt-[10px] mb-[100px]">
         <AB/>
         <Story/>
+        <Project/>
         <Testimonial/>
         <Donate/>
       </div>
