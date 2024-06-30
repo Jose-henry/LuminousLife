@@ -41,7 +41,7 @@ export default function Project() {
             <div className={styles.second_project}>
                 <div>
                     <h4>EDUCATION</h4>
-                    <h3>Empowering Young Minds on Sustainable Energy</h3>
+                    <h3>Empowering Young Minds on Solar Energy</h3>
                     <p>This program is dedicated to educating young children and students about the transformative power of solar energy. Through engaging workshops, hands-on activities, and innovative projects, we aim to inspire the next generation to embrace solar energy solutions.</p>
                     </div>
                     <Link href="/Teach" className={styles.project}>Read more</Link>
