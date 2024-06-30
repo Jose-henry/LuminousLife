@@ -48,7 +48,7 @@ const AB: React.FC = () => {
                         backgroundSize: 'cover', 
                         backgroundPosition: 'center', 
                         backgroundRepeat: 'no-repeat' 
-                    }}
+                    }} 
                 >
                 </div>
                 <div className={styles.about}>

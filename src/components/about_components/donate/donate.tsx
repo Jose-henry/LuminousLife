@@ -1,3 +1,4 @@
+'use client'
 import styles from "./donate.module.css";
 
 export default function Donate() {
