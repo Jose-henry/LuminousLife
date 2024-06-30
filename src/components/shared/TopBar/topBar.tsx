@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import styles from "./topBar.module.css"; // Import CSS module
 import NavBar from "@/components/shared/Navbar/navbar";

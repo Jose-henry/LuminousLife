@@ -1,3 +1,4 @@
+'use client'
 import styles from "./gallery.module.css";
 
 export default function Gallery() {
