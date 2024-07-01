@@ -1,5 +1,5 @@
 .main_container p {
-    color: #622D25;
+    color: #402a23;
     font-size: 15px;
     line-height: 26px;
     text-align: justify;
@@ -27,7 +27,7 @@
 .main_container > div {
     background-color: #FBF6EF;
     padding: 50px;
-    box-shadow: 20px 20px 0px 0px #773529;
+    box-shadow: 20px 20px 0px 0px #fbf2d5;
 }
 
 .image {

@@ -58,25 +58,21 @@
 .cont_img {
     height: 100%;
     width: 100%;
-    background: url("/assets/how_1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #FBF6EF;
     border-radius: 3px;
-    border: 2px solid white;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-
 }
 
 .form button {
-    background-color: #E5C9A2;
+    background-color: #FBF6EF;
     font-size: 13px;
     padding: 13px;
     width: 85%;
     border-radius: 4px;
-    box-shadow: 2px 2px 0px 0px #773529;
+    box-shadow: 2px 2px 0px 0px #622D25;;
     margin-top: 12px;
     font-weight: 700;
+    color: #402a23;;
+    border: 2px solid #622D25;
 }
 
 .form button:active {

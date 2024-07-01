@@ -66,7 +66,7 @@ const NavBar: React.FC = () => {
                             <Link href="/team" className={styles._link}>Teams</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
-                        <Link href="/design" className={styles.design}>
+                        <Link href="/contact" className={styles.design}>
                             <Link href="/contact" className={styles._link}>Contact</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>

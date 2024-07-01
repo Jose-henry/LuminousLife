@@ -13,8 +13,7 @@ export default function FooterDiv() {
             src="/assets/girls.jpg" 
             alt="Light" 
             fill 
-            objectFit="cover" 
-            objectPosition="center" 
+            style={{objectFit: 'cover'}}
             className="rounded-[50%]" 
           />
         </div>
@@ -28,7 +27,7 @@ export default function FooterDiv() {
           </div>
           <div className={styles.socials}>
             <div className={styles.message}>
-              <Link href="/message">
+              <Link href="/contact">
                 <Image src="/assets/email-icon.svg" alt="Message icon" height={50} width={50} className={styles.message_icon}></Image>
               </Link>
               <div>
