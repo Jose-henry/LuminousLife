@@ -21,7 +21,7 @@ const Picture: React.FC = () => {
                                 height: '400px',
                                 marginBottom: '20px',
                                 backgroundImage: 'url("/assets/Favour.jpg")',
-                                backgroundPosition: 'center bottom -120px',
+                                backgroundPosition: 'center bottom -140px',
                                 backgroundSize: 'cover',
                                 borderTopLeftRadius: '3px',
                                 borderTopRightRadius: '3px',

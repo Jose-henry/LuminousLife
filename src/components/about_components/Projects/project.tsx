@@ -1,5 +1,7 @@
+"use client";
 import Link from 'next/link';
 import styles from './project.module.css';
+import Image from 'next/image';
 
 export default function Project() {
   return (
@@ -14,10 +16,10 @@ export default function Project() {
         </div>
         <div className={styles.card}>
             <div style={{
-            backgroundImage: 'url("/assets/blackout.jpg")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            }}></div>
+            position: 'relative',
+            }}>
+                <Image src="/assets/blackout.jpg" alt="Test" fill quality={100} objectFit='cover' objectPosition='center'></Image>
+            </div>
             <div className={styles.first_project}>
                 <div>
                     <h4>COMMUNITY</h4>
@@ -30,14 +32,14 @@ export default function Project() {
             </div>
         </div>
         <div className={`${styles.card} ${styles.card3}`}>
-
+            <Image src="/assets/pretty.jpg" alt="Test" fill quality={100} objectFit='cover' objectPosition='center'></Image>
         </div>
         <div className={`${styles.card} ${styles.card4}`}>
-            <div style={{
-            backgroundImage: 'url("/assets/teach.jpg")',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            }}></div>
+        <div style={{
+            position: 'relative',
+            }}>
+                <Image src="/assets/teach.jpg" alt="Test" fill quality={100} objectFit='cover' objectPosition='center'></Image>
+            </div>
             <div className={styles.second_project}>
                 <div>
                     <h4>EDUCATION</h4>

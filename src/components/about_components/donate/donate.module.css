@@ -29,11 +29,6 @@
     top: 50%;
     transform: translateY(-50%);
     left: -100px;
-    background-image: url("/assets/child.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
     border-radius: 3px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }  

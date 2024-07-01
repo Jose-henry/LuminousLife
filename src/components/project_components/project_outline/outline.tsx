@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './outline.module.css';
 
 
@@ -15,10 +16,10 @@ export default function Outline() {
 
                     </div>
                     <div>
-
+                        <Image src="/assets/education.jpg" alt="Test" layout='fill' objectFit='cover' objectPosition='center'></Image>
                     </div>
                     <div>
-
+                        <Image src="/assets/education.jpg" alt="Test" layout='fill' objectFit='cover' objectPosition='center'></Image>
                     </div>
                 </div>
 
@@ -27,10 +28,10 @@ export default function Outline() {
 
                     </div>
                     <div>
-
+                        <Image src="/assets/education.jpg" alt="Test" layout='fill' objectFit='cover' objectPosition='center'></Image>
                     </div>
                     <div>
-
+                        <Image src="/assets/education.jpg" alt="Test" layout='fill' objectFit='cover' objectPosition='center'></Image>
                     </div>
                 </div>
             </div>

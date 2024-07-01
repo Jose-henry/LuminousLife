@@ -56,12 +56,9 @@
 .card3 {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-image: url("/assets/pretty.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     height: 600px;
     align-self: center;
+    position: relative;
 }
 
 .card4 {

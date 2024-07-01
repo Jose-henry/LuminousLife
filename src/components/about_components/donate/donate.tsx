@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./donate.module.css";
 
 export default function Donate() {
@@ -6,7 +7,7 @@ export default function Donate() {
         <h2 className={styles.donate_text}>Donation</h2>
         <div className={styles.main_container}>
             <div className={styles.picture}>
-
+                <Image src="/assets/child.jpg" alt="Test" fill quality={100} objectFit='cover' objectPosition='center'></Image>
             </div>
             <div className={styles.div2}>
                 <p>Empower Change Today!</p>

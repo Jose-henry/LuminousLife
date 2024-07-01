@@ -41,15 +41,16 @@ const AB: React.FC = () => {
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
-                <div
-                    className={`${styles.change} ${styles.fade}`} // Added fade class
-                    style={{
-                        backgroundImage: `url(${backgrounds[currentBackground]})`,
-                        backgroundSize: 'cover', 
-                        backgroundPosition: 'center', 
-                        backgroundRepeat: 'no-repeat' 
-                    }}
-                >
+                <div className={`${styles.change} ${styles.fade}`}>
+                    <Image
+                        src={backgrounds[currentBackground]}
+                        alt="Background Image"
+                        fill
+                        objectFit="cover"
+                        objectPosition="center"
+                        quality={100}
+                        className={`${styles.change} ${styles.fade}`}
+                    />
                 </div>
                 <div className={styles.about}>
                     <h2>About Luminous Life Foundation</h2>

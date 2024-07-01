@@ -43,10 +43,10 @@ const NavBar: React.FC = () => {
                             style={{ display: menuOpen ? 'none' : 'block' }}
                             onClick={toggleMenu}
                         />
-                        <img
+                        <Image
                             width="20"
                             height="20"
-                            src="https://img.icons8.com/fluency-systems-filled/48/FFFFFF/multiply.png"
+                            src="/assets/close.svg"
                             alt="multiply"
                             className={styles.close}
                             style={{ display: menuOpen ? 'block' : 'none' }}
