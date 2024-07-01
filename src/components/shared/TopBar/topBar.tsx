@@ -14,6 +14,7 @@ const Topbar: React.FC = () => {
                     src="/assets/removed.svg"
                     width={170}
                     height={170}
+                    quality={100}
                     alt="Logo icon"
                 />
                 

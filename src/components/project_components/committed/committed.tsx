@@ -22,6 +22,7 @@ export default function Future() {
                     alt="Sun"
                     width={140}
                     height={150}
+                    quality={100}
                     className={styles.image}>
                 </Image>
                 <p>Our journey is fueled by the belief that solar energy holds the power to transform lives and create sustainable futures. As we look ahead, our commitment to harnessing this renewable resource remains unwavering.
