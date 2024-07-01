@@ -21,7 +21,7 @@ export default function Donate() {
                         <input type="text" placeholder="Country" className={styles.input} required></input>
                         <input type="text" placeholder="Last Name" className={styles.input} required></input>
                         <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" className={styles.input} required></input>
-                        <input type="number" placeholder="Amount(N)" className={styles.input} required></input>
+                        <input type="number" placeholder="Amount" className={styles.input} required></input>
                     </div>
                     <button className={styles.btn}>Submit</button>
                 </form>
