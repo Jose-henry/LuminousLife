@@ -38,7 +38,7 @@ export default function FooterDiv() {
             </div>
             <div className={styles.instagram}>
               <Link href="https://www.instagram.com/luminous_life_foundation?igsh=MzBpaWVrODV4Nmxs">
-                <Image src="/assets/Instagram.svg" alt="Message icon" height={50} width={50} className={styles.instagram_icon}></Image>
+                <Image src="/assets/instagram.svg" alt="Message icon" height={50} width={50} className={styles.instagram_icon}></Image>
               </Link>
               <div>
                 <p>FOLLOW US ON</p>
