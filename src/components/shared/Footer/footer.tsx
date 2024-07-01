@@ -8,7 +8,16 @@ export default function FooterDiv() {
       <div className={styles.topDiv}>
         <div className={styles.extra}>
           <Image src="/assets/footer-img.svg" alt="Sun" width={100} height={100} className={styles.sun}></Image>
-          <Image src="/assets/apply-img.svg" alt="Light" width={100} height={100} className={styles.light}></Image>
+          <div className={`relative w-[100px] h-[100px] rounded-[50%] overflow-hidden border-[2px] border-white  ${styles.light}`}>
+          <Image 
+            src="/assets/girls.jpg" 
+            alt="Light" 
+            fill 
+            objectFit="cover" 
+            objectPosition="center" 
+            className="rounded-[50%]" 
+          />
+        </div>
         </div>
         <div className={styles.wrapper}>
           <div className={styles.links}>
@@ -20,7 +29,7 @@ export default function FooterDiv() {
           <div className={styles.socials}>
             <div className={styles.message}>
               <Link href="/message">
-                <Image src="/assets/mail.svg" alt="Message icon" height={50} width={50} className={styles.message_icon}></Image>
+                <Image src="/assets/email-icon.svg" alt="Message icon" height={50} width={50} className={styles.message_icon}></Image>
               </Link>
               <div>
                 <p>SEND US A</p>

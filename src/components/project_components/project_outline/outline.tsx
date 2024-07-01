@@ -22,10 +22,10 @@ export default function Outline() {
                         <Link href="/Gberefu" className={styles.btn}>Learn more</Link>
                     </div>
                     <div className={styles.div2}>
-                        <Image src="/assets/gberefu1.jpg" alt="Test" fill objectFit='cover' objectPosition='center'></Image>
+                        <Image src="/assets/gberefu1.jpg" alt="Test" fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                     </div>
                     <div className={styles.div3}>
-                        <Image src="/assets/blackout.jpg" alt="Test" fill objectFit='cover' objectPosition='center'></Image>
+                        <Image src="/assets/blackout.jpg" alt="Test" fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                     </div>
                 </div>
 
@@ -39,10 +39,10 @@ export default function Outline() {
                         <Link href="/Teach" className={styles.btn}>Learn more</Link>
                     </div>
                     <div className={styles.div2}>
-                        <Image src="/assets/learn.jpg" alt="Test" fill objectFit='cover' objectPosition='center'></Image>
+                        <Image src="/assets/learn.jpg" alt="Test" fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                     </div>
                     <div className={styles.div3}>
-                        <Image src="/assets/teach.jpg" alt="Test" fill objectFit='cover' objectPosition='center'></Image>
+                        <Image src="/assets/teach.jpg" alt="Test" fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                     </div>
                 </div>
             </div>

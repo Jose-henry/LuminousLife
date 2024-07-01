@@ -1,0 +1,36 @@
+.main_container p {
+    color: #622D25;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: justify;
+}
+
+.main_container {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.main_container h2 {
+    font-size: 35px;
+    color: #622D25;
+}
+
+.text {
+    font-size: 25px;
+    opacity: 40%;
+    position: absolute;
+    top: -50px;
+    left: 50px;
+}
+
+.main_container > div {
+    background-color: #FBF6EF;
+    padding: 50px;
+    box-shadow: 20px 20px 0px 0px #773529;
+}
+
+.image {
+    float: left;
+    margin-right: 16px; /* Adjust margin as needed */
+}
