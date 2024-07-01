@@ -46,8 +46,7 @@ const AB: React.FC = () => {
                         src={backgrounds[currentBackground]}
                         alt="Background Image"
                         fill
-                        objectFit="cover"
-                        objectPosition="center"
+                        style={{objectFit: 'cover', objectPosition: 'center'}}
                         quality={100}
                         className={`${styles.change} ${styles.fade}`}
                     />

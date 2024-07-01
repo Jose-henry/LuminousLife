@@ -18,7 +18,7 @@ export default function Project() {
             <div style={{
             position: 'relative',
             }}>
-                <Image src="/assets/blackout.jpg" alt="Test" fill quality={100} objectFit='cover' objectPosition='center'></Image>
+                <Image src="/assets/blackout.jpg" alt="Test" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
             </div>
             <div className={styles.first_project}>
                 <div>
@@ -32,13 +32,13 @@ export default function Project() {
             </div>
         </div>
         <div className={`${styles.card} ${styles.card3}`}>
-            <Image src="/assets/pretty.jpg" alt="Test" fill quality={100} objectFit='cover' objectPosition='center'></Image>
+            <Image src="/assets/pretty.jpg" alt="Test" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
         </div>
         <div className={`${styles.card} ${styles.card4}`}>
         <div style={{
             position: 'relative',
             }}>
-                <Image src="/assets/teach.jpg" alt="Test" fill quality={100} objectFit='cover' objectPosition='center'></Image>
+                <Image src="/assets/teach.jpg" alt="Test" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
             </div>
             <div className={styles.second_project}>
                 <div>
