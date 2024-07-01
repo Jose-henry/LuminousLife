@@ -1,3 +1,4 @@
+'use client'    
 import styles from "./intro.module.css";
 
 export default function Intro() {
