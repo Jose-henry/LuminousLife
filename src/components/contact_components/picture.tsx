@@ -11,7 +11,7 @@ const Picture: React.FC = () => {
             borderBottom: '2px solid white',
             marginTop: '58px',
         }}>
-            <Image src="/assets/office2.jpg" alt="Office" quality={85} fill style={{objectFit: 'cover'}}></Image>
+            <Image src="/assets/office2.jpg" alt="Office" quality={85} fill style={{objectFit: 'cover', objectPosition: 'center' }}></Image>
         </div>
         </div>
     );
