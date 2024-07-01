@@ -355,6 +355,33 @@ const Picture: React.FC = () => {
                             </div>
                         </div>
 
+                        <div className={styles.pic1}>
+                            <div className={styles.details}>
+                            <div style={{
+                                width: '400px',
+                                height: '400px',
+                                marginBottom: '20px',
+                                backgroundImage: 'url("/assets/Wale.jpg")',
+                                backgroundPosition: 'center',
+                                backgroundSize: 'cover',
+                                borderTopLeftRadius: '3px',
+                                borderTopRightRadius: '3px',
+                                backgroundRepeat: 'no-repeat',
+                            }}></div>
+                                <div className={styles.info}>
+                                    <div className={styles.name}>
+                                        <h3>Wale</h3>
+                                        <p>Wale</p>
+                                    </div>
+                                    <div className={styles.socials}>
+                                        <Link href="">
+                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
