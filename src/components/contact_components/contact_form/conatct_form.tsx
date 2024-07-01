@@ -107,19 +107,19 @@ const Form: React.FC = () => {
           <div className={styles.others}>
             <h3>Contact details</h3>
             <div>
-              <Image src="/assets/mail-plus.svg" alt="Mail" width={18} height={18}></Image>
+              <Image src="/assets/mail-plus.svg" alt="Mail" width={16} height={16}></Image>
               <p>luminouslifefoundation@gmail.com</p>
             </div>
             <div>
-              <Image src="/assets/phone.svg" alt="Phone" width={18} height={18}></Image>
+              <Image src="/assets/phone.svg" alt="Phone" width={16} height={16}></Image>
               <p>+2348186248404</p>
             </div>
             <div>
-              <Image src="/assets/linked.svg" alt="Linkedin" width={18} height={18}></Image>
+              <Image src="/assets/linked.svg" alt="Linkedin" width={16} height={16}></Image>
               <Link href="/https://www.linkedin.com/company/luminous-life-foundation/" className={styles.l}>@luminous-life-foundation</Link>
             </div>
             <div>
-              <Image src="/assets/insta.svg" alt="Instagram" width={18} height={18}></Image>
+              <Image src="/assets/insta.svg" alt="Instagram" width={16} height={16}></Image>
               <Link href="https://www.instagram.com/luminous_life_foundation?igsh=MzBpaWVrODV4Nmxs" className={styles.l}>@luminous_life_foundation</Link>
             </div>
           </div>

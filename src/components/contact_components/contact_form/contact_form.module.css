@@ -89,27 +89,30 @@
     margin-top: 5px;
 }
 
+.others p {
+    font-size: 13px;
+    color: #402a23;
+    line-height: normal;
+}
+
 .others div {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 7px;
+    margin-bottom: 3px;
 }
 
 .others {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    padding-left: 15px;
 }
 
 .others h3 {
     color: #402a23;
     font-size: 20px;
     margin-bottom: 10px;
-}
-
-.others p {
-    font-size: 14px;
-    color: #402a23;
 }
 
 .l {
