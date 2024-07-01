@@ -370,7 +370,7 @@ const Picture: React.FC = () => {
                             }}></div>
                                 <div className={styles.info}>
                                     <div className={styles.name}>
-                                        <h3>Wale</h3>
+                                        <h3>Trustee</h3>
                                         <p>Wale</p>
                                     </div>
                                     <div className={styles.socials}>
