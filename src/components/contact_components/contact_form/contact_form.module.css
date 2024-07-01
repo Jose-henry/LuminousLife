@@ -60,6 +60,10 @@
     width: 100%;
     background-color: #FBF6EF;
     border-radius: 3px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    overflow: hidden;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .form button {
@@ -83,6 +87,35 @@
     font-size: 13px;
     color: #402a23;
     margin-top: 5px;
+}
+
+.others div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.others {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.others h3 {
+    color: #402a23;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.others p {
+    font-size: 14px;
+    color: #402a23;
+}
+
+.l {
+    font-size: 14px;
+    color: #402a23;
+    font-family: var(--font-finlandacia);
 }
 
 @media screen and (max-width: 1165px) {

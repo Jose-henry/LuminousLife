@@ -3,6 +3,9 @@ import { sendEmail } from '@/lib/actions/email.action';
 import styles from './contact_form.module.css';
 import Image from 'next/image';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import Link from 'next/link';
 
 const Form: React.FC = () => {
   const [name, setName] = useState('');
@@ -34,8 +37,9 @@ const Form: React.FC = () => {
         } catch (error) {
             setStatus('Failed to send email.');
         }
-    }
-   
+  }
+
+  
 
   return (
     <div className={styles.main_container}>
@@ -73,6 +77,9 @@ const Form: React.FC = () => {
               id="message"
               value={message}
               onChange={handleMessageChange}
+              style={{
+                resize: 'none', // Disable resizing
+              }}
               placeholder="Type your message here"
               required
             />
@@ -84,7 +91,38 @@ const Form: React.FC = () => {
         </form>
 
         <div className={styles.cont_img}>
+          <div className={styles.map}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.9212084048627!2d3.3154927750403216!3d6.531635293461082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8e5d92645925%3A0x1c45036c13286d66!2s13%20Oba%20Goloba%20St%2C%20Isolo%2C%20Lagos%20102214%2C%20Lagos!5e0!3m2!1sen!2sng!4v1719822070292!5m2!1sen!2sng"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Maps Embed"
+            ></iframe>
+          </div>
 
+          <div className={styles.others}>
+            <h3>Contact details</h3>
+            <div>
+              <Image src="/assets/mail-plus.svg" alt="Mail" width={18} height={18}></Image>
+              <p>luminouslifefoundation@gmail.com</p>
+            </div>
+            <div>
+              <Image src="/assets/phone.svg" alt="Phone" width={18} height={18}></Image>
+              <p>+2348186248404</p>
+            </div>
+            <div>
+              <Image src="/assets/linked.svg" alt="Linkedin" width={18} height={18}></Image>
+              <Link href="/https://www.linkedin.com/company/luminous-life-foundation/" className={styles.l}>@luminous-life-foundation</Link>
+            </div>
+            <div>
+              <Image src="/assets/insta.svg" alt="Instagram" width={18} height={18}></Image>
+              <Link href="https://www.instagram.com/luminous_life_foundation?igsh=MzBpaWVrODV4Nmxs" className={styles.l}>@luminous_life_foundation</Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
