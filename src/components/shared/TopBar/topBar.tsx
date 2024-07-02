@@ -15,6 +15,7 @@ const Topbar: React.FC = () => {
                     width={170}
                     height={170}
                     alt="Logo icon"
+                    quality={100}
                 />
                 
             </div>
