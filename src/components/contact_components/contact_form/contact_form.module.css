@@ -43,6 +43,7 @@
     font-family: var(--font-finlandacia);
     font-size: 13px;
     outline: none;
+    color: #622D25;
 }
 
 .form textarea {
@@ -53,6 +54,7 @@
     font-size: 13px;
     font-family: var(--font-finlandacia);
     outline: none;
+    color: #622D25;
 }
 
 .cont_img {

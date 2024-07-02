@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect';
 
 export default function Future() {
   return (
-      <div className="w-full mt-[80px] relative">
+      <div className="w-full mt-[80px] relative bg-[#FBF6EF]">
         <p className={styles.text}>
                 <Typewriter
         options={{

@@ -8,29 +8,38 @@
 .main_container {
     width: 95%;
     margin: auto;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
+    padding-top: 40px;
 }
 
 .main_container h2 {
     font-size: 35px;
     color: #622D25;
+    margin-bottom: 20px;
+    line-height: normal;
 }
 
 .text {
     font-size: 25px;
-    opacity: 40%;
     position: absolute;
-    top: -50px;
+    top: -63px;
     left: 50px;
+    color: #622D25;
+    font-weight: 700;
+    opacity: 50%;
 }
 
 .main_container > div {
-    background-color: #FBF6EF;
+    background-color: white;
     padding: 50px;
-    box-shadow: 15px 15px 0px 0px #402a23;
+    box-shadow: 5px 5px 0px 0px #402a23;
+    border-radius: 3px;
+
 }
 
 .image {
     float: left;
     margin-right: 16px; /* Adjust margin as needed */
+    border-radius: 3px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }

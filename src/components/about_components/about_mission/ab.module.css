@@ -48,8 +48,15 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+.view_projects:hover {
+    opacity: 95%;
+    border: 2px solid white;
+}
+
 .view_projects:active {
     box-shadow: done;
+    background-color: #622D25;
+    border-width: 0px;
 }
 
 .about {

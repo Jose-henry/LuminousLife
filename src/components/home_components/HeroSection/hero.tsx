@@ -1,90 +1,65 @@
 "use client";
-import styles from "./hero.module.css"; // Import CSS module
-import { useState, useEffect } from 'react';
-import StyledButton from "@/components/Button/button";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import Typewriter from 'typewriter-effect';
+import styles from "./hero.module.css";
+
+const images = ["/assets/bg (1).jpg", "/assets/bg (2).jpg", "/assets/bg (3).jpg"];
 
 const Hero: React.FC = () => {
-    const [slideIndex, setSlideIndex] = useState(0);
-    const [transitioning, setTransitioning] = useState(false);
-    const [typewriterKey, setTypewriterKey] = useState(0); // State for the typewriter key
-
-    // Image paths
-    const images = [
-        "/assets/lantern-bg.jpg"
-        /**"/assets/intro (6).jpg"**/
-    ];
+    const [currentImage, setCurrentImage] = useState(images[0]);
+    const [nextImage, setNextImage] = useState("");
+    const [fadeIn, setFadeIn] = useState(false);
 
     useEffect(() => {
-        // Reset typewriter on initial load
-        setTypewriterKey((prevKey) => prevKey + 1);
-
         const interval = setInterval(() => {
-            setTransitioning(true);
-            setTimeout(() => {
-                setSlideIndex((prevIndex) => (prevIndex + 1) % images.length);
-                setTransitioning(false);
-            }, 1000); // Adjust transition duration as needed
-        }, 6000); // Adjust interval timing as needed
+            setFadeIn(true);
+            setNextImage(currentImage);
 
-        return () => clearInterval(interval); // Cleanup interval on component unmount
-    }, [images.length]);
-
-    const slideLeft = () => {
-        if (!transitioning) {
-            setTransitioning(true);
             setTimeout(() => {
-                setSlideIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-                setTransitioning(false);
-            }, 1000); // Adjust transition duration as needed
-        }
-    };
+                setCurrentImage((prevImage) => {
+                    const currentIndex = images.indexOf(prevImage);
+                    return images[(currentIndex + 1) % images.length];
+                });
+                setFadeIn(false);
+            }, 1000); // Duration of the fade transition
+        }, 5000); // Change every 5 seconds
 
-    const slideRight = () => {
-        if (!transitioning) {
-            setTransitioning(true);
-            setTimeout(() => {
-                setSlideIndex((prevIndex) => (prevIndex + 1) % images.length);
-                setTransitioning(false);
-            }, 1000); // Adjust transition duration as needed
-        }
-    };
+        return () => clearInterval(interval);
+    }, [currentImage]);
 
     return (
         <div className={styles.heroContainer}>
-            <div className="relative w-full h-full">
-                {/* Background Slider */}
-                <div className={`absolute inset-0 z-0 flex transition-transform duration-1000 ease-in-out`}
-                    style={{
-                        transform: `translateX(-${slideIndex * 100}%)`
-                    }}>
-                    {images.map((image, index) => (
-                        <div key={index} className="w-full h-full flex-shrink-0 bg-cover bg-center"
-                            style={{
-                                backgroundImage: `url("${image}")`
-                            }}>
-                        </div>
-                    ))}
+            <div className="absolute w-full h-full top-0 left-0"></div>
+            <div className={styles.main}>
+                <h1>Empowering Communities with Solar Energy.</h1>
+                <Link href="/about" className={styles.link}>LEARN MORE ABOUT US</Link>
+                <p>Harnessing the power of the sun to light up lives. At Luminous Life Foundation, we are dedicated to driving sustainable solar solutions, bringing reliable electricity to communities, and fostering a brighter, self-sufficient future.</p>
+                <div className="bg-[wheat] border-t-[4px] border-t-[white] w-[80%] h-[40px] flex items-center pl-[60px] relative">
+                    <div className="w-[50px] h-[3px] bg-[#622D25] absolute left-0"></div>
+                    <p className="text-[#402a23] font-bold"> <span className="font-bold">MOTTO: </span>Lighting up the dark places!</p>
                 </div>
-                {/* Static Content */}
-                <div className={`relative z-10 flex flex-col justify-center items-center w-full h-full`}>
-                    <div className="absolute w-full h-full bg-[#6F2B1E73]"></div>
-                    <div className={styles.div2}>
-                        <h1 className={styles.h1}>
-                            Empowering Communities with Solar Energy!!!
-                        </h1>
-                        <div className={styles.div3}>
-                            <p className={styles.p}>Bringing Sustainable Solutions to Light!</p>
-                            <Link href="/donate" className={styles.link_tag}>
-                                <StyledButton btnText="Donate Now" />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div className={`${styles.bgImg} ${fadeIn ? styles.fadeIn : ""}`}>
+                <Image
+                    src={currentImage}
+                    alt="Background"
+                    fill
+                    quality={100}
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
+            </div>
+            <div className={`${styles.bgImg} ${!fadeIn ? styles.fadeOut : ""}`}>
+                <Image
+                    src={nextImage}
+                    alt="Background"
+                    fill
+                    quality={100}
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                />
             </div>
         </div>
     );
-}
+};
 
 export default Hero;

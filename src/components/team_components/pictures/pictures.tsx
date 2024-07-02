@@ -183,10 +183,10 @@ const Picture: React.FC = () => {
                                         <p>Ola</p>
                                     </div>
                                     <div className={styles.socials}>
-                                        <Link href="">
+                                        <Link href="https://www.linkedin.com/in/ola-oluwa-salami-55a9911a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
                                             <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
                                         </Link>
-                                        <Link href="">
+                                        <Link href="https://www.instagram.com/olaxart?igsh=MTh6dDY5ZXNvdWYyZw==">
                                             <Image src="/assets/_instagram.svg" alt="Instagram Icon" width={20} height={20}></Image>
                                         </Link>
                                     </div>

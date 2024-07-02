@@ -3,7 +3,6 @@ import { sendEmail } from '@/lib/actions/email.action';
 import styles from './contact_form.module.css';
 import Image from 'next/image';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import Link from 'next/link';
 

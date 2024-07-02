@@ -14,9 +14,11 @@ export const metadata: Metadata = {
 
 export default function Team() {
   return (
-      <div className="w-full mb-[100px] mt-[50px]">
+      <div className="w-full pb-7 mt-[20px] relative">
+        <div className="w-full h-[400px] bg-[#FBF6EF] absolute -z-10"></div>
         <Picture/>
         <Join/>
+        <div className="w-full h-[400px] bg-[#FBF6EF] absolute -z-10 bottom-0"></div>
       </div>
   );
 }

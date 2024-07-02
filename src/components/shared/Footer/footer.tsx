@@ -47,7 +47,7 @@ export default function FooterDiv() {
             </div>
             <div className={styles.linkedin}>
               <Link href="https://www.linkedin.com/company/luminous-life-foundation/">
-                <Image src="/assets/Linkedin.svg" alt="Message icon" height={50} width={50} className={styles.linkedin_icon}></Image>
+                <Image src="/assets/linkedin.svg" alt="Message icon" height={50} width={50} className={styles.linkedin_icon}></Image>
               </Link>
               <div>
                 <p>FIND US ON</p>

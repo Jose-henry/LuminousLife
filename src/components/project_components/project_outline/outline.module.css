@@ -51,10 +51,16 @@
 .div2 {
     margin-left: 10%;
     border-right: 2px solid white;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    overflow: hidden;
 }
 
 .div3 {
     border-left: 2px solid white;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    overflow: hidden;
 }
 
 .project h3 {

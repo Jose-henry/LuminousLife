@@ -1,119 +1,73 @@
-.h1 {
-    color: #FBF6EF;
-    font-size: 90px;
-    font-weight: 700;
-    line-height: 130px;
-    text-shadow: 8px 8px 12px black;
-    z-index: 10;
-}
-
 .heroContainer {
-    overflow-x: hidden;
-    margin-top: 56.5px;
-    border: 1px solid black;
+    width: 100%;
+    margin-top: 57px;
+    padding: 185px 50px;
+    position: relative;
+    background-color: #fbf2d5;
 }
 
-.p {
-    color: #FBF6EF;
-    font-size: 18px;
-    font-weight: 400;
-    text-shadow: 8px 8px 12px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    margin-bottom: 25px;
+.main {
+    width: 60%;
+    position: relative;
     z-index: 10;
-}
-
-.div2 {
-    width: 90%;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 165px 0;
-    gap: 10%;
-}
-
-.div3 {
-    align-self: flex-end;
-    width: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
+    align-items: start;
 }
 
-@media screen and (max-width: 1085px) {
-    /* CSS rules for screens with a maximum width of 1000px */
-    .h1 {
-        font-size: 80px;
-        line-height: 120px;
-    }
-
-    .p {
-        font-size: 17px;
-    }
+.bgImg {
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 50%;
+    box-shadow: -5px 5px 0px 0px #F8CA39;
+    overflow: hidden;
+    transition: 1s ease-in-out;
 }
 
-@media screen and (max-width: 1000px) {
-    /* CSS rules for screens with a maximum width of 1000px */
-    .h1 {
-        font-size: 70px;
-        line-height: 110px;
-    }
-
-    .p {
-        font-size: 17px;
-    }
+.fadeIn {
+    opacity: 1;
 }
 
-@media screen and (max-width: 720px) {
-    /* CSS rules for screens with a maximum width of 1000px */
-    .h1 {
-        font-size: 60px;
-        line-height: 100px;
-        text-align: center;
-    }
-
-    .div2 {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .div3 {
-        margin: 0 auto;
-        display: flex;
-        gap: 10px;
-    }
-
-    .p {
-        font-size: 16px;
-    }
+.fadeOut {
+    opacity: 0;
 }
 
-@media screen and (max-width: 400px) {
-    /* CSS rules for screens with a maximum width of 1000px */
-    .h1 {
-        font-size: 40px;
-        line-height: 90px;
-    }
-
-    .div2 {
-        width: 100%;
-    }
-
-    .p {
-        font-size: 15px;
-    }
+.main h1 {
+    font-size: 75px;
+    color: #622D25;
+    font-weight: 700;
+    line-height: normal;
+    text-shadow: 2px 2px 3px white;
 }
 
-@media screen and (max-width: 375px) {
-    /* CSS rules for screens with a maximum width of 1000px */
-    .p {
-        font-size: 14px;
-    }
+.main p {
+    font-size: 17px;
+    width: 80%;
 
-    .h1 {
-        font-size: 38px;
-        line-height: 85px;
-    }
 }
 
+.link {
+    background-color: white;
+    font-family: var(--font-finlandacia);
+    padding: 6px 50px;
+    color: #622D25;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 3px 3px 0px 0px #402a23;
+    transition: background-color 0.3s;
+    font-weight: 700;
+}
+
+.link:hover {
+    background-color: wheat;
+}
+
+.link:active {
+    background-color: white;
+}

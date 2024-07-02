@@ -2,14 +2,15 @@
     text-align: center;
     font-size: 35px;
     color: #622D25;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     margin-top: 80px;
+    text-shadow: 2px 2px 3px white;
 }
 
 .team {
     display: flex;
     flex-wrap: wrap;
-    gap: 2%;
+    gap: 4.5%;
     align-items: flex-start;
     justify-content: center;
     row-gap: 20px;
