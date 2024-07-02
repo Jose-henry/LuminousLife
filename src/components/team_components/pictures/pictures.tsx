@@ -405,7 +405,7 @@ const Picture: React.FC = () => {
                             }}></div>
                                 <div className={styles.info}>
                                     <div className={styles.name}>
-                                        <h3>Electrical and Electronics Engineer</h3>
+                                        <h3>Robotics Engineer</h3>
                                         <p>David</p>
                                     </div>
                                     <div className={styles.socials}>
@@ -438,7 +438,7 @@ const Picture: React.FC = () => {
                             }}></div>
                                 <div className={styles.info}>
                                     <div className={styles.name}>
-                                        <h3>IT Specialist</h3>
+                                        <h3>Data Analyst</h3>
                                         <p>Kibe Ume</p>
                                     </div>
                                     <div className={styles.socials}>

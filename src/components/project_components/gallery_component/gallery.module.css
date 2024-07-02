@@ -5,6 +5,8 @@
     display: flex;
     gap: 10px;
     position: relative; /* Necessary for the animation */
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 /* The individual picture containers */

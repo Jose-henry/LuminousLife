@@ -13,19 +13,23 @@ export default function About() {
 
         <div className={styles.styleDiv}>
             <div className={styles.imageDiv}>
-                <Image src="/assets/yellow.jpg" alt="Yellow" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src="/assets/yellow.jpg" alt="Yellow" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} />
             </div>
             <div className={styles.imageDiv}>
-                <Image src="/assets/yellow2.jpg" alt="Yellow" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src="/assets/yellow2.jpg" alt="Yellow" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} />
             </div>
             <div className={styles.get}>
-                <div>
+                <div className={styles._div}>
                     <h2>Get to Know Us</h2>
                     <p>Discover how we started and the journey that drives our mission to light up lives with solar energy.</p>
                     <Link href="/about" className={styles.link}>About us</Link>
                 </div>
                 <div className={styles.div2}>
-                    <Image src="/assets/wheat.jpg" alt="Wheat field" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Link href="/story" className={styles.story_div}>
+                        <p className={styles.story}>Know Our Story</p>
+                        <Image src="/assets/discover.svg" alt="Arrow" width={30} height={20}></Image>
+                    </Link>
+                    <Image src="/assets/wheat.jpg" alt="Wheat field" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} />
                 </div>
             </div>
         </div>

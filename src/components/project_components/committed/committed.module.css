@@ -10,6 +10,7 @@
     margin: auto;
     padding-bottom: 80px;
     padding-top: 40px;
+    border-top: 3px solid white;
 }
 
 .main_container h2 {
@@ -20,9 +21,9 @@
 }
 
 .text {
-    font-size: 25px;
+    font-size: 20px;
     position: absolute;
-    top: -63px;
+    top: -40px;
     left: 50px;
     color: #622D25;
     font-weight: 700;

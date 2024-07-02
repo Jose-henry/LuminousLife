@@ -25,7 +25,7 @@
     transform: translateY(-50%);
     border-top-right-radius: 150px;
     border-bottom-left-radius: 50%;
-    box-shadow: -5px 5px 0px 0px #F8CA39;
+    box-shadow: -6px 6px 0px 0px #F8CA39;
     overflow: hidden;
     transition: 1s ease-in-out;
 }
@@ -53,7 +53,7 @@
 }
 
 .link {
-    background-color: white;
+    background-color: #FBF6EF;
     font-family: var(--font-finlandacia);
     padding: 6px 50px;
     color: #622D25;

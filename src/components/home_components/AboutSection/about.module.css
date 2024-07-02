@@ -4,7 +4,28 @@
     height: 100px;
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: 3px 3px 0px 0px #F8CA39;
+    z-index: 5;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.story_div {
+    position: absolute;
+    z-index: 10;
+    padding: 10px; /* Adjust as necessary */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.story {  /* New CSS class */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 2px 2px 3px #402a23;
 }
 
 .main_container {
@@ -13,7 +34,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-top: 3px solid white;
+    margin-top: 30px;
 }
 
 .main_container h2 {
@@ -21,7 +42,7 @@
     font-size: 35px;
 }
 
-.main_container p {
+.div1 p, ._div p {
     color: #402a23;
     font-size: 17px;
     line-height: 28px;
@@ -48,7 +69,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-bottom: 10px;
 }
 
 .link {
