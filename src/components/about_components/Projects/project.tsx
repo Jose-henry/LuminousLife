@@ -7,11 +7,13 @@ import styles from './project.module.css';
 import Image from 'next/image';
 
 
+
 interface props{
     communityProjectId: number,
     educationProjectId: number
 }
 export default function Project({ communityProjectId, educationProjectId }: props) {
+  
   // Hardcoded IDs for the projects
    // ID for "Empowering Young Minds on Solar Energy"
 

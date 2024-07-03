@@ -8,12 +8,15 @@ import Testimonial from "@/components/about_components/testimonial_section/testi
 import getContent from "@/lib/actions/cms.action";
 import { Metadata } from "next";
 
+
+
 // Define the metadata for the About page
 export const metadata: Metadata = {
   title: "About",
 };
 
 export default async function About() {
+  
 
   return (
     <div className="w-full pt-[10px] mb-[100px]">
