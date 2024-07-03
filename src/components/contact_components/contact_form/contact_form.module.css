@@ -99,9 +99,9 @@
 
 .others div {
     display: flex;
-    align-items: center;
+    align-items: end;
     gap: 7px;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .others {

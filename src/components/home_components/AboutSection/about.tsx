@@ -22,7 +22,7 @@ export default function About() {
                 <div className={styles._div}>
                     <h2>Get to Know Us</h2>
                     <p>Discover how we started and the journey that drives our mission to light up lives with solar energy.</p>
-                    <Link href="/about" className={styles.link}>About us</Link>
+                    <Link href="/about" className={styles.link}>About Us</Link>
                 </div>
                 <div className={styles.div2}>
                     <Link href="/story" className={styles.story_div}>

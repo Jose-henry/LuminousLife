@@ -1,492 +1,420 @@
 "use client";
-import React, { useState } from 'react';
+// Import necessary modules and components
+import React, { useEffect, useRef } from 'react';
 import styles from './pictures.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Picture: React.FC = () => {
+// Define interface for team members
+interface TeamMember {
+    name: string;
+    role: string;
+    image: string;
+    bgPosition?: string;
+    socials: { name: string; url: string; icon: string; }[];
+}
 
+// Define component Picture as a functional component
+const Picture: React.FC = () => {
+    // Initialize useRef to store references to details elements
+    const detailsRef = useRef<HTMLDivElement[]>([]);
+
+    // useEffect hook to handle intersection observer
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(styles.fadeIn);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        // Observe each details element in the detailsRef
+        detailsRef.current.forEach((div) => {
+            observer.observe(div);
+        });
+
+        // Clean up by unobserving each details element
+        return () => {
+            detailsRef.current.forEach((div) => {
+                observer.unobserve(div);
+            });
+        };
+    }, []); // Dependency array ensures useEffect runs only once
+
+    // Define arrays for managerial and operational teams
+    const managerialTeam: TeamMember[] = [
+        {
+            name: 'Favour Oguibe',
+            role: 'Founder',
+            image: '/assets/Favour.jpg',
+            bgPosition: 'center bottom -140px',
+            socials: [
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/favour-oguibe-0a4081195/', icon: '/assets/_linkedin.svg' },
+                { name: 'Instagram', url: 'https://www.instagram.com/_oguibe?igsh=MWc4aTQ3cG5kdXpnNg==', icon: '/assets/_instagram.svg' },
+            ],
+        },
+        {
+            name: 'David OJ',
+            role: 'Co-Founder',
+            image: '/assets/OJ.jpg',
+            bgPosition: 'center bottom -140px',
+            socials: [
+                { name: 'LinkedIn', url: '', icon: '/assets/_linkedin.svg' },
+            ],
+        },
+        {
+            name: 'Nelson Elijah',
+            role: 'Administrative Head',
+            image: '/assets/Nelson.jpg',
+            bgPosition: 'center bottom -170px',
+            socials: [
+                { name: 'LinkedIn', url: 'http://www.linkedin.com/in/nelson-elijah', icon: '/assets/_linkedin.svg' },
+            ],
+        },
+        // Add other members as needed
+    ];
+
+    const operationalTeam: TeamMember[] = [
+        {
+            name: 'Stephanie Nwangwu',
+            role: 'General Secretary',
+            image: '/assets/Stephanie.jpg',
+            socials: [
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/stephanie-adaeze-nwangwu-703ba5195', icon: '/assets/_linkedin.svg' },
+                { name: 'Instagram', url: 'https://www.instagram.com/s.wangwu?igsh=cGlhb29mbGQ3YTE2&utm_source=qr', icon: '/assets/_instagram.svg' },
+            ],
+        },
+        {
+            name: 'Joba',
+            role: 'Financial Secretary',
+            image: '/assets/Joba.jpg',
+            socials: [
+                { name: 'LinkedIn', url: 'http://linkedin.com/in/elisalome-oyefusi', icon: '/assets/_linkedin.svg' },
+            ],
+        },
+        {
+            name: 'Ola',
+            role: 'Social Media Manager',
+            image: '/assets/Ola.jpg',
+            bgPosition: 'center bottom -120px',
+            socials: [
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ola-oluwa-salami-55a9911a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', icon: '/assets/_linkedin.svg' },
+                { name: 'Instagram', url: 'https://www.instagram.com/olaxart?igsh=MTh6dDY5ZXNvdWYyZw==', icon: '/assets/_instagram.svg' },
+            ],
+        },
+        // Add other members as needed
+    ];
+
+    const technicalTeam: TeamMember[] = [
+        {
+            name: 'Joseph Henry',
+            role: 'Software Engineer',
+            image: '/assets/Joseph.jpg',
+            socials: [
+                { name: 'LinkedIn', url: "https://www.linkedin.com/in/joseph-c-henry/" , icon: '/assets/_linkedin.svg' },
+            ],
+        },
+        {
+            name: 'Fortune Oguibe',
+            role: 'IT Specialist',
+            image: '/assets/Fortune.jpg',
+            bgPosition: 'center bottom -170px',
+            socials: [
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/fortune-oguibe-024a5a198/', icon: '/assets/_linkedin.svg' },
+            ],
+        },
+        {
+            name: 'Priestly',
+            role: 'Product Designer',
+            image: '/assets/Priestly.jpg',
+            socials: [
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/priestly-chukwu-77632118a/', icon: '/assets/_linkedin.svg' },
+                { name: 'Instagram', url: 'https://www.instagram.com/c.h.i.nonso?igsh=MTBsZ3FzYTJ0MHZnaw==', icon: '/assets/_instagram.svg' },
+            ],
+        },
+
+        {
+            name: 'Onyinye Anene',
+            role: 'Product Designer',
+            image: '/assets/Onyinye.jpg',
+            socials: [
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/onyinye-anene-547628221', icon: '/assets/_linkedin.svg' },
+                { name: 'Instagram', url: 'https://www.instagram.com/__michelle_o?igsh=MWU1bno2cWV4ZnhreA==', icon: '/assets/_instagram.svg' },
+                { name: 'Twitter', url: 'https://twitter.com/onyinye__a', icon: '/assets/_twitter.svg' },
+            ],
+        },
+        // Add other members as needed
+    ];
+
+    const trusteeTeam: TeamMember[] = [
+        {
+            name: 'Gabriel Obiefule',
+            role: 'Senior Training Specialist',
+            image: '/assets/Gabriel.jpg',
+            socials: [
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/chidiebere-obiefule-2967061b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', icon: '/assets/_linkedin.svg' },
+            ],
+        },
+        {
+            name: 'Wale',
+            role: 'Trustee',
+            image: '/assets/Wale.jpg',
+            socials: [
+                { name: 'LinkedIn', url: '', icon: '/assets/_linkedin.svg' },
+            ],
+        },
+        // Add other members as needed
+    ];
+
+    const foundingMembers: TeamMember[] = [
+        {
+            name: 'David Olanisikan',
+            role: 'Robotics Engineer',
+            image: '/assets/Djones.jpg',
+            bgPosition: 'center bottom -145px',
+            socials: [
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/olonisakin-david/', icon: '/assets/_linkedin.svg' },
+                { name: 'Instagram', url: 'https://www.instagram.com/djonesplays/', icon: '/assets/_instagram.svg' },
+                { name: 'Twitter', url: 'https://x.com/DjonesEarns', icon: '/assets/_twitter.svg' },
+            ],
+        },
+        {
+            name: 'Kibe Ume',
+            role: 'Data Analyst',
+            image: '/assets/Kibe.jpg',
+            bgPosition: 'center bottom -140px',
+            socials: [
+                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/kibe-ume-0bb26a199', icon: '/assets/_linkedin.svg' },
+            ],
+        },
+        {
+            name: 'Babalola Johnson',
+            role: 'Founding Member',
+            image: '/assets/Johnson.jpg',
+            bgPosition: 'center bottom 20px',
+            socials: [
+                { name: 'LinkedIn', url: '', icon: '/assets/_linkedin.svg' },
+            ],
+        },
+        // Add other members as needed
+    ];
+
+    // Return JSX representing the component
     return (
         <div className={styles.container}>
-
             <div className={styles.team_div}>
+                {/* Render managerial team */}
                 <div>
                     <h2>Our Team (Managerial)</h2>
                     <div className={styles.team}>
-
-                        <div className={styles.pic1}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Favour.jpg")',
-                                backgroundPosition: 'center bottom -140px',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Founder</h3>
-                                        <p>Favour Oguibe</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/favour-oguibe-0a4081195/">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                        <Link href="https://www.instagram.com/_oguibe?igsh=MWc4aTQ3cG5kdXpnNg==">
-                                            <Image src="/assets/_instagram.svg" alt="Instagram Icon" width={20} height={20}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={styles.pic1}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/OJ.jpg")',
-                                backgroundPosition: 'center bottom -140px',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Co-Founder</h3>
-                                        <p>David OJ</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
+                        {managerialTeam.map((member, index) => (
+                            <div className={styles.pic} key={index}>
+                                <div className={styles.details} ref={(el) => {
+                                    if (el) detailsRef.current[index] = el;
+                                }}>
+                                    <div
+                                        style={{
+                                            width: '400px',
+                                            height: '400px',
+                                            marginBottom: '20px',
+                                            backgroundImage: `url(${member.image})`,
+                                            backgroundPosition: member.bgPosition || 'center',
+                                            backgroundSize: 'cover',
+                                            borderTopLeftRadius: '3px',
+                                            borderTopRightRadius: '3px',
+                                            backgroundRepeat: 'no-repeat',
+                                        }}
+                                    ></div>
+                                    <div className={styles.info}>
+                                        <div className={styles.name}>
+                                            <h3>{member.role}</h3>
+                                            <p>{member.name}</p>
+                                        </div>
+                                        <div className={styles.socials}>
+                                            {member.socials.map((social, socialIndex) => (
+                                                <Link href={social.url} key={socialIndex}>
+                                                    <Image src={social.icon} alt={`${social.name} Icon`} width={23} height={23} />
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className={styles.pic1}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Nelson.jpg")',
-                                backgroundPosition: 'center bottom -170px',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Administrative Head</h3>
-                                        <p>Nelson Elijah</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="http://www.linkedin.com/in/nelson-elijah">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
+                        ))}
                     </div>
                 </div>
-
-
+                {/* Render operational team */}
                 <div>
                     <h2>Our Team (Operational)</h2>
                     <div className={styles.team}>
-
-                        <div className={styles.pic4}>
-                                <div className={styles.details}>
-                                <div style={{
-                                    width: '400px',
-                                    height: '400px',
-                                    marginBottom: '20px',
-                                    backgroundImage: 'url("/assets/Stephanie.jpg")',
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
-                                    borderTopLeftRadius: '3px',
-                                    borderTopRightRadius: '3px',
-                                    backgroundRepeat: 'no-repeat',
-                                }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>General Secretary</h3>
-                                        <p>Stephanie Nwangwu</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/stephanie-adaeze-nwangwu-703ba5195">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                        <Link href="https://www.instagram.com/s.wangwu?igsh=cGlhb29mbGQ3YTE2&utm_source=qr">
-                                            <Image src="/assets/_instagram.svg" alt="Instagram Icon" width={20} height={20}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-
-                        <div className={styles.pic5}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Joba.jpg")',
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Financial Secretary</h3>
-                                        <p>Joba</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="http://linkedin.com/in/elisalome-oyefusi">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
+                        {operationalTeam.map((member, index) => (
+                            <div className={styles.pic} key={index}>
+                                <div className={styles.details} ref={(el) => {
+                                    if (el) detailsRef.current[index + managerialTeam.length] = el;
+                                }}>
+                                    <div
+                                        style={{
+                                            width: '400px',
+                                            height: '400px',
+                                            marginBottom: '20px',
+                                            backgroundImage: `url(${member.image})`,
+                                            backgroundPosition: member.bgPosition || 'center',
+                                            backgroundSize: 'cover',
+                                            borderTopLeftRadius: '3px',
+                                            borderTopRightRadius: '3px',
+                                            backgroundRepeat: 'no-repeat',
+                                        }}
+                                    ></div>
+                                    <div className={styles.info}>
+                                        <div className={styles.name}>
+                                            <h3>{member.role}</h3>
+                                            <p>{member.name}</p>
+                                        </div>
+                                        <div className={styles.socials}>
+                                            {member.socials.map((social, socialIndex) => (
+                                                <Link href={social.url} key={socialIndex}>
+                                                    <Image src={social.icon} alt={`${social.name} Icon`} width={23} height={23} />
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className={styles.pic11}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Ola.jpg")',
-                                backgroundPosition: 'center bottom -120px',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Social Media Manager</h3>
-                                        <p>Ola</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/ola-oluwa-salami-55a9911a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                        <Link href="https://www.instagram.com/olaxart?igsh=MTh6dDY5ZXNvdWYyZw==">
-                                            <Image src="/assets/_instagram.svg" alt="Instagram Icon" width={20} height={20}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+                        ))}
                     </div>
                 </div>
 
-
+                {/* Render technical team */}
                 <div>
                     <h2>Our Team (Technical)</h2>
                     <div className={styles.team}>
-
-
-                        <div className={styles.pic6}>
-                                    <div className={styles.details}>
-                                    <div style={{
-                                        width: '400px',
-                                        height: '400px',
-                                        marginBottom: '20px',
-                                        backgroundImage: 'url("/assets/Joseph.jpg")',
-                                        backgroundPosition: 'center',
-                                        backgroundSize: 'cover',
-                                        borderTopLeftRadius: '3px',
-                                        borderTopRightRadius: '3px',
-                                        backgroundRepeat: 'no-repeat',
-                                    }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Software Engineer</h3>
-                                        <p>Joseph Henry</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/joseph-c-henry/">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                                    </div>
-                        </div>
-
-                        <div className={styles.pic7}>
-                                <div className={styles.details}>
-                                <div style={{
-                                    width: '400px',
-                                    height: '400px',
-                                    marginBottom: '20px',
-                                    backgroundImage: 'url("/assets/Fortune.jpg")',
-                                    backgroundPosition: 'center bottom -170px',
-                                    backgroundSize: 'cover',
-                                    borderTopLeftRadius: '3px',
-                                    borderTopRightRadius: '3px',
-                                    backgroundRepeat: 'no-repeat',
-                                }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>IT Specialist</h3>
-                                        <p>Fortune Oguibe</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/fortune-oguibe-024a5a198/">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
+                        {technicalTeam.map((member, index) => (
+                            <div className={styles.pic} key={index}>
+                                <div className={styles.details} ref={(el) => {
+                                    if (el) detailsRef.current[index + managerialTeam.length + operationalTeam.length] = el;
+                                }}>
+                                    <div
+                                        style={{
+                                            width: '400px',
+                                            height: '400px',
+                                            marginBottom: '20px',
+                                            backgroundImage: `url(${member.image})`,
+                                            backgroundPosition: member.bgPosition || 'center',
+                                            backgroundSize: 'cover',
+                                            borderTopLeftRadius: '3px',
+                                            borderTopRightRadius: '3px',
+                                            backgroundRepeat: 'no-repeat',
+                                        }}
+                                    ></div>
+                                    <div className={styles.info}>
+                                        <div className={styles.name}>
+                                            <h3>{member.role}</h3>
+                                            <p>{member.name}</p>
+                                        </div>
+                                        <div className={styles.socials}>
+                                            {member.socials.map((social, socialIndex) => (
+                                                <Link href={social.url} key={socialIndex}>
+                                                    <Image src={social.icon} alt={`${social.name} Icon`} width={23} height={23} />
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                                </div>
-                        </div>
-
-
-                        <div className={styles.pic8}>
-                                <div className={styles.details}>
-                                <div style={{
-                                    width: '400px',
-                                    height: '400px',
-                                    marginBottom: '20px',
-                                    backgroundImage: 'url("/assets/Priestly.jpg")',
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
-                                    borderTopLeftRadius: '3px',
-                                    borderTopRightRadius: '3px',
-                                    backgroundRepeat: 'no-repeat',
-                                }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Product Designer</h3>
-                                        <p>Priestly</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/priestly-chukwu-77632118a/">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                        <Link href="https://www.instagram.com/c.h.i.nonso?igsh=MTBsZ3FzYTJ0MHZnaw==">
-                                            <Image src="/assets/_instagram.svg" alt="Instagram Icon" width={20} height={20}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-
-                        <div className={styles.pic9}>
-                                <div className={styles.details}>
-                                <div style={{
-                                    width: '400px',
-                                    height: '400px',
-                                    marginBottom: '20px',
-                                    backgroundImage: 'url("/assets/Onyinye.jpg")',
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
-                                    borderTopLeftRadius: '3px',
-                                    borderTopRightRadius: '3px',
-                                    backgroundRepeat: 'no-repeat',
-                                }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Product Designer</h3>
-                                        <p>Onyinye Anene</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/onyinye-anene-547628221">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                        <Link href="https://www.instagram.com/__michelle_o?igsh=MWU1bno2cWV4ZnhreA==">
-                                            <Image src="/assets/_instagram.svg" alt="Instagram Icon" width={20} height={20}></Image>
-                                        </Link>
-                                        <Link href="https://twitter.com/onyinye__a">
-                                            <Image src="/assets/_twitter.svg" alt="Twitter Icon" width={20} height={20}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                                </div>
-                        </div>
-
+                            </div>
+                        ))}
                     </div>
                 </div>
 
+                {/* Render Trustee team */}
                 <div>
                     <h2>Our Team (Trustees)</h2>
                     <div className={styles.team}>
-
-                        <div className={styles.pic1}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Gabriel.jpg")',
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Senior Training Specialist</h3>
-                                        <p>Gabriel Obiefule</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/chidiebere-obiefule-2967061b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={styles.pic1}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Wale.jpg")',
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Trustee</h3>
-                                        <p>Wale</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
+                        {trusteeTeam.map((member, index) => (
+                            <div className={styles.pic} key={index}>
+                                <div className={styles.details} ref={(el) => {
+                                    if (el) detailsRef.current[index + managerialTeam.length + operationalTeam.length + technicalTeam.length] = el;
+                                }}>
+                                    <div
+                                        style={{
+                                            width: '400px',
+                                            height: '400px',
+                                            marginBottom: '20px',
+                                            backgroundImage: `url(${member.image})`,
+                                            backgroundPosition: member.bgPosition || 'center',
+                                            backgroundSize: 'cover',
+                                            borderTopLeftRadius: '3px',
+                                            borderTopRightRadius: '3px',
+                                            backgroundRepeat: 'no-repeat',
+                                        }}
+                                    ></div>
+                                    <div className={styles.info}>
+                                        <div className={styles.name}>
+                                            <h3>{member.role}</h3>
+                                            <p>{member.name}</p>
+                                        </div>
+                                        <div className={styles.socials}>
+                                            {member.socials.map((social, socialIndex) => (
+                                                <Link href={social.url} key={socialIndex}>
+                                                    <Image src={social.icon} alt={`${social.name} Icon`} width={23} height={23} />
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-
+                        ))}
                     </div>
                 </div>
 
+                {/* Render Founding Members */}
                 <div>
                     <h2>Our Team (Founding Members)</h2>
                     <div className={styles.team}>
-
-                        <div className={styles.pic10}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Djones.jpg")',
-                                backgroundPosition: 'center bottom -145px',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Robotics Engineer</h3>
-                                        <p>David</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/olonisakin-david/">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                        <Link href="https://www.instagram.com/djonesplays/">
-                                            <Image src="/assets/_instagram.svg" alt="Instagram Icon" width={20} height={20}></Image>
-                                        </Link>
-                                        <Link href="https://x.com/DjonesEarns">
-                                            <Image src="/assets/_twitter.svg" alt="Twitter Icon" width={20} height={20}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={styles.pic11}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Kibe.jpg")',
-                                backgroundPosition: 'center bottom -140px',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Data Analyst</h3>
-                                        <p>Kibe Ume</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="https://www.linkedin.com/in/kibe-ume-0bb26a199">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
+                        {foundingMembers.map((member, index) => (
+                            <div className={styles.pic} key={index}>
+                                <div className={styles.details} ref={(el) => {
+                                    if (el) detailsRef.current[index + managerialTeam.length + operationalTeam.length + technicalTeam.length + trusteeTeam.length] = el;
+                                }}>
+                                    <div
+                                        style={{
+                                            width: '400px',
+                                            height: '400px',
+                                            marginBottom: '20px',
+                                            backgroundImage: `url(${member.image})`,
+                                            backgroundPosition: member.bgPosition || 'center',
+                                            backgroundSize: 'cover',
+                                            borderTopLeftRadius: '3px',
+                                            borderTopRightRadius: '3px',
+                                            backgroundRepeat: 'no-repeat',
+                                        }}
+                                    ></div>
+                                    <div className={styles.info}>
+                                        <div className={styles.name}>
+                                            <h3>{member.role}</h3>
+                                            <p>{member.name}</p>
+                                        </div>
+                                        <div className={styles.socials}>
+                                            {member.socials.map((social, socialIndex) => (
+                                                <Link href={social.url} key={socialIndex}>
+                                                    <Image src={social.icon} alt={`${social.name} Icon`} width={23} height={23} />
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div className={styles.pic11}>
-                            <div className={styles.details}>
-                            <div style={{
-                                width: '400px',
-                                height: '400px',
-                                marginBottom: '20px',
-                                backgroundImage: 'url("/assets/Johnson.jpg")',
-                                backgroundPosition: 'center bottom 10px',
-                                backgroundSize: 'cover',
-                                borderTopLeftRadius: '3px',
-                                borderTopRightRadius: '3px',
-                                backgroundRepeat: 'no-repeat',
-                            }}></div>
-                                <div className={styles.info}>
-                                    <div className={styles.name}>
-                                        <h3>Founding Member</h3>
-                                        <p>Babalola Johnson</p>
-                                    </div>
-                                    <div className={styles.socials}>
-                                        <Link href="">
-                                            <Image src="/assets/_linkedin.svg" alt="Linkedin Icon" width={23} height={23}></Image>
-                                        </Link>
-                                        <Link href="">
-                                            <Image src="/assets/_instagram.svg" alt="Instagram Icon" width={20} height={20}></Image>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
+                        ))}
                     </div>
                 </div>
-
             </div>
         </div>
     );
 }
 
+// Export the component as default
 export default Picture;

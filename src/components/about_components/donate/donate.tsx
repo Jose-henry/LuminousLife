@@ -40,7 +40,7 @@ export default function Donate() {
   }
 
   return (
-    <div className="w-full mt-[100px]">
+    <div className="w-full mt-[80px] pb-[80px]">
       <h2 className={styles.donate_text}>Donation</h2>
       <div className={styles.main_container}>
         <div className={styles.picture}>

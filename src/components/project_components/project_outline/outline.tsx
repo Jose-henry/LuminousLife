@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Outline() {
   return (
-      <div className="w-full pt-[80px] bg-[#f6eedf] pb-[80px]">
+      <div className="w-full pt-[60px] bg-[#f6eedf] pb-[80px]">
         <div className={styles.main_container}>
             <div className={styles.text}>
                 <h2>Project Outline</h2>
@@ -40,7 +40,7 @@ export default function Outline() {
                         <Link href="/Teach" className={styles.btn}>Learn more</Link>
                     </div>
                     <div className={styles.div2}>
-                        <Image src="/assets/learn.jpg" alt="Test" quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                        <Image src="/assets/education.jpg" alt="Test" quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                     </div>
                     <div className={styles.div3}>
                         <Image src="/assets/teach.jpg" alt="Test"  quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>

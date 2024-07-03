@@ -1,6 +1,6 @@
 .container h3 {
     color: #622D25;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .container {
@@ -10,18 +10,18 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 50px;
 }
 
 .volunteer {
     font-family: var(--font-finlandacia);
-    color: #622D25;
-    font-size: 15px;
-    background-color: #FBF6EF;
-    padding: 5px 10px;
+    color: white;
+    font-size: 14px;
+    padding: 4px 10px;
     border-radius: 3px;
     font-weight: 700;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid #622D25;
+    background-color: #402a23;
 }
 
 .volunteer:active {

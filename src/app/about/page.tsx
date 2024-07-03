@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-      <div className="w-full pt-[10px] mb-[100px]">
+      <div className="w-full pt-[10px] mb-[40px]">
         <AB/>
         <Story/>
         <Project/>

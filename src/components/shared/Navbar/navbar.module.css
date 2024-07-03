@@ -16,13 +16,32 @@
 
 .link {
     font-family: var(--font-finlandacia);
-    font-size: 12.5px;
+    font-size: 14px;
     font-weight: 600;
-    color: #FBF6EF;
+    color: #622D25;
 }
 
 .link:hover {
     text-decoration: underline;
+}
+
+.donate {
+    background-color: #402a23;
+    font-family: var(--font-finlandacia);
+    padding: 6px 40px;
+    color: white;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.donate:hover {
+    box-shadow: 1px 1px 2px 0px #ffe76a;
+}
+
+.donate:active {
+    box-shadow: none;
 }
 
 .close {

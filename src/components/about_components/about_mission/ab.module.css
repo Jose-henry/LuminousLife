@@ -1,7 +1,7 @@
 .wrapper {
-    background-color: #FBF6EF;
     width: 100%;
     position: relative;
+    background: linear-gradient(180deg, #FBF6EF, white, white, white, #FBF6EF);
 }
 
 .change {
@@ -31,7 +31,7 @@
 }
 
 .container {
-    margin-top: 45px;
+    margin-top: 77px;
 }
 
 .view_projects {
@@ -46,6 +46,7 @@
     font-size: 14px;
     border-radius: 30px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    font-weight: 700;
 }
 
 .view_projects:hover {
@@ -168,8 +169,9 @@
 
 .div p {
     color: #622D25;
-    line-height: 30px;
+    line-height: 28px;
     text-align: center;
+    font-size: 16px;
 }
 
 .area_div h2 {

@@ -1,0 +1,33 @@
+.main_container h2 {
+    color: #402a23;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main_container p {
+    color: #402a23;
+    font-size: 16px;
+}
+
+.main_container h3 {
+    font-size: 50px;
+}
+
+.impactDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.impactDiv > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.main_container {
+    padding: 50px;
+    background: linear-gradient(180deg, #fdffcd, white, #fdffcd);
+}
