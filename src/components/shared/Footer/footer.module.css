@@ -1,6 +1,6 @@
 .footer_container {
     background-color: white;
-    padding: 30px 0;
+    padding: 35px 0;
     width: 100%;
 }
 
@@ -46,10 +46,15 @@
 .newsletter {
     display: flex;
     flex-direction: column;
-    gap: 30px;
 }
 
 .newsletter p {
+    font-size: 14px;
+    color: #402a23;
+    margin-bottom: 10px;
+}
+
+.nav p {
     color: #402a23;
     font-size: 13px;
     opacity: 50%;
@@ -58,4 +63,36 @@
 .socials {
     display: flex;
     align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.theLinks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.link {
+    font-family: var(--font-finlandacia);
+    font-size: 14px;
+    font-weight: 600;
+    color: #622D25;
+}
+
+.link:hover {
+    text-decoration: underline;
 }

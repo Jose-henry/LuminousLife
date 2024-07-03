@@ -51,7 +51,7 @@ export default function Impact() {
     };
 
     const observerOptions = {
-      threshold: 0.5, // Adjust as needed
+      threshold: 1.0, // Adjust as needed
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
