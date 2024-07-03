@@ -19,8 +19,9 @@ const Picture: React.FC = () => {
     // Initialize useRef to store references to details elements
     const detailsRef = useRef<HTMLDivElement[]>([]);
 
-    // useEffect hook to handle intersection observer
     useEffect(() => {
+        const currentRefs = detailsRef.current; // Store the current value in a local variable
+    
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -32,19 +33,18 @@ const Picture: React.FC = () => {
             },
             { threshold: 0.2 }
         );
-
-        // Observe each details element in the detailsRef
-        detailsRef.current.forEach((div) => {
+    
+        currentRefs.forEach((div) => {
             observer.observe(div);
         });
-
+    
         // Clean up by unobserving each details element
         return () => {
-            detailsRef.current.forEach((div) => {
+            currentRefs.forEach((div) => {
                 observer.unobserve(div);
             });
         };
-    }, []); // Dependency array ensures useEffect runs only once
+    }, []); // Dependency array ensures useEffect runs only once    
 
     // Define arrays for managerial and operational teams
     const managerialTeam: TeamMember[] = [

@@ -7,7 +7,7 @@ export default function Contribute() {
         <div className={styles.wrapper}>
             <div className={styles.intro}>
                 <h2>Together, we can light up the dark places</h2>
-                <p>Here's how you can help us!</p>
+                <p>This is how how you can help us!</p>
             </div>
             <div className={styles.picDiv}>
                 <div className={styles.textDiv}>

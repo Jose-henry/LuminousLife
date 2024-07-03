@@ -3,12 +3,6 @@ import { useEffect, useState, useRef } from 'react';
 import styles from './impact.module.css';
 
 export default function Impact() {
-  const targetValues = {
-    lamps: 100,
-    communities: 2,
-    lives: 300,
-  };
-
   const [lamps, setLamps] = useState<number>(0);
   const [communities, setCommunities] = useState<number>(0);
   const [lives, setLives] = useState<number>(0);
@@ -17,7 +11,12 @@ export default function Impact() {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Define a function to update the value
+    const targetValues = {
+      lamps: 100,
+      communities: 2,
+      lives: 300,
+    };
+
     const animateValue = (
       start: number,
       end: number,
@@ -37,21 +36,19 @@ export default function Impact() {
       requestAnimationFrame(step);
     };
 
-    // Observer callback
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !hasAnimated) {
-          // Animate each value
           animateValue(0, targetValues.lamps, 1000, setLamps);
           animateValue(0, targetValues.communities, 1000, setCommunities);
           animateValue(0, targetValues.lives, 1000, setLives);
-          setHasAnimated(true); // Prevent animation from running again
+          setHasAnimated(true);
         }
       });
     };
 
     const observerOptions = {
-      threshold: 1.0, // Adjust as needed
+      threshold: 1.0,
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
