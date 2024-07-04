@@ -1,9 +1,11 @@
+'use server';
 // src/utils/subscribe.ts
-import fetch, { Response } from 'node-fetch';
+import fetch from 'node-fetch';
 import nodemailer from 'nodemailer';
 
 export async function subscribeToMailchimp(email: string): Promise<void> {
-  const { MAILCHIMP_API_KEY, MAILCHIMP_AUDIENCE_ID} = process.env;
+  const { MAILCHIMP_API_KEY, MAILCHIMP_AUDIENCE_ID } = process.env;
+
   if (!MAILCHIMP_API_KEY || !MAILCHIMP_AUDIENCE_ID) {
     throw new Error('Mailchimp API Key or Audience ID is not defined in the environment variables');
   }
@@ -13,7 +15,7 @@ export async function subscribeToMailchimp(email: string): Promise<void> {
     status: 'subscribed',
   };
 
-  const response: Response = await fetch(`https://us13.api.mailchimp.com/3.0/lists/${MAILCHIMP_AUDIENCE_ID}/members`, {
+  const response = await fetch(`https://us13.api.mailchimp.com/3.0/lists/${MAILCHIMP_AUDIENCE_ID}/members`, {
     method: 'POST',
     headers: {
       'Authorization': `apikey ${MAILCHIMP_API_KEY}`,
@@ -39,7 +41,8 @@ export async function subscribeToMailchimp(email: string): Promise<void> {
 }
 
 async function sendWelcomeEmail(email: string) {
-  const { EMAIL_USER, EMAIL_PASS} = process.env;
+  const { EMAIL_USER, EMAIL_PASS } = process.env;
+
   if (!EMAIL_USER || !EMAIL_PASS) {
     throw new Error('Email credentials are not defined in environment variables');
   }

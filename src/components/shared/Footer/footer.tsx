@@ -3,9 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./footer.module.css";
 import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { subscribeToMailchimp } from '@/utils/subscribe';
 
 export default function FooterDiv() {
-
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
 
@@ -18,33 +18,27 @@ export default function FooterDiv() {
     setStatus('');
 
     try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
+      await subscribeToMailchimp(email);
+      setStatus('Successfully subscribed!');
+      setEmail('');
 
-      const result = await response.json();
 
-      if (response.ok) {
-        setStatus('Successfully subscribed!');
-        setEmail('');
-      } else {
-        handleErrorResponse(response.status, result.message);
-      }
-    } catch (error) {
-      setStatus('Failed to subscribe. Please try again later.');
+       // Clear the status message after 5 seconds (5000 milliseconds)
+      setTimeout(() => {
+      setStatus('');
+    }, 5000);
+    
+    } catch (error: any) {
+      handleErrorResponse(error.message);
     }
   };
 
-  const handleErrorResponse = (status: number, message: string) => {
-    if (status === 409) {
+  const handleErrorResponse = (message: string) => {
+    if (message === 'Email already subscribed.') {
       setStatus('This email is already subscribed.');
-    } else if (status === 400) {
+    } else if (message === 'Invalid email address.') {
       setStatus('Please provide a valid email address.');
-    } else if (status === 401) {
+    } else if (message === 'Unauthorized: Invalid API key.') {
       setStatus('Unauthorized. Please check the API key.');
     } else {
       setStatus(message || 'Subscription failed.');
@@ -97,9 +91,9 @@ export default function FooterDiv() {
         </div>
         <div className={styles.newsletter}>
           <p>Subscribe to our newsletter to get our latest updates!</p>
-          <form className={styles.input}  onSubmit={handleSubmit}>
+          <form className={styles.input} onSubmit={handleSubmit}>
             <input type="email" placeholder="Enter your email" value={email}
-          onChange={handleEmailChange} required></input>
+          onChange={handleEmailChange} required />
             <button type="submit" className={styles.subscribe}>Subscribe</button>
           </form>
           {status && <h4 className={styles.status}>{status}</h4>}
