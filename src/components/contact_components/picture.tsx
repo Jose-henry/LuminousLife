@@ -3,8 +3,10 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import styles from './picture.module.css'; // Make sure to import your CSS module
+import Office from "@/assets/office2.jpg"
 
-const Picture: React.FC = () => {
+export default function Picture({ blurdata }: { blurdata: any }) {
+    
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
@@ -24,10 +26,9 @@ const Picture: React.FC = () => {
                     opacity: isLoaded ? 1 : 0, // Ensure opacity is 0 until the fade-in effect starts
                 }}
             >
-                <Image src="/assets/office2.jpg" alt="Office" quality={100} fill style={{ objectFit: 'cover', objectPosition: 'center' }} />
+                <Image src={Office} alt="Office" quality={100} fill style={{ objectFit: 'cover', objectPosition: 'center' }} placeholder='blur' blurDataURL={blurdata} />
             </div>
         </div>
     );
 }
 
-export default Picture;

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './contribute.module.css';
 import Link from 'next/link';
+import Kero from '@/assets/kero.jpg'
 export default function Contribute() {
   return (
     <div className={`relative w-full ${styles.main_container}`}>
@@ -26,7 +27,7 @@ export default function Contribute() {
                         <p>100% of your donation brings solar energy to homes in need.</p>
                 </div>
                 <div className={styles.ImgDiv}>
-                    <Image src="/assets/kero.jpg" alt="Lamp" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Image src={Kero} alt="Lamp" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                 </div>
             </div>
         </div>

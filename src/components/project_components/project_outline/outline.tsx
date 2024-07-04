@@ -2,6 +2,10 @@
 import Image from 'next/image';
 import styles from './outline.module.css';
 import Link from 'next/link';
+import Education from "@/assets/education.jpg";
+import Gberefu from "@/assets/gberefu1.jpg"
+import Teach from "@/assets/teach.jpg"
+import Blackout from "@/assets/blackout.jpg"
 
 
 export default function Outline() {
@@ -23,10 +27,10 @@ export default function Outline() {
                         <Link href="/Gberefu" className={styles.btn}>Learn more</Link>
                     </div>
                     <div className={styles.div2}>
-                        <Image src="/assets/gberefu1.jpg" alt="Test" quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                        <Image src={Gberefu} alt="Test" quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}   placeholder='blur'></Image>
                     </div>
                     <div className={styles.div3}>
-                        <Image src="/assets/blackout.jpg" alt="Test" quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                        <Image src={Blackout} alt="Test" quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}} placeholder='blur'></Image>
                     </div>
                 </div>
 
@@ -40,10 +44,10 @@ export default function Outline() {
                         <Link href="/Teach" className={styles.btn}>Learn more</Link>
                     </div>
                     <div className={styles.div2}>
-                        <Image src="/assets/education.jpg" alt="Test" quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                        <Image src={Education} alt="Test" quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}} placeholder='blur'></Image>
                     </div>
                     <div className={styles.div3}>
-                        <Image src="/assets/teach.jpg" alt="Test"  quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                        <Image src={Teach} alt="Test"  quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}} placeholder='blur'></Image>
                     </div>
                 </div>
             </div>

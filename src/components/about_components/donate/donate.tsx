@@ -2,6 +2,7 @@
 import Image from "next/image";
 import styles from "./donate.module.css";
 import React, { FormEvent, useState } from 'react';
+import Child from '@/assets/child.jpg'
 
 export default function Donate() {
   const [message, setMessage] = useState("");
@@ -44,7 +45,7 @@ export default function Donate() {
       <h2 className={styles.donate_text}>Donation</h2>
       <div className={styles.main_container}>
         <div className={styles.picture}>
-          <Image src="/assets/child.jpg" alt="Test" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+          <Image src={Child} alt="Test" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder="blur"></Image>
         </div>
         <div className={styles.div2}>
           <p className={styles.p}>Empower Change Today!</p>

@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react';
 import styles from './ab.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import Rural1 from '@/assets/rural_1.jpg';
+import Rural2 from '@/assets/rural_2.jpg';    
+import Rural3 from '@/assets/rural_3.jpg';
+import Rural4 from '@/assets/rural_4.jpg';
 
 const AB: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,10 +20,10 @@ const AB: React.FC = () => {
     ];
 
     const backgrounds = [
-        '/assets/rural_1.jpg',
-        '/assets/rural_2.jpg',
-        '/assets/rural_3.jpg',
-        '/assets/rural_4.jpg'
+        Rural1,
+        Rural2,
+        Rural3,
+        Rural4
     ];
 
     useEffect(() => {
@@ -49,6 +53,7 @@ const AB: React.FC = () => {
                         style={{objectFit: 'cover', objectPosition: 'center'}}
                         quality={100}
                         className={`${styles.change} ${styles.fade}`}
+                        placeholder='blur'
                     />
                 </div>
                 <div className={styles.about}>

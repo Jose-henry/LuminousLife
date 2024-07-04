@@ -2,6 +2,9 @@ import PageText2 from "@/components/PageText/pageText2";
 import styles from './improve.module.css'
 import Link from "next/link";
 import Image from "next/image";
+import Love1 from '@/assets/love1.jpg'
+import Love2 from '@/assets/love2.jpg'
+import Love3 from '@/assets/love3.jpg'
 
 export default function Improve() {
   return (
@@ -14,13 +17,13 @@ export default function Improve() {
             </div>
             <div className={styles.loveDiv}>
                 <div className={styles.love}>
-                    <Image src="/assets/love1.jpg" alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Image src={Love1} alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                 </div>
                 <div className={`${styles.love} ${styles.love2}`}>
-                    <Image src="/assets/love2.jpg" alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Image src={Love2} alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                 </div>
                 <div className={styles.love}>
-                    <Image src="/assets/love3.jpg" alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Image src={Love3} alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                 </div>
             </div>
         </div>

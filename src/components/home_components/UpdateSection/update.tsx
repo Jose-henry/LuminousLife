@@ -3,6 +3,9 @@ import Image from 'next/image';
 import styles from './update.module.css';
 import Link from 'next/link';
 import Typewriter from 'typewriter-effect';
+import Post1 from '@/assets/post1.jpg';
+import Post2 from '@/assets/post2.jpg';
+import Post3 from '@/assets/post3.jpg';
 
 export default function Update() {
   return (
@@ -22,7 +25,7 @@ export default function Update() {
 
           <div>
               <div className={styles.div}>
-                <Image src="/assets/post1.jpg" alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src={Post1} alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
               </div>
               <h3>INSTAGRAM POST</h3>
               <p>This post highlights some key info regarding electricity.</p>
@@ -31,7 +34,7 @@ export default function Update() {
 
           <div>
             <div className={`${styles.div} ${styles.pop}`}>
-                <Image src="/assets/post2.jpg" alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src={Post2} alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
               </div>
               <h3>LINKEDIN POST</h3>
               <p>Did you know? There are currently 28 power generating plants connected to the national grid, of which 25 are gas-fired plants...</p>
@@ -40,7 +43,7 @@ export default function Update() {
 
           <div>
             <div className={styles.div}>
-                <Image src="/assets/post3.jpg" alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src={Post3} alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
               </div>
               <h3>YOUTUBE VIDEO</h3>
               <p>Our first youtube video!</p>

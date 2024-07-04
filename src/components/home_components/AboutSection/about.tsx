@@ -1,6 +1,9 @@
 import Image from 'next/image';
 import styles from './about.module.css';
 import Link from 'next/link';
+import Yellow1 from '@/assets/yellow.jpg'
+import Yellow2 from '@/assets/yellow2.jpg'
+import Wheat from '@/assets/wheat.jpg'
 
 export default function About() {
   return (
@@ -13,10 +16,10 @@ export default function About() {
 
         <div className={styles.styleDiv}>
             <div className={styles.imageDiv}>
-                <Image src="/assets/yellow.jpg" alt="Yellow" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} />
+                <Image src={Yellow1} alt="Yellow" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}  placeholder='blur'/>
             </div>
             <div className={styles.imageDiv}>
-                <Image src="/assets/yellow2.jpg" alt="Yellow" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} />
+                <Image src={Yellow2}alt="Yellow" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder='blur' />
             </div>
             <div className={styles.get}>
                 <div className={styles._div}>
@@ -29,7 +32,7 @@ export default function About() {
                         <p className={styles.story}>Know Our Story</p>
                         <Image src="/assets/discover.svg" alt="Arrow" width={30} height={20}></Image>
                     </Link>
-                    <Image src="/assets/wheat.jpg" alt="Wheat field" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} />
+                    <Image src={Wheat} alt="Wheat field" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder='blur' />
                 </div>
             </div>
         </div>
