@@ -1,14 +1,20 @@
-"use client";
+'use client';
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./hero.module.css";
 
-const images = ["/assets/bg (1).jpg", "/assets/bg (2).jpg", "/assets/bg (3).jpg"];
+// Static imports for images
+import bg1 from "@/assets/bg (1).jpg";
+import bg2 from "@/assets/bg (2).jpg";
+import bg3 from "@/assets/bg (3).jpg";
+
+// Array of imported images
+const images = [bg1, bg2, bg3];
 
 const Hero: React.FC = () => {
     const [currentImage, setCurrentImage] = useState(images[0]);
-    const [nextImage, setNextImage] = useState("");
+    const [nextImage, setNextImage] = useState(images[0]);  // Initialize nextImage with the same type
     const [fadeIn, setFadeIn] = useState(false);
     const [initialFadeIn, setInitialFadeIn] = useState(false);
     const [animateHeader, setAnimateHeader] = useState(false);
@@ -55,6 +61,7 @@ const Hero: React.FC = () => {
                     fill
                     quality={100}
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
+                    placeholder="blur"  // Optional: Adds a blur effect while loading
                 />
             </div>
             <div className={`${styles.bgImg} ${!fadeIn ? styles.fadeOut : ""}`}>
@@ -64,6 +71,7 @@ const Hero: React.FC = () => {
                     fill
                     quality={100}
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
+                    placeholder="blur"  // Optional: Adds a blur effect while loading
                 />
             </div>
         </div>
