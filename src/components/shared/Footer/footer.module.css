@@ -15,7 +15,7 @@
     border: 2px solid #402a23;
     color: #402a23;
     font-family: var(--font-finlandacia);
-    font-size: 14px;
+    font-size: 13px;
     width: 250px;
     padding: 5px 10px;
     border-radius: 3px;
@@ -46,6 +46,7 @@
 .newsletter {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .newsletter p {
@@ -95,4 +96,12 @@
 
 .link:hover {
     text-decoration: underline;
+}
+
+.status {
+    position: absolute;
+    bottom: -20px;
+    font-size: 12px;
+    opacity: 60%;
+    font-family: var(--font-finlandacia);
 }
