@@ -2,8 +2,55 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./footer.module.css";
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 
 export default function FooterDiv() {
+
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('');
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setStatus('Successfully subscribed!');
+        setEmail('');
+      } else {
+        handleErrorResponse(response.status, result.message);
+      }
+    } catch (error) {
+      setStatus('Failed to subscribe. Please try again later.');
+    }
+  };
+
+  const handleErrorResponse = (status: number, message: string) => {
+    if (status === 409) {
+      setStatus('This email is already subscribed.');
+    } else if (status === 400) {
+      setStatus('Please provide a valid email address.');
+    } else if (status === 401) {
+      setStatus('Unauthorized. Please check the API key.');
+    } else {
+      setStatus(message || 'Subscription failed.');
+    }
+  };
+
   return (
     <div className={styles.footer_container}>
       <div className={styles.wrapper}>
@@ -50,10 +97,12 @@ export default function FooterDiv() {
         </div>
         <div className={styles.newsletter}>
           <p>Subscribe to our newsletter to get our latest updates!</p>
-          <form className={styles.input}>
-            <input type="email" placeholder="Enter your email"></input>
-            <button className={styles.subscribe}>Subscribe</button>
+          <form className={styles.input}  onSubmit={handleSubmit}>
+            <input type="email" placeholder="Enter your email" value={email}
+          onChange={handleEmailChange} required></input>
+            <button type="submit" className={styles.subscribe}>Subscribe</button>
           </form>
+          {status && <h4 className={styles.status}>{status}</h4>}
         </div>
       </div>
     </div>
