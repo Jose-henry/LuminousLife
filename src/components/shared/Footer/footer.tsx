@@ -2,77 +2,102 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./footer.module.css";
+import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { subscribeToMailchimp } from '@/utils/subscribe';
 
 export default function FooterDiv() {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('');
+
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('');
+
+    try {
+      await subscribeToMailchimp(email);
+      setStatus('Successfully subscribed!');
+      setEmail('');
+
+
+       // Clear the status message after 5 seconds (5000 milliseconds)
+      setTimeout(() => {
+      setStatus('');
+    }, 5000);
+    
+    } catch (error: any) {
+      handleErrorResponse(error.message);
+    }
+  };
+
+  const handleErrorResponse = (message: string) => {
+    if (message === 'Email already subscribed.') {
+      setStatus('This email is already subscribed.');
+    } else if (message === 'Invalid email address.') {
+      setStatus('Please provide a valid email address.');
+    } else if (message === 'Unauthorized: Invalid API key.') {
+      setStatus('Unauthorized. Please check the API key.');
+    } else {
+      setStatus(message || 'Subscription failed.');
+    }
+  };
+
   return (
     <div className={styles.footer_container}>
-      <div className={styles.topDiv}>
-        <div className={styles.extra}>
-          <Image src="/assets/footer-img.svg" alt="Sun" width={100} height={100} className={styles.sun}></Image>
-          <div className={`relative w-[100px] h-[100px] rounded-[50%] overflow-hidden border-[2px] border-white  ${styles.light}`}>
-          <Image 
-            src="/assets/girls.jpg" 
-            alt="Light" 
-            fill 
-            style={{objectFit: 'cover'}}
-            className="rounded-[50%]" 
-          />
-        </div>
-        </div>
-        <div className={styles.wrapper}>
-          <div className={styles.links}>
-            <Link href="/" className={styles.a}>Home</Link>
-            <Link href="/about" className={styles.a}>About</Link>
-            <Link href="/team" className={styles.a}>Team</Link>
-            <Link href="/contact" className={styles.a}>Contact</Link>
-          </div>
-          <div className={styles.socials}>
-            <div className={styles.message}>
-              <Link href="/contact">
-                <Image src="/assets/email-icon.svg" alt="Message icon" height={50} width={50} className={styles.message_icon}></Image>
-              </Link>
-              <div>
-                <p>SEND US A</p>
-                <h3>MESSAGE</h3>
-              </div>
+      <div className={styles.wrapper}>
+        <div className={styles.logo}>
+            <div className="flex items-center gap-[10px] relative">
+                <Image
+                    src="/assets/try.svg"
+                    width={33}
+                    height={33}
+                    quality={100}
+                    alt="Logo icon"
+                    className="rounded-[3px] absolute"
+                />
+                <h3 className="text-[#622D25] font-bold text-[16px] leading-5 pl-[44px]">Luminous Life Foundation</h3>
             </div>
-            <div className={styles.instagram}>
+            <div className={styles.socials}>
               <Link href="https://www.instagram.com/luminous_life_foundation?igsh=MzBpaWVrODV4Nmxs">
-                <Image src="/assets/instagram.svg" alt="Message icon" height={50} width={50} className={styles.instagram_icon}></Image>
+                <Image src="/assets/icon2.svg" alt="Instagram" width={20} height={20}></Image>
               </Link>
-              <div>
-                <p>FOLLOW US ON</p>
-                <h3>INSTAGRAM</h3>
-              </div>
-            </div>
-            <div className={styles.linkedin}>
+              <Link href="https://x.com/luminous_life_f?s=11">
+                <Image src="/assets/icon4.svg" alt="Twitter" width={20} height={20}></Image>
+              </Link>
               <Link href="https://www.linkedin.com/company/luminous-life-foundation/">
-                <Image src="/assets/Linkedin.svg" alt="Message icon" height={50} width={50} className={styles.linkedin_icon}></Image>
+                <Image src="/assets/icon3.svg" alt="Linkedin" width={20} height={20}></Image>
               </Link>
-              <div>
-                <p>FIND US ON</p>
-                <h3>LINKEDIN</h3>
-              </div>
+              <Link href="https://youtube.com/@luminouslife_foundation?si=IMNqUNZDf1ZckxgO">
+                <Image src="/assets/icon5.svg" alt="Youtube" width={20} height={20}></Image>
+              </Link>
+              <a href="mailto:luminouslifefoundation@gmail.com?subject=MESSAGE%20TO%20LUMINOUS%20LIFE&body=Hello%20Luminous%20Life!">
+                <Image src="/assets/icon1.svg" alt="Email" width={20} height={20} />
+              </a>
             </div>
-          </div>
         </div>
-      </div>
-      <div className={styles.bottomDiv}>
-        <div className={styles.slide_info}>
-          <div className={styles.slide_content}>
-            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} className={styles.small} />
-            <p>Empowering Communities, Illuminating Futures</p>
-            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} className={styles.small} />
-            <p>Empowering Communities, Illuminating Futures</p>
-            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} className={styles.small} />
-            <p>Empowering Communities, Illuminating Futures</p>
-            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} className={styles.small} />
-            <p>Empowering Communities, Illuminating Futures</p>
-            <Image src="/assets/star.svg" alt="Star icon" width={20} height={20} className={styles.small} />
-            <p>Empowering Communities, Illuminating Futures</p>
-          </div>
+
+        <div className={styles.nav}>
+          <div className={styles.theLinks}>
+                  <Link href="/" className={styles.link}>HOME</Link>
+                  <Link href="/about" className={styles.link}>ABOUT</Link>
+                  <Link href="/team" className={styles.link}>TEAMS</Link>
+                  <Link href="/projects" className={styles.link}>PROJECTS</Link>
+                  <Link href="/contact" className={styles.link}>CONTACT</Link>
+            </div>
+            <p>&copy;2024 Luminous Life Foundation. All rights reserved.</p>
         </div>
-        <p className={styles.rights}>&copy; Luminous Life Foundation. All Rights Reserved.</p>
+        <div className={styles.newsletter}>
+          <p>Subscribe to our newsletter to get our latest updates!</p>
+          <form className={styles.input} onSubmit={handleSubmit}>
+            <input type="email" placeholder="Enter your email" value={email}
+          onChange={handleEmailChange} required />
+            <button type="submit" className={styles.subscribe}>Subscribe</button>
+          </form>
+          {status && <h4 className={styles.status}>{status}</h4>}
+        </div>
       </div>
     </div>
   );

@@ -9,15 +9,17 @@ const Topbar: React.FC = () => {
         <div className={styles.topbarContainer}>
             <Link href="/">
             <div className={styles.logoContainer}>
-                
-                <Image
-                    src="/assets/removed.svg"
-                    width={170}
-                    height={170}
-                    alt="Logo icon"
-                    quality={100}
-                />
-                
+                <div className="flex items-center gap-[10px] relative">
+                    <Image
+                        src="/assets/try.svg"
+                        width={35}
+                        height={35}
+                        quality={100}
+                        alt="Logo icon"
+                        className="rounded-[3px] absolute"
+                    />
+                    <h3 className="text-[#622D25] font-bold text-[18px] leading-5 pl-[44px]">Luminous Life Foundation</h3>
+                </div>
             </div>
             </Link>
             <NavBar/>

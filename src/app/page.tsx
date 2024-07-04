@@ -1,25 +1,23 @@
 import Hero from "@/components/home_components/HeroSection/hero";
-import About from "@/components/home_components/About/about";
-import Mission from "@/components/home_components/Mission/mission";
-import PageText from "@/components/home_components/Mission/pageText";
-import Impact from "@/components/home_components/Impact/impact";
 import PageText2 from "@/components/PageText/pageText2";
-import Testimonial from "@/components/home_components/Testimonial/testimonial";
-import Apply from "@/components/home_components/Apply/apply";
-import Large from "@/components/home_components/Large/large";
+import About from "@/components/home_components/AboutSection/about";
+import Mission from "@/components/home_components/MissionStatement/mission";
+import Impact from "@/components/home_components/ImpactSection/impact";
+import Contribute from "@/components/home_components/ContributeSection/contribute";
+import Improve from "@/components/home_components/ImproveSection/improve";
+import Update from "@/components/home_components/UpdateSection/update";
 
 export default function Home() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-[#ffe76a]">
       <Hero/>
       <About/>
       <Mission/>
-      <PageText/>
       <Impact/>
+      <Contribute/>
       <PageText2/>
-      <Testimonial/>
-      <Apply/>
-      <Large/>
+      <Improve/>
+      <Update/>
     </div>
   );
 }

@@ -1,90 +1,81 @@
-"use client";
-import styles from "./hero.module.css"; // Import CSS module
-import { useState, useEffect } from 'react';
-import StyledButton from "@/components/Button/button";
+'use client';
+import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import Typewriter from 'typewriter-effect';
+import styles from "./hero.module.css";
+
+// Static imports for images
+import bg1 from "@/assets/bg (1).jpg";
+import bg2 from "@/assets/bg (2).jpg";
+import bg3 from "@/assets/bg (3).jpg";
+
+// Array of imported images
+const images = [bg1, bg2, bg3];
 
 const Hero: React.FC = () => {
-    const [slideIndex, setSlideIndex] = useState(0);
-    const [transitioning, setTransitioning] = useState(false);
-    const [typewriterKey, setTypewriterKey] = useState(0); // State for the typewriter key
-
-    // Image paths
-    const images = [
-        "/assets/lantern-bg.jpg"
-        /**"/assets/intro (6).jpg"**/
-    ];
+    const [currentImage, setCurrentImage] = useState(images[0]);
+    const [nextImage, setNextImage] = useState(images[0]);  // Initialize nextImage with the same type
+    const [fadeIn, setFadeIn] = useState(false);
+    const [initialFadeIn, setInitialFadeIn] = useState(false);
+    const [animateHeader, setAnimateHeader] = useState(false);
 
     useEffect(() => {
-        // Reset typewriter on initial load
-        setTypewriterKey((prevKey) => prevKey + 1);
+        setInitialFadeIn(true); // Trigger initial fade-in
+        setAnimateHeader(true); // Trigger header slide-in
 
         const interval = setInterval(() => {
-            setTransitioning(true);
-            setTimeout(() => {
-                setSlideIndex((prevIndex) => (prevIndex + 1) % images.length);
-                setTransitioning(false);
-            }, 1000); // Adjust transition duration as needed
-        }, 6000); // Adjust interval timing as needed
+            setFadeIn(true);
+            setNextImage(currentImage);
 
-        return () => clearInterval(interval); // Cleanup interval on component unmount
-    }, [images.length]);
-
-    const slideLeft = () => {
-        if (!transitioning) {
-            setTransitioning(true);
             setTimeout(() => {
-                setSlideIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-                setTransitioning(false);
-            }, 1000); // Adjust transition duration as needed
-        }
-    };
+                setCurrentImage((prevImage) => {
+                    const currentIndex = images.indexOf(prevImage);
+                    return images[(currentIndex + 1) % images.length];
+                });
+                setFadeIn(false);
+            }, 1000); // Duration of the fade transition
 
-    const slideRight = () => {
-        if (!transitioning) {
-            setTransitioning(true);
-            setTimeout(() => {
-                setSlideIndex((prevIndex) => (prevIndex + 1) % images.length);
-                setTransitioning(false);
-            }, 1000); // Adjust transition duration as needed
-        }
-    };
+        }, 3000); // Change every 3 seconds
+
+        return () => clearInterval(interval);
+    }, [currentImage]);
 
     return (
-        <div className={styles.heroContainer}>
-            <div className="relative w-full h-full">
-                {/* Background Slider */}
-                <div className={`absolute inset-0 z-0 flex transition-transform duration-1000 ease-in-out`}
-                    style={{
-                        transform: `translateX(-${slideIndex * 100}%)`
-                    }}>
-                    {images.map((image, index) => (
-                        <div key={index} className="w-full h-full flex-shrink-0 bg-cover bg-center"
-                            style={{
-                                backgroundImage: `url("${image}")`
-                            }}>
-                        </div>
-                    ))}
+        <div className={`${styles.heroContainer}`}>
+            <div className="absolute w-full h-full top-0 left-0"></div>
+            <div className={styles.main}>
+                <h1 className={`${animateHeader ? styles.slideIn : ""}`}>
+                    Empowering Communities with Solar Energy.
+                </h1>
+                <Link href="/about" className={styles.link}>LEARN MORE ABOUT US</Link>
+                <p>Harnessing the power of the sun to light up lives. At Luminous Life Foundation, we are dedicated to driving sustainable solar solutions, bringing reliable electricity to communities, and fostering a brighter, self-sufficient future.</p>
+                <div className="bg-[#ffe76a;] border-t-[4px] border-t-[white] w-[80%] h-[40px] flex items-center pl-[60px] relative">
+                    <div className="w-[50px] h-[3px] bg-[#622D25] absolute left-0"></div>
+                    <p className="text-[#402a23] font-bold"> <span className="font-bold">MOTTO: </span>Lighting up the dark places!</p>
                 </div>
-                {/* Static Content */}
-                <div className={`relative z-10 flex flex-col justify-center items-center w-full h-full`}>
-                    <div className="absolute w-full h-full bg-[#6F2B1E73]"></div>
-                    <div className={styles.div2}>
-                        <h1 className={styles.h1}>
-                            Empowering Communities with Solar Energy!!!
-                        </h1>
-                        <div className={styles.div3}>
-                            <p className={styles.p}>Bringing Sustainable Solutions to Light!</p>
-                            <Link href="/donate" className={styles.link_tag}>
-                                <StyledButton btnText="Donate Now" />
-                            </Link>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div className={`${styles.bgImg} ${fadeIn ? styles.fadeIn : ""}`}>
+                <Image
+                    src={currentImage}
+                    alt="Background"
+                    fill
+                    quality={100}
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                    placeholder="blur"  // Optional: Adds a blur effect while loading
+                />
+            </div>
+            <div className={`${styles.bgImg} ${!fadeIn ? styles.fadeOut : ""}`}>
+                <Image
+                    src={nextImage}
+                    alt="Background"
+                    fill
+                    quality={100}
+                    style={{ objectFit: 'cover', objectPosition: 'center' }}
+                    placeholder="blur"  // Optional: Adds a blur effect while loading
+                />
             </div>
         </div>
     );
-}
+};
 
 export default Hero;

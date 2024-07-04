@@ -26,10 +26,15 @@ const NavBar: React.FC = () => {
     return (
         <div className={styles.main_container}>
             <div className={styles.theLinks}>
-                <Link href="/" className={styles.link}>Home</Link>
-                <Link href="/about" className={styles.link}>About</Link>
-                <Link href="/team" className={styles.link}>Teams</Link>
-                <Link href="/contact" className={styles.link}>Contact</Link>
+                <Link href="/" className={styles.link}>HOME</Link>
+                <Link href="/about" className={styles.link}>ABOUT</Link>
+                <Link href="/team" className={styles.link}>TEAMS</Link>
+                <Link href="/projects" className={styles.link}>PROJECTS</Link>
+                <Link href="/contact" className={styles.link}>CONTACT</Link>
+                <Link href="" className={styles.donate}>DONATE</Link>
+                <div className="w-[30px] h-[30px] rounded-full relative overflow-hidden border-[2px] border-[#5c3c10]">
+                    <Image src="/assets/ng.svg" alt='Flag' quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                </div>
             </div>
             {isMobile && (
                 <div>
@@ -64,6 +69,10 @@ const NavBar: React.FC = () => {
                         </Link>
                         <Link href="/team" className={styles.design}>
                             <Link href="/team" className={styles._link}>Teams</Link>
+                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
+                        </Link>
+                        <Link href="/projects" className={styles.design}>
+                            <Link href="/team" className={styles._link}>Projects</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/contact" className={styles.design}>

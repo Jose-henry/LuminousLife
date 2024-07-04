@@ -40,7 +40,7 @@
     margin-bottom: 10px;
 }
 
-.main_container p {
+.p {
     font-size: 17px;
     color: #622D25;
     line-height: 29px;
@@ -84,4 +84,26 @@
 
 .btn:active {
     box-shadow: none;
+}
+
+.message {
+    margin-top: 10px;
+    color: #622D25;
+    font-size: 13.5px;
+}
+
+.message_container {
+    display: flex;
+    gap: 5px;
+}
+
+.clear_btn {
+    background-color: #622D25;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 1px 8px;
+    line-height: normal;
+    color: white;
+    align-self: self-end;
+    font-size: 13px;
+    border-radius: 3px;
 }
