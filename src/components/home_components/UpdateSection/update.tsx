@@ -25,7 +25,7 @@ export default function Update() {
 
           <div>
               <div className={styles.div}>
-                <Image src={Post1} alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src={Post1} alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder='blur'></Image>
               </div>
               <h3>INSTAGRAM POST</h3>
               <p>This post highlights some key info regarding electricity.</p>
@@ -34,7 +34,7 @@ export default function Update() {
 
           <div>
             <div className={`${styles.div} ${styles.pop}`}>
-                <Image src={Post2} alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src={Post2} alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder='blur'></Image>
               </div>
               <h3>LINKEDIN POST</h3>
               <p>Did you know? There are currently 28 power generating plants connected to the national grid, of which 25 are gas-fired plants...</p>
@@ -43,7 +43,7 @@ export default function Update() {
 
           <div>
             <div className={styles.div}>
-                <Image src={Post3} alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src={Post3} alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder='blur'></Image>
               </div>
               <h3>YOUTUBE VIDEO</h3>
               <p>Our first youtube video!</p>

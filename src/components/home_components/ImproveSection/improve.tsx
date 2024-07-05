@@ -17,13 +17,13 @@ export default function Improve() {
             </div>
             <div className={styles.loveDiv}>
                 <div className={styles.love}>
-                    <Image src={Love1} alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Image src={Love1} alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder="blur"></Image>
                 </div>
                 <div className={`${styles.love} ${styles.love2}`}>
-                    <Image src={Love2} alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Image src={Love2} alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder="blur"></Image>
                 </div>
                 <div className={styles.love}>
-                    <Image src={Love3} alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Image src={Love3} alt="Love" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder="blur"></Image>
                 </div>
             </div>
         </div>

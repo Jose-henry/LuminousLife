@@ -16,7 +16,11 @@ const nextConfig = {
             protocol: "https",
             hostname: "www.pixar.com",
           },
+          {
+            protocol: "https",
+            hostname: "images.unsplash.com",
+          },
         ]
-}};
+}}
 
 export default withPlaiceholder(nextConfig);

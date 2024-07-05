@@ -1,9 +1,9 @@
-// src/lib/utils/imageUtils.ts
 import { getPlaiceholder } from "plaiceholder";
 
+// Define the type for your image data
 type ImageData = {
-  src: string;
-  blurredDataUrl?: string;
+  src: string;       // Image URL
+  blurredDataUrl?: string; // Optional blurred data URL
 };
 
 // Fetch and convert image to base64 for placeholder
@@ -21,7 +21,7 @@ async function getBase64(imageUrl: string): Promise<string | null> {
     return base64;
   } catch (err) {
     if (err instanceof Error) {
-      console.error(`Error fetching or processing image at ${imageUrl}:`, err.stack);
+      console.error(err.stack);
     }
     return null;
   }
@@ -37,6 +37,6 @@ export async function addBlurredDataUrls(imageUrls: string[]): Promise<ImageData
   // Combine image URLs with their base64 blurred versions
   return imageUrls.map((url, index) => ({
     src: url,
-    blurredDataUrl: base64Results[index] || '', // Assign empty string if conversion fails
+    blurredDataUrl: base64Results[index] || '',
   }));
 }

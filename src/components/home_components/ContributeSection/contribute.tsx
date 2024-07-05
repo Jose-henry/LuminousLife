@@ -27,7 +27,7 @@ export default function Contribute() {
                         <p>100% of your donation brings solar energy to homes in need.</p>
                 </div>
                 <div className={styles.ImgDiv}>
-                    <Image src={Kero} alt="Lamp" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Image src={Kero} alt="Lamp" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}} placeholder="blur"></Image>
                 </div>
             </div>
         </div>

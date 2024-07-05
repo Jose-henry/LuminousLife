@@ -3,6 +3,7 @@
 
 import 'server-only'
 
-export const customLoader = ({ src }: { src: string }) => {
-  return src;
+// /utils/imageCustom.ts
+export const customLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }) => {
+  return `${src}?w=${width}&q=${quality || 75}`;
 };
