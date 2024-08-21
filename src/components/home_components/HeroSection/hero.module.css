@@ -118,6 +118,10 @@
     .main p {
         font-size: 16px;
     }
+
+    .heroContainer {
+        padding: 150px 50px;
+    }
 }
 
 @media (max-width: 511px) {
@@ -130,7 +134,7 @@
     }
 
     .heroContainer {
-        padding: 150px 50px;
+        padding: 140px 50px;
     }
 }
 
@@ -140,14 +144,14 @@
     }
 
     .heroContainer {
-        padding: 140px 40px;
+        padding: 130px 40px;
     }
 }
 
 @media (max-width: 451px) {
 
     .heroContainer {
-        padding: 150px 40px;
+        padding: 120px 40px;
     }
 
     .main h1 {
@@ -166,7 +170,7 @@
 
 @media (max-width: 411px) {
     .heroContainer {
-        padding: 140px 30px;
+        padding: 120px 30px;
     }
 }
 
@@ -178,13 +182,13 @@
 
 @media (max-width: 369px) {
     .heroContainer {
-        padding: 140px 10px;
+        padding: 120px 10px;
     }
 }
 
 @media (max-width: 351px) {
     .heroContainer {
-        padding: 130px 10px;
+        padding: 120px 10px;
     }
 
     .main h1 {
