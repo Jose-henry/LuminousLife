@@ -71,7 +71,7 @@
 .logo {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 20px;
 }
 
 .nav {
@@ -120,4 +120,90 @@
     cursor: pointer;
     font-size: 12px;
     text-decoration: underline;
+}
+
+@media (max-width: 1115px) {
+    .theLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 954px) {
+    .nav p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 875px) {
+    .wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .theLinks {
+        display: flex;
+    }
+
+    .nav {
+        align-items: start;
+    }
+
+    .logo {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav {
+        align-items: center;
+    }
+
+    .newsletter {
+        align-items: center;
+    }
+
+    .newsletter p {
+        text-align: center;
+    }
+
+    .subscribe {
+        padding: 6px 20px;
+    }
+
+    .input input {
+        width: 230px;
+    }
+}
+
+@media (max-width: 345px) {
+    .input input {
+        width: 200px;
+    }
+
+    .subscribe {
+        padding: 6px 15px;
+    }
+}
+
+@media (max-width: 345px) {
+    .input input {
+        width: 180px;
+    }
+
+    .subscribe {
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 305px) {
+    .theLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
