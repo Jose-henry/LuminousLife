@@ -29,8 +29,7 @@
 
 .main_container {
     padding: 5%;
-    background: linear-gradient(180deg, #fdffcd, white, #fdffcd);
-    border-top: 1px solid #d3d6db;
+    background: linear-gradient(180deg, #fdffcd, white);
 }
 
 .btn {

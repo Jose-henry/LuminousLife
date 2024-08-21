@@ -11,8 +11,7 @@
 }
 
 .main_container {
-
-    background: linear-gradient(180deg, #FBF6EF, white, #FBF6EF);
+    background-color: white;
     border-radius: 3px;
     position: relative;
     width: 95%;
