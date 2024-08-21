@@ -52,24 +52,28 @@
 .small {
     position: absolute;
     background-color: white;
-    display: none; /* Initially hidden */
+    display: none;
     flex-direction: column;
-    right: 0px;
+    right: 20px;
     padding: 10px;
     gap: 12px;
-    top: 55px;
-    width: 100%;
-    height: 210px;
+    top: 70px;
+    width: 300px;
+    min-height: 210px;
+    transition: all 0.3s ease-in-out;
+    z-index: 30;
+    border: 1px solid #622D25;
 }
 
 .show {
-    display: flex; /* Show the menu when the .show class is added */
+    display: flex; 
 }
 
 ._link {
-    font-size: 12px;
+    font-size: 14px;
     font-family: var(--font-finlandacia);
     color: #622D25;
+    font-weight: 700;
 }
 
 ._link:hover {
@@ -80,15 +84,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #622D25;
     padding: 5px;
+    border-bottom: 1px solid #ececec;
 }
 
 .design:hover {
     background-color: #ececec;
-    border-radius: 3px;
     cursor: pointer;
-    border: 2px solid #622D25;
+}
+
+.design:active {
+    background-color: white;
 }
 
 .popUp {
@@ -130,4 +136,55 @@
 .p2 {
     color: white;
     font-size: 13.5px;
+}
+
+@media (max-width: 801px) {
+    .theLinks {
+        display: none;
+    }
+    .menu {
+        display: block; /* Show the menu icon */
+    }
+    .close {
+        display: block; /* Show the close icon when menu is open */
+    }
+}
+
+@media (max-width: 430px) {
+    .popUp {
+        width: 380px;
+    }
+}
+
+@media (max-width: 402px) {
+    .popUp {
+        width: 360px;
+    }
+}
+
+@media (max-width: 370px) {
+    .popUp {
+        width: 340px;
+    }
+}
+
+@media (max-width: 355px) {
+    .popUp {
+        max-width: 320px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 350px) {
+    .small {
+        width: 280px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 296px) {
+    .small {
+        width: 95%;
+    }
 }

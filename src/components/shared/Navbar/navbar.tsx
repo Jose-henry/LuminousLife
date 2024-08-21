@@ -14,7 +14,7 @@ const NavBar: React.FC = () => {
     };
 
     const updateMedia = () => {
-        setIsMobile(window.innerWidth <= 450);
+        setIsMobile(window.innerWidth <= 800);
     };
 
     useEffect(() => {
@@ -77,17 +77,17 @@ const NavBar: React.FC = () => {
                 <div>
                     <div className="flex items-center">
                         <Image
-                            src="/assets/menu-icon.svg"
+                            src="/assets/menu.svg"
                             alt="menu icon"
-                            width={20}
-                            height={20}
+                            width={25}
+                            height={25}
                             className={styles.menu}
                             style={{ display: menuOpen ? 'none' : 'block' }}
                             onClick={toggleMenu}
                         />
                         <Image
-                            width="20"
-                            height="20"
+                            width="25"
+                            height="25"
                             src="/assets/close.svg"
                             alt="multiply"
                             className={styles.close}
@@ -96,24 +96,31 @@ const NavBar: React.FC = () => {
                         />
                     </div>
                     <div className={`${styles.small} ${menuOpen ? styles.show : ''}`}>
-                        <Link href="/" className={styles.design}>
-                            <Link href="/" className={styles._link}>Home</Link>
+                        <div className="w-[30px] h-[30px] rounded-full relative ml-auto overflow-hidden shadow-md active:shadow-none cursor-pointer border-[1.5px] border-[#393e46]" onClick={handleFlagClick}>
+                            <Image src="/assets/ng.svg" alt='Flag' quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                        </div>
+                        <Link href="/" className={`${styles.design} border-t-[1px] border-t-[#ececec]`}>
+                            <Link href="/" className={`${styles._link}`}>HOME</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/about" className={styles.design}>
-                            <Link href="/about" className={styles._link}>About</Link>
+                            <Link href="/about" className={styles._link}>ABOUT</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/team" className={styles.design}>
-                            <Link href="/team" className={styles._link}>Teams</Link>
+                            <Link href="/team" className={styles._link}>TEAMS</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/projects" className={styles.design}>
-                            <Link href="/projects" className={styles._link}>Projects</Link>
+                            <Link href="/projects" className={styles._link}>PROJECTS</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/contact" className={styles.design}>
-                            <Link href="/contact" className={styles._link}>Contact</Link>
+                            <Link href="/contact" className={styles._link}>CONTACT</Link>
+                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
+                        </Link>
+                        <Link href="/about#donate" onClick={handleDonateClick} className={styles.design}>
+                            <Link href="/about#donate" className={styles._link}>DONATE</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                     </div>

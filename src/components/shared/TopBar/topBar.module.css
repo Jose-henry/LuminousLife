@@ -44,3 +44,11 @@
         font-size: 13px;
     }
 }
+
+@media screen and (max-width: 410px) {
+    /* CSS rules for screens with a maximum width of 1000px */
+    .logoContainer h3 {
+        color: white;
+        font-size: 2px;
+    }
+}
