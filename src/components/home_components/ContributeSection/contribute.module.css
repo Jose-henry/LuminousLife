@@ -1,8 +1,7 @@
 .main_container {
-    background: linear-gradient(180deg, #fdffcd, white, #fdffcd);
+    background: linear-gradient(180deg, #fdffcd, white);
     padding-top: 60px;
     padding-bottom: 80px;
-    border-bottom: 1px solid #d3d6db;
 }
 
 .ImgDiv {
