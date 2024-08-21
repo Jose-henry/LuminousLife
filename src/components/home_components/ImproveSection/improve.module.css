@@ -55,3 +55,128 @@
     position: relative;
     top: 30px;
 }
+
+@media (max-width: 1088px) {
+    .wrapper {
+        gap: 2%;
+    }
+}
+
+@media (max-width: 955px) {
+    .wrapper h2 {
+        line-height: normal;
+    }
+
+    .textDiv {
+        gap: 7px;
+    }
+}
+
+@media (max-width: 930px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 6%;
+    }
+
+    .loveDiv {
+        justify-content: left;
+    }
+
+    .main_container {
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 897px) {
+    .wrapper p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 672px) {
+
+    .loveDiv {
+        justify-content: left;
+    }
+
+    .main_container {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 645px) {
+
+    .loveDiv {
+        flex-direction: column;
+    }
+
+    .love {
+        max-width: 400px;
+        height: 300px;
+        width: 100%;
+    }
+
+    .love2 {
+        top: 0px;
+        height: 380px;
+    }
+}
+
+@media (max-width: 603px) {
+
+    .wrapper h2 {
+        font-size: 29px;
+    }
+
+    .wrapper p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 405px) {
+
+    .wrapper h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 431px) {
+
+    .wrapper h2 {
+        margin: auto;
+    }
+
+    .wrapper p {
+        text-align: center;
+    }
+
+    .link {
+        margin: auto;
+        padding: 6px 50px;
+    }
+}
+
+@media (max-width: 371px) {
+
+    .wrapper h2 {
+        font-size: 26px;
+    }
+
+    .wrapper p {
+        font-size: 14.5px;
+    }
+}
+
+@media (max-width: 357px) {
+
+    .wrapper h2 {
+        font-size: 25px;
+    }
+
+    .wrapper p {
+        font-size: 14px;
+    }
+}

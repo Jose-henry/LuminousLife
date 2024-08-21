@@ -16,7 +16,7 @@ export default function Improve() {
     };
 
   return (
-    <div className="relative w-full pt-[80px] pb-[80px]">
+    <div className={`relative w-full pt-[80px] pb-[80px] ${styles.main_container}`}>
         <div className={styles.wrapper}>
             <div className={styles.textDiv}>
                 <h2>Help Us Improve!</h2>
