@@ -5,6 +5,7 @@ import Topbar from "@/components/shared/TopBar/topBar";
 import FooterDiv from "@/components/shared/Footer/footer";
 import { Arima } from "next/font/google";
 import { Analytics } from '@vercel/analytics/react'
+import LenisScroll from "@/components/ui/LenisScroll";
 
 const finlandacia = Arima({
   subsets: ['latin'],
@@ -31,6 +32,7 @@ export default function RootLayout({
     <html lang="en" className="h-full w-[100%] overflow-x-hidden">
       <body className={`h-full flex flex-col justify-between w-[100%] overflow-x-hidden ${finlandacia.className}`}>
         <Topbar/>
+        <LenisScroll/>
         {children}
         <Analytics />
         <FooterDiv/>
@@ -38,4 +40,3 @@ export default function RootLayout({
     </html>
   );
 }
-

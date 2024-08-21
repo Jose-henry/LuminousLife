@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 
 
 export default function Projects() {
-  return <ClientProject />;
+  return (
+    <ClientProject />
+  );
 }
 
