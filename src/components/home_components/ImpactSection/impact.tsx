@@ -82,15 +82,15 @@ export default function Impact() {
       <div className={styles.impactDiv}>
         <div>
           <h3>{lamps}<sup>+</sup></h3>
-          <p>SOLAR LAMPS DISTRIBUTED</p>
+          <p>SOLAR LAMPS <span>DISTRIBUTED</span></p>
         </div>
         <div>
           <h3>{communities}</h3>
-          <p>COMMUNITIES REACHED</p>
+          <p>COMMUNITIES <span>REACHED</span></p>
         </div>
         <div>
           <h3>{lives}<sup>+</sup></h3>
-          <p>LIVES IMPACTED</p>
+          <p>LIVES <span>IMPACTED</span></p>
         </div>
       </div>
       <Link href="/about#testimony" className={styles.btn} onClick={handleTestimonialClick}>Our Impact Stories</Link>

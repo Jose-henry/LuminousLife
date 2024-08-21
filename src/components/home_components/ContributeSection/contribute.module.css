@@ -7,8 +7,8 @@
 
 .ImgDiv {
     position: relative;
-    width: 600px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 3px;
     box-shadow: 0 7px 11px rgba(0, 0, 0, 0.2);
@@ -25,6 +25,7 @@
     color: #402a23;
     font-size: 30px;
     text-align: center;
+    line-height: normal;
 }
 
 .main_container p {
@@ -67,7 +68,8 @@
 .picDiv {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 90%;
+    max-width: 1200px;
+    width: 95%;
     gap: 3%;
     margin: auto;
     margin-top: 40px;
@@ -88,8 +90,76 @@
     align-items: center;
     padding: 20px;
     gap: 30px;
+    width: 100%;
 }
 
-.ImgDiv {
-    width: 100%;
+@media (max-width: 897px) {
+    .main_container p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 826px) {
+    .picDiv {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }   
+}
+
+@media (max-width: 405px) {
+    .intro h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 371px) {
+    .intro h2 {
+        font-size: 26px;
+    }
+
+    .main_container p {
+        font-size: 14.5px;
+    }
+
+    .link {
+        font-size: 13.5px;
+        padding: 6px 50px;
+    }
+}
+
+@media (max-width: 357px) {
+    .intro h2 {
+        font-size: 25px;
+    }
+
+    .main_container p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 412px) {
+    .picDiv {
+        width: 100%;
+    }
+
+    .textDiv {
+        padding: 2%;
+    }
+
+    .link {
+        padding: 5px 40px;
+    }
+}
+
+@media (max-width: 315px) {
+    .link {
+        padding: 5px 30px;
+    }
+}
+
+@media (max-width: 279px) {
+    .linkDiv {
+        flex-direction: column;
+    }
 }
