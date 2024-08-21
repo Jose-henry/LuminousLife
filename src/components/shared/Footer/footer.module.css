@@ -155,7 +155,7 @@
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 360px) {
     .logo {
         justify-content: center;
         align-items: center;
