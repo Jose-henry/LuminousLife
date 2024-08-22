@@ -45,7 +45,7 @@ export default function ClientAbout() {
 
 
   return (
-    <div className="w-full pt-[10px] mb-[40px]">
+    <div className={`w-full pt-[10px] mb-[40px]`}>
       <AB />
       <div id="our-story">
         <Story />

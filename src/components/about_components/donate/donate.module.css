@@ -1,5 +1,6 @@
 .main_container {
-    width: 1000px;
+    max-width: 1000px;
+    width: 95%;
     border-radius: 3px;
     background-color: #FBF6EF;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -106,4 +107,40 @@
     align-self: self-end;
     font-size: 13px;
     border-radius: 3px;
+}
+
+
+@media (max-width: 1225px) {
+    .picture {
+        left: -50px;
+    }
+}
+
+@media (max-width: 1125px) {
+    .picture {
+        left: -30px;
+    }
+}
+
+@media (max-width: 1085px) {
+    .picture {
+        position: relative;
+        height: auto;
+        top: 0px;
+        left: 0px;
+        transform: none;
+        width: 100%;
+    }
+
+    .main_container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2%;
+    }
+
+    .div2 {
+        width: 100%;
+        margin-left: 0px;
+        height: auto;
+    }
 }
