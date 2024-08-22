@@ -5,8 +5,6 @@
     padding: 50px;
     grid-template-columns: 1.8fr 2fr;
     gap: 2%;
-    border-top: 1px solid #d3d6db;
-    border-bottom: 1px solid #d3d6db;
 }
 
 .main_container h2 {
