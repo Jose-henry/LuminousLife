@@ -11,3 +11,9 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: 801px) {
+    .mar {
+      margin-top: 63px !important;
+    }
+}

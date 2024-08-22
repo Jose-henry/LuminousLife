@@ -14,7 +14,7 @@
 .text_container h2 {
     color: #622D25;
     line-height: normal;
-    font-size: 45px;
+    font-size: 40px;
 }
 .text_container p {
     color: #622D25;
@@ -32,7 +32,7 @@
 .form label {
     font-family: var(--font-finlandacia);
     color: #222831;
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 3px;
 }
 
@@ -41,7 +41,7 @@
     padding: 12px;
     border-radius: 3px;
     font-family: var(--font-finlandacia);
-    font-size: 13px;
+    font-size: 14.5px;
     outline: none;
     color: #622D25;
 }
@@ -51,7 +51,7 @@
     padding: 12px;
     height: 300px;
     border-radius: 3px;
-    font-size: 13px;
+    font-size: 14.5px;
     font-family: var(--font-finlandacia);
     outline: none;
     color: #622D25;
@@ -70,7 +70,7 @@
 
 .form button {
     background-color: #402a23;
-    font-size: 13px;
+    font-size: 14px;
     padding: 12px;
     width: 85%;
     border-radius: 4px;
@@ -127,9 +127,68 @@
     font-family: var(--font-finlandacia);
 }
 
-@media screen and (max-width: 1165px) {
+@media (max-width: 897px) {
     .text_container h2 {
-        font-size: 40;
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 834px) {
+    .form_container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .form input {
+        width: 100%;
+    }
+
+    .form textarea {
+        width: 100%;
+    }
+
+    .form button {
+        width: 100%;
+    }
+
+    .main_container {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 815px) {
+    .text_container h2 {
+        font-size: 36px;
+    }
+
+    .text_container p {
+        font-size: 15.5px;
+    }
+
+    .form input {
+        font-size: 14px;
+    }
+
+    .form textarea {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 656px) {
+    .text_container h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 615px) {
+    .text_container h2{
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 605px) {
+    .text_container h2 {
+        font-size: 30px;
     }
 
     .text_container p {
@@ -137,77 +196,28 @@
     }
 }
 
-
-@media screen and (max-width: 1000px) {
-    .text_container h2 {
-        font-size: 35px;
-    }
-}
-
-@media screen and (max-width: 875px) {
-    .text_container h2 {
-        font-size: 30px;
-    }
-
-    .text_container p {
-        font-size: 14px;
-    }
-
-    .form label {
-        font-size: 13px;
-    }
-}
-
-@media screen and (max-width: 800px) {
+@media (max-width: 405px) {
     .text_container h2 {
         font-size: 28px;
     }
 }
 
-@media screen and (max-width: 849px) {
-    .form_container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .cont_img {
-        display: none;
-    }
-
-    .form input {
-        width: 95%;
-    }
-    
-    .form textarea {
-        width: 95%;
-    }
-
-    .form button {
-        width: 95%;
-    }
-}
-
-@media screen and (max-width: 515px) {
-    .form input {
-        width: 100%;
-    }
-    
-    .form textarea {
-        width: 100%;
-    }
-
-    .form button {
-        width: 100%;
-        padding: 13.5px;
-    }
-}
-
-@media screen and (max-width: 350px) {
+@media (max-width: 371px) {
     .text_container h2 {
-        text-align: center;
+        font-size: 26px;
     }
 
     .text_container p {
-        text-align: center;
+        font-size: 14.5px;
+    }
+}
+
+@media (max-width: 357px) {
+    .text_container h2 {
+        font-size: 25px;
+    }
+
+    .text_container p {
+        font-size: 14px;
     }
 }

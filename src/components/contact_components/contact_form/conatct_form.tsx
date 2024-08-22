@@ -53,7 +53,7 @@ const Form: React.FC = () => {
       </div>
       <div className={styles.form_container}>
         <form onSubmit={handleSubmit} className={styles.form}>
-          <div>
+          <div className='mb-3'>
             <label htmlFor="name">Name</label>
             <input
               id="name"
@@ -64,7 +64,7 @@ const Form: React.FC = () => {
               autoComplete="off"
             />
           </div>
-          <div>
+          <div className='mb-3'>
             <label htmlFor="email">Email</label>
             <input
               id="email"
