@@ -70,7 +70,7 @@
 }
 
 .btn {
-    font-size: 12px;
+    font-size: 13px;
     background-color: #622D25;
     color: white;
     padding: 5px;
@@ -81,6 +81,7 @@
     border-radius: 2px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    font-weight: 700;
 }
 
 .btn:active {
@@ -142,5 +143,111 @@
         width: 100%;
         margin-left: 0px;
         height: auto;
+    }
+}
+
+@media (max-width: 897px) {
+    .donate_text {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 815px) {
+    .donate_text {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 802px) {
+    .main_container {
+        padding: 60px 20px;
+    } 
+}
+
+@media (max-width: 752px) {
+    .main_container h3 {
+        font-size: 17px;
+    } 
+
+    .main_container p {
+        font-size: 16px;
+    } 
+}
+
+@media (max-width: 656px) {
+    .donate_text {
+        font-size: 34px;
+    }
+
+    .main_container p {
+        font-size: 15.5px;
+    }
+}
+
+@media (max-width: 615px) {
+    .donate_text {
+        font-size: 32px;
+    }
+
+    .main_container p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 605px) {
+    .donate_text {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 603px) {
+    .main_container {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+
+    .picture {
+        height: 350px;
+    }
+}
+
+@media (max-width: 482px) {
+    .picture {
+        width: 100%;
+    }
+
+    .div2 {
+        width: 100%;
+    }
+
+    .div2 form {
+        padding: 3%;
+    }
+
+    .input_fields {
+        column-gap: 3%;
+        grid-template-columns: 1fr;
+    }
+
+    .input {
+        padding: 3%;
+    }
+}
+
+@media (max-width: 405px) {
+    .donate_text {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 371px) {
+    .donate_text {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 357px) {
+    .donate_text {
+        font-size: 25px;
     }
 }
