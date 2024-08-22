@@ -20,7 +20,7 @@ const Picture: React.FC = () => {
     const detailsRef = useRef<HTMLDivElement[]>([]);
 
     useEffect(() => {
-        const currentRefs = detailsRef.current; // Store the current value in a local variable
+        const currentRefs = detailsRef.current; 
     
         const observer = new IntersectionObserver(
             (entries) => {
@@ -52,7 +52,7 @@ const Picture: React.FC = () => {
             name: 'Favour Oguibe',
             role: 'Founder',
             image: '/assets/Favour.jpg',
-            bgPosition: 'center bottom -140px',
+            bgPosition: 'center bottom -110px',
             socials: [
                 { name: 'LinkedIn', url: 'https://www.linkedin.com/in/favour-oguibe-0a4081195/', icon: '/assets/_linkedin.svg' },
                 { name: 'Instagram', url: 'https://www.instagram.com/_oguibe?igsh=MWc4aTQ3cG5kdXpnNg==', icon: '/assets/_instagram.svg' },
@@ -62,7 +62,7 @@ const Picture: React.FC = () => {
             name: 'David OJ',
             role: 'Co-Founder',
             image: '/assets/OJ.jpg',
-            bgPosition: 'center bottom -140px',
+            bgPosition: 'center bottom -125px',
             socials: [
                 { name: 'LinkedIn', url: '', icon: '/assets/_linkedin.svg' },
             ],
@@ -71,7 +71,7 @@ const Picture: React.FC = () => {
             name: 'Nelson Elijah',
             role: 'Administrative Head',
             image: '/assets/Nelson.jpg',
-            bgPosition: 'center bottom -170px',
+            bgPosition: 'center bottom -155px',
             socials: [
                 { name: 'LinkedIn', url: 'http://www.linkedin.com/in/nelson-elijah', icon: '/assets/_linkedin.svg' },
             ],
@@ -101,7 +101,7 @@ const Picture: React.FC = () => {
             name: 'Ola',
             role: 'Social Media Manager',
             image: '/assets/Ola.jpg',
-            bgPosition: 'center bottom -120px',
+            bgPosition: 'center bottom -50px',
             socials: [
                 { name: 'LinkedIn', url: 'https://www.linkedin.com/in/ola-oluwa-salami-55a9911a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app', icon: '/assets/_linkedin.svg' },
                 { name: 'Instagram', url: 'https://www.instagram.com/olaxart?igsh=MTh6dDY5ZXNvdWYyZw==', icon: '/assets/_instagram.svg' },
@@ -173,10 +173,10 @@ const Picture: React.FC = () => {
 
     const foundingMembers: TeamMember[] = [
         {
-            name: 'David Olanisikan',
+            name: 'David Olonisakin',
             role: 'Robotics Engineer',
             image: '/assets/Djones.jpg',
-            bgPosition: 'center bottom -145px',
+            bgPosition: 'center bottom -135px',
             socials: [
                 { name: 'LinkedIn', url: 'https://www.linkedin.com/in/olonisakin-david/', icon: '/assets/_linkedin.svg' },
                 { name: 'Instagram', url: 'https://www.instagram.com/djonesplays/', icon: '/assets/_instagram.svg' },
@@ -187,7 +187,7 @@ const Picture: React.FC = () => {
             name: 'Kibe Ume',
             role: 'Data Analyst',
             image: '/assets/Kibe.jpg',
-            bgPosition: 'center bottom -140px',
+            bgPosition: 'center bottom -125px',
             socials: [
                 { name: 'LinkedIn', url: 'https://www.linkedin.com/in/kibe-ume-0bb26a199', icon: '/assets/_linkedin.svg' },
             ],
@@ -196,7 +196,7 @@ const Picture: React.FC = () => {
             name: 'Babalola Johnson',
             role: 'Founding Member',
             image: '/assets/Johnson.jpg',
-            bgPosition: 'center bottom 20px',
+            bgPosition: 'center bottom 10px',
             socials: [
                 { name: 'LinkedIn', url: '', icon: '/assets/_linkedin.svg' },
             ],
@@ -214,13 +214,16 @@ const Picture: React.FC = () => {
                     <div className={styles.team}>
                         {managerialTeam.map((member, index) => (
                             <div className={styles.pic} key={index}>
-                                <div className={styles.details} ref={(el) => {
-                                    if (el) detailsRef.current[index] = el;
-                                }}>
+                                <div
+                                    className={`${styles.details} ${styles[member.name.replace(/\s/g, '')]}`}
+                                    ref={(el) => {
+                                        if (el) detailsRef.current[index] = el;
+                                    }}
+                                >
                                     <div
                                         style={{
-                                            width: '400px',
-                                            height: '400px',
+                                            width: '350px',
+                                            height: '350px',
                                             marginBottom: '20px',
                                             backgroundImage: `url(${member.image})`,
                                             backgroundPosition: member.bgPosition || 'center',
@@ -229,6 +232,8 @@ const Picture: React.FC = () => {
                                             borderTopRightRadius: '3px',
                                             backgroundRepeat: 'no-repeat',
                                         }}
+
+                                        className={styles.imageDiv}
                                     ></div>
                                     <div className={styles.info}>
                                         <div className={styles.name}>
@@ -254,13 +259,13 @@ const Picture: React.FC = () => {
                     <div className={styles.team}>
                         {operationalTeam.map((member, index) => (
                             <div className={styles.pic} key={index}>
-                                <div className={styles.details} ref={(el) => {
+                                <div className={`${styles.details} ${styles[member.name.replace(/\s/g, '')]}`} ref={(el) => {
                                     if (el) detailsRef.current[index + managerialTeam.length] = el;
                                 }}>
                                     <div
                                         style={{
-                                            width: '400px',
-                                            height: '400px',
+                                            width: '350px',
+                                            height: '350px',
                                             marginBottom: '20px',
                                             backgroundImage: `url(${member.image})`,
                                             backgroundPosition: member.bgPosition || 'center',
@@ -269,6 +274,8 @@ const Picture: React.FC = () => {
                                             borderTopRightRadius: '3px',
                                             backgroundRepeat: 'no-repeat',
                                         }}
+
+                                        className={styles.imageDiv}
                                     ></div>
                                     <div className={styles.info}>
                                         <div className={styles.name}>
@@ -295,13 +302,13 @@ const Picture: React.FC = () => {
                     <div className={styles.team}>
                         {technicalTeam.map((member, index) => (
                             <div className={styles.pic} key={index}>
-                                <div className={styles.details} ref={(el) => {
+                                <div className={`${styles.details} ${styles[member.name.replace(/\s/g, '')]}`} ref={(el) => {
                                     if (el) detailsRef.current[index + managerialTeam.length + operationalTeam.length] = el;
                                 }}>
                                     <div
                                         style={{
-                                            width: '400px',
-                                            height: '400px',
+                                            width: '350px',
+                                            height: '350px',
                                             marginBottom: '20px',
                                             backgroundImage: `url(${member.image})`,
                                             backgroundPosition: member.bgPosition || 'center',
@@ -310,6 +317,8 @@ const Picture: React.FC = () => {
                                             borderTopRightRadius: '3px',
                                             backgroundRepeat: 'no-repeat',
                                         }}
+
+                                        className={styles.imageDiv}
                                     ></div>
                                     <div className={styles.info}>
                                         <div className={styles.name}>
@@ -336,13 +345,13 @@ const Picture: React.FC = () => {
                     <div className={styles.team}>
                         {trusteeTeam.map((member, index) => (
                             <div className={styles.pic} key={index}>
-                                <div className={styles.details} ref={(el) => {
+                                <div className={`${styles.details} ${styles[member.name.replace(/\s/g, '')]}`} ref={(el) => {
                                     if (el) detailsRef.current[index + managerialTeam.length + operationalTeam.length + technicalTeam.length] = el;
                                 }}>
                                     <div
                                         style={{
-                                            width: '400px',
-                                            height: '400px',
+                                            width: '350px',
+                                            height: '350px',
                                             marginBottom: '20px',
                                             backgroundImage: `url(${member.image})`,
                                             backgroundPosition: member.bgPosition || 'center',
@@ -351,6 +360,8 @@ const Picture: React.FC = () => {
                                             borderTopRightRadius: '3px',
                                             backgroundRepeat: 'no-repeat',
                                         }}
+
+                                        className={styles.imageDiv}
                                     ></div>
                                     <div className={styles.info}>
                                         <div className={styles.name}>
@@ -377,13 +388,13 @@ const Picture: React.FC = () => {
                     <div className={styles.team}>
                         {foundingMembers.map((member, index) => (
                             <div className={styles.pic} key={index}>
-                                <div className={styles.details} ref={(el) => {
+                                <div className={`${styles.details} ${styles[member.name.replace(/\s/g, '')]}`} ref={(el) => {
                                     if (el) detailsRef.current[index + managerialTeam.length + operationalTeam.length + technicalTeam.length + trusteeTeam.length] = el;
                                 }}>
                                     <div
                                         style={{
-                                            width: '400px',
-                                            height: '400px',
+                                            width: '350px',
+                                            height: '350px',
                                             marginBottom: '20px',
                                             backgroundImage: `url(${member.image})`,
                                             backgroundPosition: member.bgPosition || 'center',
@@ -392,6 +403,8 @@ const Picture: React.FC = () => {
                                             borderTopRightRadius: '3px',
                                             backgroundRepeat: 'no-repeat',
                                         }}
+
+                                        className={styles.imageDiv}
                                     ></div>
                                     <div className={styles.info}>
                                         <div className={styles.name}>

@@ -4,6 +4,7 @@
     color: #622D25;
     margin-bottom: 20px;
     margin-top: 60px;
+    line-height: normal;
 }
 
 .team {
@@ -61,4 +62,265 @@
 .details p {
     font-size: 14px;
     color: #622D25;
+}
+
+@media (max-width: 1357px) {
+    .imageDiv {
+        width: 330px !important;
+        height: 330px !important;
+    }
+}
+
+@media (max-width: 1285px) {
+    .imageDiv {
+        max-width: 320px !important;
+        height: 320px !important;
+    }
+
+    .team {
+        gap: 5%;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 897px) {
+    .team_div h2 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 815px) {
+    .team_div h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 656px) {
+    .team_div h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 615px) {
+    .team_div h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 605px) {
+    .team_div h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 405px) {
+    .team_div h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 379px) {
+    .imageDiv {
+        width: 100% !important;
+    }
+
+    .team {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .pic {
+        width: 100%;
+    }
+
+    .FavourOguibe .imageDiv {
+        background-position: center bottom -90px !important; 
+    }
+
+    .DavidOJ .imageDiv {
+        background-position: center bottom -105px !important; 
+    }
+
+    .NelsonElijah .imageDiv {
+        background-position: center bottom -135px !important; 
+    }
+    
+    .FortuneOguibe .imageDiv {
+        background-position: center bottom -155px !important; 
+    }
+
+    .Ola .imageDiv {
+        background-position: center bottom -30px !important; 
+    }
+
+    .KibeUme .imageDiv {
+        background-position: center bottom -105px !important; 
+    }
+
+    .DavidOlonisakin .imageDiv {
+        background-position: center bottom -115px !important; 
+    }
+    
+}
+
+@media (max-width: 360px) {
+    .FavourOguibe .imageDiv {
+        background-position: center bottom -70px !important; 
+    }
+
+    .DavidOJ .imageDiv {
+        background-position: center bottom -85px !important; 
+    }
+
+    .NelsonElijah .imageDiv {
+        background-position: center bottom -115px !important; 
+    }
+    
+    .FortuneOguibe .imageDiv {
+        background-position: center bottom -135px !important; 
+    }
+
+    .Ola .imageDiv {
+        background-position: center bottom -10px !important; 
+    }
+
+    .KibeUme .imageDiv {
+        background-position: center bottom -85px !important; 
+    }
+
+    .DavidOlonisakin .imageDiv {
+        background-position: center bottom -95px !important; 
+    }
+}
+
+@media (max-width: 340px) {
+    .FavourOguibe .imageDiv {
+        background-position: center bottom -50px !important; 
+    }
+
+    .DavidOJ .imageDiv {
+        background-position: center bottom -65px !important; 
+    }
+
+    .NelsonElijah .imageDiv {
+        background-position: center bottom -85px !important; 
+    }
+    
+    .FortuneOguibe .imageDiv {
+        background-position: center bottom -115px !important; 
+    }
+
+    .Ola .imageDiv {
+        background-position: center bottom 10px !important; 
+    }
+
+    .KibeUme .imageDiv {
+        background-position: center bottom -65px !important; 
+    }
+
+    .DavidOlonisakin .imageDiv {
+        background-position: center bottom -75px !important; 
+    }
+}
+
+@media (max-width: 320px) {
+    .FavourOguibe .imageDiv {
+        background-position: center bottom -30px !important; 
+    }
+
+    .DavidOJ .imageDiv {
+        background-position: center bottom -45px !important; 
+    }
+
+    .NelsonElijah .imageDiv {
+        background-position: center bottom -65px !important; 
+    }
+    
+    .FortuneOguibe .imageDiv {
+        background-position: center bottom -85px !important; 
+    }
+
+    .Ola .imageDiv {
+        background-position: center bottom 30px !important; 
+    }
+
+    .KibeUme .imageDiv {
+        background-position: center bottom -45px !important; 
+    }
+
+    .DavidOlonisakin .imageDiv {
+        background-position: center bottom -55px !important; 
+    }
+}
+
+@media (max-width: 300px) {
+    .FavourOguibe .imageDiv {
+        background-position: center bottom -10px !important; 
+    }
+
+    .DavidOJ .imageDiv {
+        background-position: center bottom -25px !important; 
+    }
+
+    .NelsonElijah .imageDiv {
+        background-position: center bottom -45px !important; 
+    }
+    
+    .FortuneOguibe .imageDiv {
+        background-position: center bottom -65px !important; 
+    }
+
+    .Ola .imageDiv {
+        background-position: center bottom 50px !important; 
+    }
+
+    .KibeUme .imageDiv {
+        background-position: center bottom -25px !important; 
+    }
+
+    .DavidOlonisakin .imageDiv {
+        background-position: center bottom -35px !important; 
+    }
+}
+
+@media (max-width: 300px) {
+    .FavourOguibe .imageDiv {
+        background-position: center bottom 10px !important; 
+    }
+
+    .DavidOJ .imageDiv {
+        background-position: center bottom -5px !important; 
+    }
+
+    .NelsonElijah .imageDiv {
+        background-position: center bottom -25px !important; 
+    }
+    
+    .FortuneOguibe .imageDiv {
+        background-position: center bottom -45px !important; 
+    }
+
+    .Ola .imageDiv {
+        background-position: center bottom 70px !important; 
+    }
+
+    .KibeUme .imageDiv {
+        background-position: center bottom -5px !important; 
+    }
+
+    .DavidOlonisakin .imageDiv {
+        background-position: center bottom -15px !important; 
+    }
+}
+
+@media (max-width: 371px) {
+    .team_div h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 357px) {
+    .team_div h2 {
+        font-size: 25px;
+    }
 }
