@@ -11,7 +11,7 @@ export default function Project() {
         </div>
         <div className={styles.text_div}>
             <h2>Our Projects</h2>
-            <p className='text-center text-[#25161b] text-[17px]'>See the steps we are taking towards lighting up the dark places!</p>
+            <p className={`text-center text-[#25161b] text-[17px] ${styles.see}`}>See the steps we are taking towards lighting up the dark places!</p>
             <Link href="/projects" className={styles.view}>See all projects</Link>
         </div>
         <div className={styles.card}>
@@ -27,7 +27,7 @@ export default function Project() {
                     <p>Nestled in the heart of Badagry, the Gebrefu Community has endured an astonishing 24 years without access to electricity. 
                         This prolonged blackout has cast long shadows over the lives of its residents, affecting education, 
                         healthcare, and economic opportunities. Yet, amidst the darkness, there is a growing spark of hope.</p>
-                    </div>
+                </div>
                 <Link href="/projects/article2" className={styles.project}>Read more</Link>
             </div>
         </div>

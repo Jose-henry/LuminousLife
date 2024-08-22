@@ -126,3 +126,148 @@
     font-size: 15px;
     line-height: 28px;
 }
+
+@media (max-width: 897px) {
+    .main_container h2 {
+        font-size: 38px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .see {
+        font-size: 16px;
+    }
+
+    .card h3 {
+        font-size: 21px;
+    }
+
+    .card h4 {
+        font-size: 15px;
+    }
+
+    .text_div {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 834px) {
+    .card {
+        height: 550px;
+    }
+}
+
+@media (max-width: 815px) {
+    .main_container h2 {
+        font-size: 36px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card h4 {
+        font-size: 14px;
+    }
+
+    .card p {
+        font-size: 15.5px;
+    }
+}
+
+@media (max-width: 715px) {
+    .main_container {
+        width: 95%;
+    }
+
+    .card {
+        height: 600px;
+    }
+}
+
+@media (max-width: 656px) {
+    .main_container h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 615px) {
+    .main_container h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 605px) {
+    .main_container h2 {
+        font-size: 30px;
+    }
+
+    .card p {
+        font-size: 15px;
+    }
+
+    .see {
+        font-size: 15px;
+    }
+
+    .card h3 {
+        font-size: 18.5px;
+    }
+}
+
+@media (max-width: 603px) {
+    .main_container {
+        grid-template-columns: 1fr;
+        row-gap: 3%;
+    }
+
+    .main_container h2 {
+        line-height: normal;
+    }
+}
+
+@media (max-width: 405px) {
+    .main_container h2 {
+        font-size: 28px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+    }
+
+    .project {
+        padding: 6px 15px;
+    }
+}
+
+@media (max-width: 371px) {
+    .main_container h2 {
+        font-size: 26px;
+    }
+
+    .card p {
+        font-size: 14.5px;
+    }
+
+    .card h3 {
+        font-size: 18px;
+        line-height: normal;
+    }
+}
+
+@media (max-width: 357px) {
+    .main_container h2 {
+        font-size: 25px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .card h3 {
+        font-size: 17px;
+    }
+}
