@@ -27,3 +27,9 @@
 .volunteer:active {
     box-shadow: none;
 }
+
+@media (max-width: 440px) {
+    .container {
+        flex-direction: column;
+    }
+}
