@@ -24,10 +24,11 @@
     font-size: 15px;
     color: #142d4c;
     margin-top: 20px;
+    text-decoration: underline;
 }
 
 .read:hover {
-    text-decoration: underline;
+    font-weight: 700;
 }
 
 .read:active {
@@ -44,4 +45,95 @@
     height: 500px;
     width: 100%;
     border-color: white;
+}
+
+@media (max-width: 897px) {
+    .main_container p {
+        font-size: 16px;
+    }
+
+    .main_container h2 {
+        font-size: 38px;
+    } 
+}
+
+@media (max-width: 834px) {
+    .main_container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 815px) {
+    .main_container h2 {
+        font-size: 36px;
+    } 
+}
+
+@media (max-width: 656px) {
+    .main_container h2 {
+        font-size: 34px;
+    } 
+}
+
+@media (max-width: 615px) {
+    .main_container h2 {
+        font-size: 32px;
+    } 
+}
+
+@media (max-width: 605px) {
+    .main_container p {
+        font-size: 15px;
+    }
+
+    .main_container h2 {
+        font-size: 30px;
+    } 
+}
+
+@media (max-width: 431px) {
+    .main_container p {
+        text-align: center;
+    }
+
+    .main_container h2 {
+        text-align: center;
+    } 
+
+    .read {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main_container {
+        padding: 5%;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 405px) {
+
+    .main_container h2 {
+        font-size: 28px;
+    } 
+}
+
+@media (max-width: 371px) {
+    .main_container p {
+        font-size: 14.5px;
+    }
+
+    .main_container h2 {
+        font-size: 26px;
+    } 
+}
+
+@media (max-width: 357px) {
+    .main_container p {
+        font-size: 14px;
+    }
+
+    .main_container h2 {
+        font-size: 25px;
+    } 
 }
