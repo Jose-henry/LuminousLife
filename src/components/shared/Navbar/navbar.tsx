@@ -69,7 +69,7 @@ const NavBar: React.FC = () => {
                 <Link href="/projects" className={styles.link}>PROJECTS</Link>
                 <Link href="/contact" className={styles.link}>CONTACT</Link>
                 <Link href="/about#donate" className={styles.donate} onClick={handleDonateClick}>DONATE</Link>
-                <div className="w-[30px] h-[30px] rounded-full relative overflow-hidden shadow-md active:shadow-none cursor-pointer border-[1.5px] border-[#393e46]" onClick={handleFlagClick}>
+                <div className="w-[30px] h-[30px] rounded-full relative overflow-hidden shadow-md active:shadow-none cursor-pointer border-[2px] border-[#2c786c]" onClick={handleFlagClick}>
                     <Image src="/assets/ng.svg" alt='Flag' quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                 </div>
             </div>
