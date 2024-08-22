@@ -13,7 +13,7 @@ const Testimonial: React.FC = () => {
     // Array of testimonial data
     const testimonials = [
         {
-            name: "Joseph Henry",
+            name: "Tope Alabi",
             position: "Community Leader",
             location: "Lagos",
             testimony: '"Thanks to the solar panels provided by Luminous Life Foundation, our community now has reliable electricity. Children can study at night, and our health clinic operates smoothly even after dark."'
