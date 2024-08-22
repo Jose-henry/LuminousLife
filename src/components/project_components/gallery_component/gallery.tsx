@@ -1,8 +1,8 @@
 'use client';
-import { animate, useMotionValue, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { useRef } from "react";
 import Image from "next/image";
-import useMeasure from "react-use-measure";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import styles from './gallery.module.css'
 
 interface CardProps {
   image: string;
@@ -35,61 +35,43 @@ const images = [
   { src: '/assets/market1.jpg', caption: "Improved Market Life" },
 ];
 
-const FAST_DURATION = 15; 
-const SLOW_DURATION = 25;
-
-
 const Gallery: React.FC = () => {
-  const [duration, setDuration] = useState(FAST_DURATION);
-  let [ref, { width }] = useMeasure();
-  const xTranslation = useMotionValue(0);
-  const [mustFinish, setMustFinish] = useState(false);
-  const [rerender, setRerender] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    let controls;
-    let finalPosition = -width / 0.375 - 8;
-    if (mustFinish) {
-      controls = animate(xTranslation, [xTranslation.get(), finalPosition], {
-        ease: "linear",
-        duration: duration * (1 - xTranslation.get() / finalPosition),
-        onComplete: () => {
-          setMustFinish(false);
-          setRerender(!rerender);
-        },
-      });
-    } else {
-      controls = animate(xTranslation, [0, finalPosition], {
-        ease: "linear",
-        duration: duration + 10,
-        repeat: Infinity,
-        repeatType: "loop",
-        repeatDelay: 0,
-      });
+  const handleScroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 300; // Adjust scroll distance as needed
+      if (direction === "left") {
+        scrollRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      } else if (direction === "right") {
+        scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
     }
-    return controls?.stop;
-  }, [rerender, xTranslation, duration, width]);
+  };
 
   return (
     <main className="py-4 pb-2">
-      <div className="sticky top-[73px]">
-        <motion.div
-          className="flex gap-4"
-          style={{ x: xTranslation }}
-          ref={ref}
-          onHoverStart={() => {
-            setMustFinish(true);
-            setDuration(SLOW_DURATION);
-          }}
-          onHoverEnd={() => {
-            setMustFinish(true);
-            setDuration(FAST_DURATION + 10);
-          }}
+      <div className="relative">
+        <button
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10"
+          onClick={() => handleScroll("left")}
         >
-          {[...images, ...images].map((item, idx) => (
+          <AiOutlineLeft size={24} />
+        </button>
+        <button
+          className={`absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10`}
+          onClick={() => handleScroll("right")}
+        >
+          <AiOutlineRight size={24} />
+        </button>
+        <div
+          className={`flex gap-4 overflow-x-scroll overflow-y-hidden ${styles.no_scrollbar}`}
+          ref={scrollRef}
+        >
+          {images.map((item, idx) => (
             <Card image={item.src} caption={item.caption} key={idx} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </main>
   );

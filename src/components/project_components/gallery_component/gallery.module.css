@@ -63,3 +63,7 @@
     border-radius: 3px;
     overflow: hidden;
 }
+
+.no_scrollbar {
+    scrollbar-width: none;
+}
