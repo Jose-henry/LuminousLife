@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css"; // Import CSS module
 import Image from "next/image";
@@ -8,6 +8,7 @@ const NavBar: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [popupVisible, setPopupVisible] = useState(false); // Add state for pop-up visibility
+    const menuRef = useRef<HTMLDivElement>(null); // Ref to track the menu
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -23,6 +24,24 @@ const NavBar: React.FC = () => {
 
         return () => window.removeEventListener("resize", updateMedia); // Clean up event listener
     }, []);
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setMenuOpen(false); // Close the menu if clicking outside
+            }
+        };
+
+        if (menuOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside); // Clean up event listener
+        };
+    }, [menuOpen]);
 
     const handleDonateClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
         if (window.location.pathname === "/about") {
@@ -74,7 +93,7 @@ const NavBar: React.FC = () => {
                 </div>
             </div>
             {isMobile && (
-                <div>
+                <div ref={menuRef}>
                     <div className="flex items-center">
                         <Image
                             src="/assets/menu.svg"
