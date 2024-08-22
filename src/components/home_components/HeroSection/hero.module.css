@@ -18,6 +18,15 @@
     background-color: rgba(0, 0, 0, 0.3); /* Light brown (tan) with 70% opacity */
 }
 
+.bgImg {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.bgImg.fadeIn {
+    opacity: 1;
+}
+
 
 @keyframes slideInLeft {
     0% {
