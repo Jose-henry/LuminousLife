@@ -77,6 +77,10 @@
     .container {
         margin-top: 20px;
     }
+
+    .main_container {
+        padding-top: 85px;
+    }
 }
 
 @media (max-width: 815px) {
@@ -123,6 +127,10 @@
     .container p {
         text-align: center;
         font-size: 13.5px;
+    }
+
+    .main_container {
+        padding-top: 75px;
     }
 }
 
