@@ -84,7 +84,6 @@ const Form: React.FC = () => {
               style={{
                 resize: 'none', // Disable resizing
               }}
-              placeholder="Type your message here"
               required
             />
           </div>

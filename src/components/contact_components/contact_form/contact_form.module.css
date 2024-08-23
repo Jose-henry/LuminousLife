@@ -31,9 +31,10 @@
 
 .form label {
     font-family: var(--font-finlandacia);
-    color: #222831;
+    color: black;
     font-size: 15px;
     margin-bottom: 3px;
+    font-weight: 700;
 }
 
 .form input {
