@@ -15,6 +15,7 @@
 
 .text p {
     font-size: 16px;
+    line-height: 26px;
 }
 
 .the_projects {
@@ -91,6 +92,7 @@
 .project p {
     font-size: 15px;
     color: #402a23;
+    line-height: 26px;
 }
 
 .btn {
@@ -187,18 +189,16 @@
     } 
 }
 
-@media (max-width: 431px) {
-    .text p {
-        text-align: center;
-    }
-
-    .main_container h2 {
-        text-align: center;
-    } 
-
+@media (max-width: 510px) {
     .btn {
         margin-top: 30px;
         margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 431px) {
+    .project p {
+        font-size: 14px;
     }
 }
 
@@ -222,7 +222,7 @@
     }
 
     .project p {
-        font-size: 14px;
+        font-size: 13.5px;
     }
 }
 
@@ -234,12 +234,4 @@
     .main_container h2 {
         font-size: 25px;
     } 
-
-    .project h3 {
-        font-size: 15.5px;
-    }
-
-    .project p {
-        font-size: 13.5px;
-    }
 }
