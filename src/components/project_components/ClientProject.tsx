@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import Gallery from "@/components/project_components/gallery_component/gallery";
 import Intro from "@/components/project_components/intro_component/intro";
 import Outline from "@/components/project_components/project_outline/outline";
+import styles from './clientProject.module.css'
 
 
 export default function ClientProject() {
@@ -33,7 +34,7 @@ export default function ClientProject() {
     }, []);
   
     return (
-        <div className="w-full mt-[73px]">
+        <div className={`w-full mt-[73px] ${styles.main}`}>
           <Intro/>
           <Gallery/>
           <div id="project-section">

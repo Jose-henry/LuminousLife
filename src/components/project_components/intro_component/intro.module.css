@@ -18,7 +18,7 @@
     line-height: 45px;
 }
 
-.main_container p {
+.main_text {
     color: #622D25;
     font-size: 16px;
     line-height: 28px;
@@ -57,8 +57,97 @@
     z-index: 1;
 }
 
-
 .color p {
     color: white;
     font-size: 14px;
+    line-height: 28px;
+}
+
+@media (max-width: 897px) {
+    .main_container h2 {
+        font-size: 38px;
+    } 
+}
+
+@media (max-width: 834px) {
+    .main_container > div {
+        grid-template-columns: 1fr;
+    } 
+
+    .container {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 815px) {
+    .main_container h2 {
+        font-size: 36px;
+    } 
+}
+
+@media (max-width: 656px) {
+    .main_container h2 {
+        font-size: 34px;
+    } 
+}
+
+@media (max-width: 615px) {
+    .main_container h2 {
+        font-size: 32px;
+    } 
+}
+
+@media (max-width: 605px) {
+    .main_text {
+        font-size: 15px;
+    }
+
+    .main_container h2 {
+        font-size: 30px;
+    } 
+}
+
+@media (max-width: 431px) {
+    .main_text {
+        text-align: center;
+    }
+
+    .main_container h2 {
+        text-align: center;
+    } 
+
+    .container {
+        margin: auto;
+    }
+
+    .container p {
+        text-align: center;
+        font-size: 13.5px;
+    }
+}
+
+@media (max-width: 405px) {
+    .main_container h2 {
+        font-size: 28px;
+    } 
+}
+
+@media (max-width: 371px) {
+    .main_text {
+        font-size: 14.5px;
+    }
+
+    .main_container h2 {
+        font-size: 26px;
+    } 
+}
+
+@media (max-width: 357px) {
+    .main_text {
+        font-size: 14px;
+    }
+
+    .main_container h2 {
+        font-size: 25px;
+    } 
 }

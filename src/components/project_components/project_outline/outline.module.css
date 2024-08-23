@@ -6,11 +6,15 @@
 .main_container h2 {
     color: #402a23;
     font-size: 35px;
+    line-height: normal;
 }
 
 .text {
     color: #402a23;
-    font-size: 15px;
+}
+
+.text p {
+    font-size: 16px;
 }
 
 .the_projects {
@@ -33,7 +37,6 @@
 }
 
 .project div {
-    height: 350px;
     width: 100%;
     position: relative;
 }
@@ -49,11 +52,13 @@
     margin-left: 10%;
     border-right: 10px solid white;
     overflow: hidden;
+    height: 350px;
 }
 
 .div3 {
     border-left: 10px solid white;
     overflow: hidden;
+    height: 350px;
 }
 
 .style1 {
@@ -80,6 +85,7 @@
     color: #622D25;
     font-size: 18px;
     margin-bottom: 8px;
+    line-height: normal;
 }
 
 .project p {
@@ -108,4 +114,132 @@
     color: #622D25;
     font-family: var(--font-finlandacia);
     font-size: 14px;
+}
+
+@media (max-width: 834px) {
+    .div2 {
+        display: none;
+    }
+
+    .project {
+        grid-template-columns: 1fr 1fr;
+        gap: 3%;
+    }
+
+    .style4,.style2 {
+        border-radius: 3px;
+    }
+
+    .div3 {
+        border-left: 0px;
+    }
+
+    .div1 {
+        padding: 0px 10px;
+    }
+}
+
+@media (max-width: 656px) {
+    .main_container h2 {
+        font-size: 34px;
+    } 
+}
+
+@media (max-width: 615px) {
+    .main_container h2 {
+        font-size: 32px;
+    } 
+}
+
+@media (max-width: 605px) {
+    .text p {
+        font-size: 15px;
+    }
+
+    .project h3 {
+        font-size: 17px;
+    }
+
+    .project p {
+        font-size: 14.5px;
+    }
+
+    .main_container h2 {
+        font-size: 30px;
+    } 
+}
+
+@media (max-width: 603px) {
+    .project {
+        grid-template-columns: 1fr;
+    }
+
+    .the_projects {
+        padding-bottom: 50px;
+    }
+
+    .div1 {
+        min-height: 220px;
+    }
+
+    .main_container {
+        width: 90%;
+    } 
+}
+
+@media (max-width: 431px) {
+    .text p {
+        text-align: center;
+    }
+
+    .main_container h2 {
+        text-align: center;
+    } 
+
+    .btn {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 405px) {
+    .main_container h2 {
+        font-size: 28px;
+    } 
+}
+
+@media (max-width: 371px) {
+    .text p {
+        font-size: 14.5px;
+    }
+
+    .main_container h2 {
+        font-size: 26px;
+    } 
+
+    .project h3 {
+        font-size: 16px;
+    }
+
+    .project p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 357px) {
+    .text p {
+        font-size: 14px;
+    }
+
+    .main_container h2 {
+        font-size: 25px;
+    } 
+
+    .project h3 {
+        font-size: 15.5px;
+    }
+
+    .project p {
+        font-size: 13.5px;
+    }
 }
