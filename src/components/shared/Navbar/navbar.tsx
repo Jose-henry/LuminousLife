@@ -61,6 +61,10 @@ const NavBar: React.FC = () => {
         setPopupVisible(false); // Hide the pop-up
     };
 
+    const handleLinkClick = () => {
+        setMenuOpen(false); // Close the menu
+    };
+
     return (
         <div className={styles.main_container}>
             {popupVisible && (
@@ -118,29 +122,36 @@ const NavBar: React.FC = () => {
                         <div className="w-[30px] h-[30px] rounded-full relative ml-auto overflow-hidden shadow-md active:shadow-none cursor-pointer border-[1.5px] border-[#393e46]" onClick={handleFlagClick}>
                             <Image src="/assets/ng.svg" alt='Flag' quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                         </div>
-                        <Link href="/" className={`${styles.design} border-t-[1px] border-t-[#ececec]`}>
+                        <Link href="/" className={`${styles.design} border-t-[1px] border-t-[#ececec]`} onClick={handleLinkClick}>
                             <Link href="/" className={`${styles._link}`}>HOME</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
-                        <Link href="/about" className={styles.design}>
+                        <Link href="/about" className={styles.design} onClick={handleLinkClick}>
                             <Link href="/about" className={styles._link}>ABOUT</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
-                        <Link href="/team" className={styles.design}>
+                        <Link href="/team" className={styles.design} onClick={handleLinkClick}>
                             <Link href="/team" className={styles._link}>TEAMS</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
-                        <Link href="/projects" className={styles.design}>
+                        <Link href="/projects" className={styles.design} onClick={handleLinkClick}>
                             <Link href="/projects" className={styles._link}>PROJECTS</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
-                        <Link href="/contact" className={styles.design}>
+                        <Link href="/contact" className={styles.design} onClick={handleLinkClick}>
                             <Link href="/contact" className={styles._link}>CONTACT</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
-                        <Link href="/about#donate" onClick={handleDonateClick} className={styles.design}>
+                        <Link
+                            href="/about#donate"
+                            onClick={(e) => {
+                                handleDonateClick(e);
+                                handleLinkClick();
+                            }}
+                            className={styles.design}
+                        >
                             <Link href="/about#donate" className={styles._link}>DONATE</Link>
-                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
+                            <Image src="/assets/move.svg" alt="Go icon" height={13} width={13} />
                         </Link>
                     </div>
                 </div>
