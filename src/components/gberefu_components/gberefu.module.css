@@ -1,7 +1,7 @@
 .main_container {
     width: 1050px;
     display: grid;
-    margin-left: 5%;
+    margin: auto;
 }
 
 .navigate {

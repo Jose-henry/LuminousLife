@@ -34,29 +34,6 @@ function GberefuVisit() {
     const handleGoBack = () => {
         window.history.back(); // Navigate back using browser's history
     };
-
-    const pics = [
-        "/assets/gberefu1.jpeg",
-        "/assets/gberefu2.jpg",
-        "/assets/gberefu4.mp4",
-        "/assets/gberefu5.jpg",
-        "/assets/broken-school.mp4",
-        "/assets/gberefu7.jpeg",
-        "/assets/gberefu8.JPG",
-        "/assets/gberefu9.jpeg",
-        "/assets/gberefu10.jpg",
-        "/assets/gberefu11.jpeg",
-        "/assets/gberefu12.jpg",
-        "/assets/gberefu13.jpeg",
-        "/assets/gberefu14.JPG",
-        "/assets/gberefu15.jpg",
-    ];
-
-    const handleImageClick = (index: number) => {
-        console.log(`Clicked image at index ${index}`);
-        setSelectedImage(pics[index]); 
-        setShowOverlay(true); 
-    };
     
     const handleCloseClick = () => {
         setShowOverlay(false); 
@@ -211,60 +188,6 @@ function GberefuVisit() {
                         </div>
                     </div>
                 </div>
-
-                <div className={styles.pic_slide}>
-                <p><span>Gallery: </span>Picture references found here</p>
-    <div>
-        {[
-            "/assets/gberefu1.jpeg",
-            "/assets/gberefu2.jpg",
-            "/assets/gberefu4.mp4",
-            "/assets/gberefu5.jpg",
-            "/assets/broken-school.mp4",
-            "/assets/gberefu7.jpeg",
-            "/assets/gberefu8.JPG",
-            "/assets/gberefu9.jpeg",
-            "/assets/gberefu10.jpg",
-            "/assets/gberefu11.jpeg",
-            "/assets/gberefu12.jpg",
-            "/assets/gberefu13.jpeg",
-            "/assets/gberefu14.JPG",
-            "/assets/gberefu15.jpg",
-        ].map((src, index) => (
-            <div
-                key={index}
-                ref={(el) => {
-                    imgRefs.current[index] = el;
-                }}
-                className={`${styles.imgDiv} ${highlightIndex === index ? styles.highlight : ''}`}
-                onClick={() => handleImageClick(index)} 
-            >
-                {(
-                    <>
-                        {src.endsWith('.mp4') ? (
-                            <video
-                                controls
-                                className={styles.video}
-                            >
-                                <source src={src} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        ) : (
-                            <Image
-                                src={src}
-                                alt={`Picture ${index + 1}`}
-                                fill
-                                quality={100}
-                                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                                className='cursor-pointer'
-                            />
-                        )}
-                    </>
-                )}
-            </div>
-        ))}
-    </div>
-</div>
             </div>
         </div>
     );
