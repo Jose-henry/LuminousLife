@@ -52,7 +52,7 @@ function Teach() {
                     <div className={styles.text_div}>
                         <p>In the face of pressing environmental challenges and energy poverty, it is crucial to equip the next generation with the knowledge and tools to drive sustainable change. Luminous Life Foundation is dedicated to harnessing the power of solar energy to provide sustainable solutions to rural communities in Nigeria. By empowering young minds with an understanding of solar energy, we aim to cultivate a generation of environmentally conscious individuals who can contribute to a brighter, more sustainable future. This project focuses on educating and inspiring the youth, fostering their creativity and innovation, and providing them with practical skills to utilize solar energy effectively. Our comprehensive approach involves educational workshops, community outreach programs, training and mentorship, and hands-on projects, all designed to instill a deep appreciation for renewable energy and its potential to transform lives.</p>
                         <div className={styles.outline}>
-                            <h3 className={styles.outline_into}>Outline:</h3>
+                            <h3 className={styles.outline_intro}>Outline:</h3>
                             <h2><Link href="#introduction" className='font-normal text-[15px] hover:text-[#24527a]'>1. Introduction</Link></h2>
                             <h2><Link href="#overview" className='font-normal text-[15px] hover:text-[#24527a]'>2. Project Overview</Link></h2>
                             <h2><Link href="#workshop" className='font-normal text-[15px] hover:text-[#24527a]'>3. Educational Workshops</Link></h2>

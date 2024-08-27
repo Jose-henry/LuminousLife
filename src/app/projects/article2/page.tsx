@@ -1,7 +1,6 @@
 import GberefuVisit from "@/components/gberefu_components/gberefu";
 import { Metadata } from "next";
-
-
+import styles from '../article.module.css';
 
 
 export const metadata: Metadata = {
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Gberefu() {
   return (
-    <div className="w-full mt-[73px] bg-white">
+    <div  className={`w-full mt-[73px] bg-white ${styles.main}`}>
       <GberefuVisit/>
   </div>
   );

@@ -25,11 +25,6 @@ function GberefuVisit() {
         }
     };
 
-    const handleClick = (event: React.MouseEvent<HTMLAnchorElement>, index: number) => {
-        event.preventDefault();
-        handleHighlight(index);
-    };
-
 
     const handleGoBack = () => {
         window.history.back(); // Navigate back using browser's history
@@ -74,14 +69,14 @@ function GberefuVisit() {
                     <div className={styles.text_div}>
                         <p>Electricity is a cornerstone of modern life, powering homes, schools, hospitals, and businesses. For many, the flick of a switch or the glow of a light bulb is taken for granted. However, for the Gebrefu Community in Badagry, Lagos, this basic amenity has been out of reach for an astonishing 24 years. This article delves into the heart of Gebrefu, a community that has endured the hardships of living without electricity, highlighting the challenges faced and the resilience shown. It also brings to light the hope sparked by the efforts of the Luminous Life Foundation, an NGO dedicated to empowering underserved communities through sustainable energy solutions. Through personal stories, community engagement, and sustainable initiatives, we explore how the introduction of solar energy is transforming lives and providing a beacon of hope for a brighter future.</p>
                         <div className={styles.outline}>
-                            <h3 className={styles.outline_into}>Outline:</h3>
-                            <h2><Link href="#introduction" className='font-normal text-[15px] hover:text-[#24527a]'>1. Introduction</Link></h2>
-                            <h2><Link href="#background" className='font-normal text-[15px] hover:text-[#24527a]'>2. Historical Background</Link></h2>
-                            <h2><Link href="#stories" className='font-normal text-[15px] hover:text-[#24527a]'>3. Personal Stories</Link></h2>
-                            <h2><Link href="#hope" className='font-normal text-[15px] hover:text-[#24527a]'>4. The Spark of Hope</Link></h2>
-                            <h2><Link href="#solutions" className='font-normal text-[15px] hover:text-[#24527a]'>5. Implementing Sustainable Solutions</Link></h2>
-                            <h2><Link href="#future" className='font-normal text-[15px] hover:text-[#24527a]'>6. Future Prospects</Link></h2>
-                            <h2><Link href="#conclusion" className='font-normal text-[15px] hover:text-[#24527a]'>7. Conclusion</Link></h2>
+                            <h3 className={styles.outline_intro}>Outline:</h3>
+                            <h2><Link href="#introduction" className={`font-normal text-[15px] hover:text-[#24527a] ${styles.h2}`}>1. Introduction</Link></h2>
+                            <h2><Link href="#background" className={`font-normal text-[15px] hover:text-[#24527a] ${styles.h2}`}>2. Historical Background</Link></h2>
+                            <h2><Link href="#stories" className={`font-normal text-[15px] hover:text-[#24527a] ${styles.h2}`}>3. Personal Stories</Link></h2>
+                            <h2><Link href="#hope" className={`font-normal text-[15px] hover:text-[#24527a] ${styles.h2}`}>4. The Spark of Hope</Link></h2>
+                            <h2><Link href="#solutions" className={`font-normal text-[15px] hover:text-[#24527a] ${styles.h2}`}>5. Implementing Sustainable Solutions</Link></h2>
+                            <h2><Link href="#future" className={`font-normal text-[15px] hover:text-[#24527a] ${styles.h2}`}>6. Future Prospects</Link></h2>
+                            <h2><Link href="#conclusion" className={`font-normal text-[15px] hover:text-[#24527a] ${styles.h2}`}>7. Conclusion</Link></h2>
                         </div>
                         <p id='introduction'>
                             <h3>Introduction:</h3>

@@ -51,7 +51,7 @@ function Text1() {
                     <div className={styles.text_div}>
                         <p>In the remote villages of rural Nigeria, where darkness descends with the setting sun, lives are defined by the absence of light. Imagine a world where children struggle to study after dusk, where healthcare is limited by the setting of the sun, and where economic opportunities fade into obscurity with each passing hour of darkness. Economic opportunities, crucial for livelihoods, fade into obscurity with each passing hour after sunset, leaving communities trapped in a cycle of dependency on unpredictable energy sources.In these forgotten corners of Nigeria, the night brings not restful peace, but a stark reminder of the disparities faced by those without reliable electricity. Yet amidst these challenges, hope flickers faintly.</p>
                         <div className={styles.outline}>
-                            <h3 className={styles.outline_into}>Outline:</h3>
+                            <h3 className={styles.outline_intro}>Outline:</h3>
                             <h2><Link href="#introduction" className='font-normal text-[15px] hover:text-[#24527a]'>1. Introduction</Link></h2>
                             <h2><Link href="#problem" className='font-normal text-[15px] hover:text-[#24527a]'>2. <span className='font-semibold'>The Problem:</span> Life Without Light</Link></h2>
                             <h2><Link href="#inspiration" className='font-normal text-[15px] hover:text-[#24527a]'>3. <span className='font-semibold'>The Inspiration:</span> Why We Started</Link></h2>
