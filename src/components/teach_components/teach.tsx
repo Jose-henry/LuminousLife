@@ -6,53 +6,11 @@ import Link from 'next/link';
 
 
 function Teach() {
-    const [highlightIndex, setHighlightIndex] = useState<number | null>(null);
-    const imgRefs = useRef<(HTMLDivElement | null)[]>([]);
     const [selectedImage, setSelectedImage] = useState<string | null>(null); 
     const [showOverlay, setShowOverlay] = useState(false); 
 
-
-    const handleHighlight = (index: number) => {
-        if (index >= 0 && index < imgRefs.current.length) {
-            const imgElement = imgRefs.current[index];
-            if (imgElement) {
-                imgElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                setHighlightIndex(index);
-                setTimeout(() => {
-                    setHighlightIndex(null);
-                }, 2000); 
-            }
-        }
-    };
-
-    const handleClick = (event: React.MouseEvent<HTMLAnchorElement>, index: number) => {
-        event.preventDefault();
-        handleHighlight(index);
-    };
-    
-
     const handleGoBack = () => {
         window.history.back(); 
-    };
-
-    const pics = [
-        "/assets/teach1.jpg",
-        "/assets/teach2.jpg",
-        "/assets/teach3.jpg",
-        "/assets/teach4.mp4",
-        "/assets/teach5.mp4",
-        "/assets/teach6.mp4",
-        "/assets/teach7.jpg",
-        "/assets/teach8.jpg",
-        "/assets/teach9.JPG",
-        "/assets/teach10.jpg",
-        "/assets/teach11.jpg",
-    ];
-
-    const handleImageClick = (index: number) => {
-        console.log(`Clicked image at index ${index}`);
-        setSelectedImage(pics[index]); 
-        setShowOverlay(true); 
     };
     
     const handleCloseClick = () => {
@@ -148,7 +106,6 @@ function Teach() {
                                         <li><span className='font-semibold'>Importance and Benefits of Solar Power: </span>Understanding the environmental, economic, and social benefits of solar energy, including reducing carbon footprints and providing cost-effective energy solutions.</li>
                                         <li><span className='font-semibold'>How Solar Panels Work: </span>Detailed explanation of the technology behind solar panels, including photovoltaic cells, energy conversion, and storage.</li>
                                     </ul>
-                                    <p>Videos of our teaching sessions: <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 4)}>Video2</Link>, <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 5)}>Video 3</Link></p>
                                 </div>
                                 <div>
                                     <h4>ii.  Activities</h4>
@@ -167,7 +124,6 @@ function Teach() {
                                     </ul>
                                 </div>
                             </div>
-                            <p>Venue used for teaching: <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 6)}>Picture4</Link></p>
                         </div>
 
                         <div id="outreach">
@@ -191,7 +147,6 @@ function Teach() {
                                         <li>Facilitate mentorship and guidance for participants to develop and implement their projects.</li>
                                     </ul>
                                 </div>
-                                <p>A picture taken during one of our outreach programs: <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 10)}>Picture 8</Link></p>
                             </div>
                         </div>
 
@@ -205,65 +160,15 @@ function Teach() {
                             <div className='flex flex-col gap-3'>
                                 <p>We are proud to partner with Naza Agape Foundation in our mission to empower young minds through solar energy education. NAF's commitment to providing quality education, good welfare, and entrepreneurial training to vulnerable children, especially girls and women, aligns seamlessly with our goals.</p>
                                 <p>Together, we have already initiated several workshops and community outreach programs, and we will continue to collaborate closely to ensure equitable access to education and resources. By combining our efforts, we aim to eliminate barriers to education and empower the next generation of leaders with the knowledge and skills needed for sustainable development and future success.</p>
-                                <p>A picture of our students with one of the memebers of Naz Agape Foundation: <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 2)}>Picture 3</Link></p>
                             </div>
                         </div>
 
                         <div id='conclusion'>
                             <h3>Conclusion</h3>
                             <p>The road ahead is filled with opportunities to make a meaningful impact. By empowering young minds with the knowledge and skills to harness solar energy, we are not only promoting sustainable development but also fostering a sense of responsibility and innovation among the youth. We look forward to implementing these initiatives and witnessing the transformative effects they will have on our communities. Together, we can create a brighter, more sustainable future powered by solar energy.</p>
-                            <p>Picture of our coordinators: <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 0)}>Picture 1</Link>, <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 9)}>Picture 10</Link>, <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 7)}>Picture 8</Link></p>
                         </div>
                     </div>
                 </div>
-
-                <div className={styles.pic_slide}>
-                <p><span>Gallery: </span>Picture references found here</p>
-                <div>
-    {[
-        "/assets/teach1.jpg",
-        "/assets/teach2.jpg",
-        "/assets/teach3.jpg",
-        "/assets/teach4.mp4",
-        "/assets/teach5.mp4",
-        "/assets/teach6.mp4",
-        "/assets/teach7.jpg",
-        "/assets/teach8.jpg",
-        "/assets/teach9.JPG",
-        "/assets/teach10.jpg",
-        "/assets/teach11.jpg",
-    ].map((src: string, index: number) => (
-        <div
-            key={index}
-            ref={(el) => {
-                imgRefs.current[index] = el;
-            }}
-            className={`${styles.imgDiv} ${highlightIndex === index ? styles.highlight : ''}`}
-            onClick={() => handleImageClick(index)} 
-        >
-            {src.endsWith('.mp4') ? (
-                <video
-                    controls
-                    className={styles.video}
-                >
-                    <source src={src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            ) : (
-                <Image
-                    src={src}
-                    alt={`Picture ${index + 1}`}
-                    fill
-                    quality={100}
-                    style={{ objectFit: 'cover', objectPosition: 'center' }}
-                    className='cursor-pointer'
-                />
-            )}
-        </div>
-    ))}
-</div>
-
-</div>
             </div>
         </div>
     );

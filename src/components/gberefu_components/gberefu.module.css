@@ -1,5 +1,6 @@
 .main_container {
-    width: 1050px;
+    max-width: 1050px;
+    width: 95%;
     display: grid;
     margin: auto;
 }

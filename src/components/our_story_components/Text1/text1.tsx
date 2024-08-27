@@ -5,51 +5,11 @@ import styles from './text1.module.css';
 import Link from 'next/link';
 
 function Text1() {
-    const [highlightIndex, setHighlightIndex] = useState<number | null>(null);
-    const imgRefs = useRef<(HTMLDivElement | null)[]>([]);
     const [selectedImage, setSelectedImage] = useState<string | null>(null); 
     const [showOverlay, setShowOverlay] = useState(false); 
 
-
-    const handleHighlight = (index: number) => {
-        // Highlight and scroll only if within the .pic_slide > div
-        if (index >= 0 && index < imgRefs.current.length) {
-            const imgElement = imgRefs.current[index];
-            if (imgElement) {
-                imgElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                setHighlightIndex(index);
-                setTimeout(() => {
-                    setHighlightIndex(null);
-                }, 2000); // Remove the overlay after 2 seconds
-            }
-        }
-    };
-
-    const handleClick = (event: React.MouseEvent<HTMLAnchorElement>, index: number) => {
-        event.preventDefault();
-        handleHighlight(index);
-    };
-
     const handleGoBack = () => {
         window.history.back(); // Navigate back using browser's history
-    };
-
-    
-    const pics = [
-        "/assets/story3.jpg",
-        "/assets/story4.jpg",
-        "/assets/story5.jpg",
-        "/assets/story8.mp4",
-        "/assets/story1.jpg",
-        "/assets/story6.mp4",
-        "/assets/story2.jpg",
-        "/assets/story7.mp4",
-    ];
-
-    const handleImageClick = (index: number) => {
-        console.log(`Clicked image at index ${index}`);
-        setSelectedImage(pics[index]); 
-        setShowOverlay(true); 
     };
     
     const handleCloseClick = () => {
@@ -133,7 +93,7 @@ function Text1() {
                         <div id="inspiration">
                             <h3>The Inspiration:</h3>
                             <div className='flex flex-col gap-3'>
-                                <p>The Luminous Life Foundation was born from a vision rooted in firsthand experiences and a deep-seated commitment to social justice. <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 2)}>Favour Oguibe</Link>, having witnessed the debilitating effects of energy poverty in rural Nigeria, envisioned an organization that could bridge the gap between technological advances and underserved communities. Inspired by the belief that access to electricity is not a privilege but a fundamental right, the foundation was established to bring sustainable energy solutions to regions where the absence of light perpetuates cycles of poverty and limits opportunities for growth.</p>
+                                <p>The Luminous Life Foundation was born from a vision rooted in firsthand experiences and a deep-seated commitment to social justice. Favour Oguibe, having witnessed the debilitating effects of energy poverty in rural Nigeria, envisioned an organization that could bridge the gap between technological advances and underserved communities. Inspired by the belief that access to electricity is not a privilege but a fundamental right, the foundation was established to bring sustainable energy solutions to regions where the absence of light perpetuates cycles of poverty and limits opportunities for growth.</p>
                                 <p>Driven by a passion to improve living conditions and empower individuals, the foundation's mission transcends mere electrification. It encompasses the broader goal of fostering community resilience, enabling educational advancement, enhancing healthcare delivery, and catalyzing economic development. This vision has been the guiding force behind every initiative undertaken by the Luminous Life Foundation.</p>
                             </div>
                         </div>
@@ -147,15 +107,15 @@ function Text1() {
                                     We began by raising awareness about the challenges faced due to electricity poverty in these communities. Through advocacy and outreach efforts, we highlighted the urgent need for reliable energy solutions. Simultaneously, we solicited funds from various sources to support our initiative.</li>
                                     <li>
                                     <span className='font-semibold'>Procurement of Solar Lamps:</span>
-                                    With the funds secured, we purchased 100 solar lamps from <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 0)}>Holsten Boseen</Link>, a reputable company in China specializing in solar technology. Their commitment to quality and efficiency aligned perfectly with our mission to provide sustainable solutions.
+                                    With the funds secured, we purchased 100 solar lamps from <Link href="https://www.holstenbossen.com" className='text-blue-600'>Holsteen Bosteen</Link>, a reputable company in China specializing in solar technology. Their commitment to quality and efficiency aligned perfectly with our mission to provide sustainable solutions.
                                     </li>
                                     <li>
                                     <span className='font-semibold'>Community Engagement in Gbadagry:</span>
-                                    Understanding the importance of community involvement, we visited Gberefu and Yovoyan communities in Gbadagry: <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 3)}>Video1</Link>, <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 4)}>Picture4</Link>, <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 7)}>Video3</Link>. This initial visit was crucial in building trust and understanding the specific needs of the residents. We shared our vision to bring light to their homes using solar lamps, which resonated deeply with the community members.
+                                    Understanding the importance of community involvement, we visited Gberefu and Yovoyan communities in Gbadagry. This initial visit was crucial in building trust and understanding the specific needs of the residents. We shared our vision to bring light to their homes using solar lamps, which resonated deeply with the community members.
                                     </li>
                                     <li>
                                     <span className='font-semibold'>Distribution and Impact:</span>
-                                    Upon the arrival of the <Link href="" className={styles.link_ref} onClick={(e) => handleClick(e, 1)}>solar lamps</Link>, we meticulously planned and executed their distribution within the communities. Each lamp was strategically allocated to students, ensuring they had adequate lighting to study at night. This distribution not only addressed immediate needs but also laid the groundwork for sustainable educational development.
+                                    Upon the arrival of the solar lamps, we meticulously planned and executed their distribution within the communities. Each lamp was strategically allocated to students, ensuring they had adequate lighting to study at night. This distribution not only addressed immediate needs but also laid the groundwork for sustainable educational development.
                                     </li>
                                 </ul>
                             </div>
@@ -222,74 +182,6 @@ function Text1() {
                         </div>
                     </div>
                 </div>
-
-                <div className={styles.pic_slide}>
-                <p><span>Gallery: </span>Picture references found here</p>
-    <div>
-        {[
-            "/assets/story3.jpg",
-            "/assets/story4.jpg",
-            "/assets/story5.jpg",
-            "/assets/story8.mp4",
-            "/assets/story1.jpg",
-            "/assets/story6.mp4",
-            "/assets/story2.jpg",
-            "/assets/story7.mp4",
-        ].map((src, index) => (
-            <div
-                key={index}
-                ref={(el) => {
-                    imgRefs.current[index] = el;
-                }}
-                className={`${styles.imgDiv} ${highlightIndex === index ? styles.highlight : ''}`}
-            >
-                {index === 0 ? (
-                    <Link href="http://holstenbossen.com/" passHref>
-                            {src.endsWith('.mp4') ? (
-                                <video
-                                    controls
-                                    className={styles.video}
-                                >
-                                    <source src={src} type="video/mp4" />
-                                    Your browser does not support the video tag.
-                                </video>
-                            ) : (
-                                <Image
-                                    src={src}
-                                    alt={`Picture ${index + 1}`}
-                                    fill
-                                    quality={100}
-                                    style={{ objectFit: 'cover', objectPosition: 'center' }}
-                                />
-                            )}
-                    </Link>
-                ) : (
-                    <>
-                        {src.endsWith('.mp4') ? (
-                            <video
-                                controls
-                                className={styles.video}
-                            >
-                                <source src={src} type="video/mp4" />
-                                Your browser does not support the video tag.
-                            </video>
-                        ) : (
-                            <Image
-                                src={src}
-                                alt={`Picture ${index + 1}`}
-                                fill
-                                quality={100}
-                                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                                onClick={() => handleImageClick(index)} 
-                                className='cursor-pointer'
-                            />
-                        )}
-                    </>
-                )}
-            </div>
-        ))}
-    </div>
-</div>
             </div>
         </div>
     );
