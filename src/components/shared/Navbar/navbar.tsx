@@ -86,12 +86,12 @@ const NavBar: React.FC = () => {
                 </div>
             )}
             <div className={styles.theLinks}>
-                <Link href="/" className={styles.link}>HOME</Link>
-                <Link href="/about" className={styles.link}>ABOUT</Link>
-                <Link href="/team" className={styles.link}>TEAMS</Link>
-                <Link href="/projects" className={styles.link}>PROJECTS</Link>
-                <Link href="/contact" className={styles.link}>CONTACT</Link>
-                <Link href="/about#donate" className={styles.donate} onClick={handleDonateClick}>DONATE</Link>
+                <Link href="/" className={styles.link}>Home</Link>
+                <Link href="/about" className={styles.link}>About</Link>
+                <Link href="/team" className={styles.link}>Teams</Link>
+                <Link href="/projects" className={styles.link}>Projects</Link>
+                <Link href="/contact" className={styles.link}>Contact</Link>
+                <Link href="/about#donate" className={styles.donate} onClick={handleDonateClick}>Donate</Link>
                 <div className="w-[30px] h-[30px] rounded-full relative overflow-hidden shadow-md active:shadow-none cursor-pointer border-[2px] border-[#2c786c]" onClick={handleFlagClick}>
                     <Image src="/assets/ng.svg" alt='Flag' quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                 </div>
@@ -123,23 +123,23 @@ const NavBar: React.FC = () => {
                             <Image src="/assets/ng.svg" alt='Flag' quality={100} fill style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                         </div>
                         <Link href="/" className={`${styles.design} border-t-[1px] border-t-[#ececec]`} onClick={handleLinkClick}>
-                            <Link href="/" className={`${styles._link}`}>HOME</Link>
+                            <Link href="/" className={`${styles._link}`}>Home</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/about" className={styles.design} onClick={handleLinkClick}>
-                            <Link href="/about" className={styles._link}>ABOUT</Link>
+                            <Link href="/about" className={styles._link}>About</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/team" className={styles.design} onClick={handleLinkClick}>
-                            <Link href="/team" className={styles._link}>TEAMS</Link>
+                            <Link href="/team" className={styles._link}>Teams</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/projects" className={styles.design} onClick={handleLinkClick}>
-                            <Link href="/projects" className={styles._link}>PROJECTS</Link>
+                            <Link href="/projects" className={styles._link}>Projects</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link href="/contact" className={styles.design} onClick={handleLinkClick}>
-                            <Link href="/contact" className={styles._link}>CONTACT</Link>
+                            <Link href="/contact" className={styles._link}>Contact</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13}></Image>
                         </Link>
                         <Link
@@ -150,7 +150,7 @@ const NavBar: React.FC = () => {
                             }}
                             className={styles.design}
                         >
-                            <Link href="/about#donate" className={styles._link}>DONATE</Link>
+                            <Link href="/about#donate" className={styles._link}>Donate</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13} />
                         </Link>
                     </div>

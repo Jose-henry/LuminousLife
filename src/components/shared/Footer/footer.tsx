@@ -99,11 +99,11 @@ export default function FooterDiv() {
 
         <div className={styles.nav}>
           <div className={styles.theLinks}>
-            <Link href="/" className={styles.link}>HOME</Link>
-            <Link href="/about" className={styles.link}>ABOUT</Link>
-            <Link href="/team" className={styles.link}>TEAMS</Link>
-            <Link href="/projects" className={styles.link}>PROJECTS</Link>
-            <Link href="/contact" className={styles.link}>CONTACT</Link>
+            <Link href="/" className={styles.link}>Home</Link>
+            <Link href="/about" className={styles.link}>About</Link>
+            <Link href="/team" className={styles.link}>Teams</Link>
+            <Link href="/projects" className={styles.link}>Projects</Link>
+            <Link href="/contact" className={styles.link}>Contact</Link>
           </div>
           <p>&copy;2024 Luminous Life Foundation. All rights reserved.</p>
         </div>
