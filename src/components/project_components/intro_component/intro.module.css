@@ -38,11 +38,12 @@
 .color {
     background-color: #622D25;
     margin-top: 10px;
-    padding: 10px;
+    padding: 10px 20px;
     width: -moz-fit-content; /* Add this */
     width: fit-content;
     z-index: 2;
     position: relative;
+    font-weight: 700;
 }
 
 .line {

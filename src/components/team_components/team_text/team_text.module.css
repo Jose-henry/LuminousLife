@@ -17,8 +17,8 @@
     font-family: var(--font-finlandacia);
     color: white;
     font-size: 14px;
-    padding: 4px 10px;
-    border-radius: 3px;
+    padding: 8px 10px;
+    border-radius: 2px;
     font-weight: 700;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     background-color: #402a23;

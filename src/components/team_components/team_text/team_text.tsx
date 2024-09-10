@@ -8,7 +8,7 @@ const Join: React.FC = () => {
 
     return (
         <div className={styles.container}>
-            <h3>Would you love to join our vibrant team?</h3>
+            <h3 className='font-normal'>Love To Join Our Vibrant Team?</h3>
             <Link href="https://forms.gle/xzP3CLSgd9cAS2EQ9" className={styles.volunteer}>Volunteer Now</Link>
         </div>
     );

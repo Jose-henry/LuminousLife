@@ -48,7 +48,7 @@
     font-family: var(--font-finlandacia);
     padding: 8px 50px;
     color: white;
-    border-radius: 3px;
+    border-radius: 2px;
     box-shadow: 3px 3px 0px 0px white;
     transition: background-color 0.3s;
     font-weight: 700;
@@ -82,7 +82,7 @@
 
 .textDiv {
     background-color: white;
-    box-shadow: 0 7px 11px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;

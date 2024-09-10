@@ -40,6 +40,7 @@
 .project div {
     width: 100%;
     position: relative;
+    border-radius: 2px;
 }
 
 .div1 {
@@ -62,26 +63,6 @@
     height: 350px;
 }
 
-.style1 {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.style2 {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.style3 {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.style4 {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
 .project h3 {
     color: #622D25;
     font-size: 18px;
@@ -98,8 +79,8 @@
 .btn {
     background-color: #402a23;
     color: white;
-    padding: 5px 10px;
-    border-radius: 3px;
+    padding: 8px 10px;
+    border-radius: 2px;
     font-size: 13px;
     font-weight: 700;
     cursor: pointer;
@@ -129,7 +110,7 @@
     }
 
     .style4,.style2 {
-        border-radius: 3px;
+        border-radius: 2px;
     }
 
     .div3 {

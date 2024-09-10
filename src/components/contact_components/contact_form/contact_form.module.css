@@ -40,7 +40,7 @@
 .form input {
     width: 85%;
     padding: 12px;
-    border-radius: 3px;
+    border-radius: 2px;
     font-family: var(--font-finlandacia);
     font-size: 14.5px;
     outline: none;
@@ -51,7 +51,7 @@
     width: 85%;
     padding: 12px;
     height: 300px;
-    border-radius: 3px;
+    border-radius: 2px;
     font-size: 14.5px;
     font-family: var(--font-finlandacia);
     outline: none;
@@ -62,7 +62,7 @@
     height: 100%;
     width: 100%;
     background-color: #FBF6EF;
-    border-radius: 3px;
+    border-radius: 2px;
     display: grid;
     grid-template-rows: 2fr 1fr;
     overflow: hidden;
@@ -74,7 +74,7 @@
     font-size: 14px;
     padding: 12px;
     width: 85%;
-    border-radius: 4px;
+    border-radius: 3px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
     margin-top: 12px;
     font-weight: 700;

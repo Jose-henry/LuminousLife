@@ -19,7 +19,7 @@
     font-size: 13px;
     width: 250px;
     padding: 5px 10px;
-    border-radius: 3px;
+    border-radius: 2px;
     outline: none;
 }
 
@@ -33,7 +33,7 @@
     font-family: var(--font-finlandacia);
     padding: 8px 30px;
     color: white;
-    border-radius: 3px;
+    border-radius: 2px;
     transition: background-color 0.3s;
     font-weight: 700;
     font-size: 13px;
@@ -53,7 +53,7 @@
 
 .newsletter p {
     font-size: 14px;
-    color: #402a23;
+    color: black;
     margin-bottom: 10px;
 }
 
@@ -93,7 +93,7 @@
     font-family: var(--font-finlandacia);
     font-size: 14px;
     font-weight: 600;
-    color: #622D25;
+    color: black;
 }
 
 .link:hover {
