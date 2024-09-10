@@ -23,7 +23,7 @@ export default function Project() {
             <div className={styles.first_project}>
                 <div>
                     <h4>COMMUNITY</h4>
-                    <h3>Gebrefu in the Dark: Two Decades Without Electricity</h3>
+                    <h3>Gberefu in the Dark: Two Decades Without Electricity</h3>
                     <p>Nestled in the heart of Badagry, the Gebrefu Community has endured an astonishing 24 years without access to electricity. 
                         This prolonged blackout has cast long shadows over the lives of its residents, affecting education, 
                         healthcare, and economic opportunities. Yet, amidst the darkness, there is a growing spark of hope.</p>
