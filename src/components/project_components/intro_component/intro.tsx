@@ -1,4 +1,5 @@
 'use client'    
+import Link from "next/link";
 import styles from "./intro.module.css";
 
 export default function Intro() {
@@ -18,6 +19,7 @@ export default function Intro() {
             <div className={styles.color}>
               <p>The gallery below highlights locations we aim to impact with our solar solutions.</p>
             </div>
+            <p className="font-bold text-[14px] mt-2">Visit Our Gallery <Link href="/gallery" className="text-blue-900 underline">here</Link></p>
             <div className={styles.line}>
             </div>
           </div>
