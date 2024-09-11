@@ -43,7 +43,7 @@ export const Pages: CollectionConfig = {
     {
       name: 'image',
       type: 'upload',
-      relationTo: 'media',
+      relationTo: 'projectmedia',
     },
     {
       name: 'slug',
