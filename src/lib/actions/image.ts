@@ -6,7 +6,7 @@ import { getPlaiceholder } from 'plaiceholder';
 import { cache } from 'react';
 import { revalidateTag } from 'next/cache';
 
-export const preload = async (alt: string) => {
+export const preload = async () => {
   void fetchImage();
 };
 

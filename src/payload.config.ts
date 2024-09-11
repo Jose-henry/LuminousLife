@@ -34,7 +34,7 @@ export default buildConfig({
   sharp,
   plugins: [s3Storage({ 
     collections: {
-      [Media.slug]: {
+      [Media.slug || ProjectMedia.slug]: {
         disableLocalStorage: true,  // Use cloud storage exclusively
         // disablePayloadAccessControl: false,  // Defaults to false, so access control is still applied
         prefix: 'media',

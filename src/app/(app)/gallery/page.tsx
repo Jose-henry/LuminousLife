@@ -1,5 +1,5 @@
 import BentoGridGallery from '@/components/gallery_components/BentoGridGallery'
-import { fetchImage } from '@/lib/actions/image';
+import { fetchImage, preload } from '@/lib/actions/image';
 import photos from '@/lib/photos';
 
 
@@ -29,6 +29,7 @@ import photos from '@/lib/photos';
 export const revalidate = 400 // Revalidate every 5 minutes
 
 export default async function GalleryPage() {
+  preload();
  const data = await fetchImage()
  console.log(data)
 
