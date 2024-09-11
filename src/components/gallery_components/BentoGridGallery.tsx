@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export const customLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }) => {
   return `${src}?w=${width}&q=${quality || 80}`;
@@ -20,8 +19,37 @@ interface BentoGridGalleryProps {
   images: ImageProps[]
 }
 
+const Modal: React.FC<{ image: ImageProps; onClose: () => void }> = ({ image, onClose }) => {
+  return (
+    <div 
+      className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50" 
+      onClick={onClose}
+      style={{ backdropFilter: 'blur(5px)' }}
+    >
+      <div 
+        className="relative w-[850px] h-[550px] overflow-hidden rounded-md"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <Image
+          src={image.src || ''}
+          alt={image.alt || ''}
+          layout="fill"
+          objectFit="cover"
+          loader={customLoader}
+          placeholder='blur'
+          blurDataURL={image.blurData || ''}
+        />
+        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
+          <p>{image.description}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
   const [layout, setLayout] = useState<('small' | 'large')[][]>([])
+  const [selectedImage, setSelectedImage] = useState<ImageProps | null>(null)
 
   useEffect(() => {
     const generateLayout = () => {
@@ -68,19 +96,20 @@ const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 mx-auto" style={{ maxWidth: '1300px', padding: '0 50px' }}>
-      {layout.map((row, rowIndex) => (
-        <div className="flex justify-between gap-4" key={rowIndex}>
-          {row.map((size, colIndex) => {
-            const image = images[rowIndex * 4 + colIndex]
-            if (!image) return null
+    <>
+      <div className="flex flex-col gap-4 mx-auto" style={{ maxWidth: '1300px', padding: '0 50px' }}>
+        {layout.map((row, rowIndex) => (
+          <div className="flex justify-between gap-4" key={rowIndex}>
+            {row.map((size, colIndex) => {
+              const image = images[rowIndex * 4 + colIndex]
+              if (!image) return null
 
-            return (
-              <div
-                key={image.id}
-                className={`transition-transform duration-300 hover:scale-105 rounded-md relative ${size === 'large' ? 'w-[600px] h-[300px]' : 'w-[300px] h-[300px]'} bg-gray-200 group overflow-hidden`}
-              >
-                <Link href={`/gallery/${image.id}`}>
+              return (
+                <div
+                  key={image.id}
+                  className={`transition-transform duration-300 hover:scale-105 rounded-md relative ${size === 'large' ? 'w-[600px] h-[300px]' : 'w-[300px] h-[300px]'} bg-gray-200 group overflow-hidden cursor-pointer`}
+                  onClick={() => setSelectedImage(image)}
+                >
                   <Image
                     src={image.src || ''}
                     alt={image.alt || ''}
@@ -96,13 +125,16 @@ const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
                       {truncateDescription(image.description || '', 100)}
                     </p>
                   </div>
-                </Link>
-              </div>
-            )
-          })}
-        </div>
-      ))}
-    </div>
+                </div>
+              )
+            })}
+          </div>
+        ))}
+      </div>
+      {selectedImage && (
+        <Modal image={selectedImage} onClose={() => setSelectedImage(null)} />
+      )}
+    </>
   )
 }
 
