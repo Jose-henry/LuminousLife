@@ -2,11 +2,18 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+
+export const customLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }) => {
+  return `${src}?w=${width}&q=${quality || 80}`;
+};
 
 interface ImageProps {
-  id: number
-  src: string
-  alt: string
+  id?: number | string
+  src?: string
+  alt?: string
+  description?: string
+  blurData?: string
 }
 
 interface BentoGridGalleryProps {
@@ -25,12 +32,10 @@ const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
         const row: ('small' | 'large')[] = []
         let rowWidth = 0
 
-        // Randomly decide if this row will have 4 squares or 2 squares and 1 rectangle
         const hasRectangle = Math.random() > 0.3
 
         if (hasRectangle) {
-          // Randomly decide the position of the rectangle in the row
-          const rectanglePosition = Math.floor(Math.random() * 3) // 0, 1, or 2
+          const rectanglePosition = Math.floor(Math.random() * 3)
           for (let i = 0; i < 3; i++) {
             if (i === rectanglePosition) {
               row.push('large')
@@ -41,7 +46,6 @@ const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
             }
           }
         } else {
-          // Add 4 squares
           for (let i = 0; i < 4 && remainingImages.length > 0; i++) {
             row.push('small')
             rowWidth += 1
@@ -58,6 +62,11 @@ const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
     generateLayout()
   }, [images])
 
+  const truncateDescription = (description: string, maxLength: number) => {
+    if (description.length <= maxLength) return description;
+    return description.slice(0, maxLength) + '...';
+  };
+
   return (
     <div className="flex flex-col gap-4 mx-auto" style={{ maxWidth: '1300px', padding: '0 50px' }}>
       {layout.map((row, rowIndex) => (
@@ -69,15 +78,25 @@ const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
             return (
               <div
                 key={image.id}
-                className={`transition-transform duration-300 hover:scale-105 rounded-md relative ${size === 'large' ? 'w-[600px] h-[300px]' : 'w-[300px] h-[300px]'} bg-gray-200`}
+                className={`transition-transform duration-300 hover:scale-105 rounded-md relative ${size === 'large' ? 'w-[600px] h-[300px]' : 'w-[300px] h-[300px]'} bg-gray-200 group overflow-hidden`}
               >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-md "
-                />
+                <Link href={`/gallery/${image.id}`}>
+                  <Image
+                    src={image.src || ''}
+                    alt={image.alt || ''}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-md"
+                    loader={customLoader}
+                    placeholder='blur'
+                    blurDataURL={image.blurData || ''}
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                    <p className="text-white text-sm">
+                      {truncateDescription(image.description || '', 100)}
+                    </p>
+                  </div>
+                </Link>
               </div>
             )
           })}
