@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+/* import { notFound } from "next/navigation";
 import configPromise from '@payload-config';
 import { getPayload } from 'payload';
 import TextContent from "@/components/our_story_components/Text1/textContent";
@@ -66,3 +66,15 @@ export default async function Projects({ params }: { params: { slug: string } })
     </div>
   );
 }
+ */
+
+
+
+
+export default function Projects() {
+  return (
+    <div> 
+      dynamic post
+    </div>
+  );
+} 
