@@ -60,7 +60,7 @@ const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
         const row: ('small' | 'large')[] = []
         let rowWidth = 0
 
-        const hasRectangle = Math.random() > 0.3
+        const hasRectangle = Math.random() > 0.2
 
         if (hasRectangle) {
           const rectanglePosition = Math.floor(Math.random() * 3)

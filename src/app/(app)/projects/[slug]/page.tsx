@@ -1,11 +1,9 @@
-/* import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import configPromise from '@payload-config'
-import { getPayload } from 'payload' //you can use this or the one below
-// import { getPayloadHMR } from '@payloadcms/next/utilities' //you can use this or the one above
-
-// import type { Media } from "@/payload-types";
-
-
+import { getPayload } from 'payload'
+import TextContent from "@/components/our_story_components/Text1/textContent";
+import styles from '../article.module.css';
+import { getBlurDataUrl } from '@/utils/imageUtils'
 
 const payload = await getPayload({
   config: configPromise,
@@ -13,48 +11,52 @@ const payload = await getPayload({
 
 export async function generateStaticParams() {
   const posts = await payload.find({
-    collection: 'post',
+    collection: 'pages',
   })
   return posts.docs.map((post: any) => ({
     slug: post.slug,
   }))
 }
 
-
 export default async function Projects({ params }: { params: { slug: string } }) {
-
-  const {slug} = params
+  const { slug } = params
   const post = await payload.find({
-    collection: 'post',
+    collection: 'pages',
     where: {
       slug: { equals: slug },
     }
   })
 
-
-  if (post.docs.length===0) {
+  if (post.docs.length === 0) {
     notFound()
   }
- //console.log('post docs',post.docs)
+
+  const doc = post.docs[0]
+  console.log(doc)
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000'
+  
+  // Extract the image URL from the doc.image object
+  const imageUrl = doc.image?.url || ''
+  const src = imageUrl ? `${apiUrl}${imageUrl.startsWith('/') ? '' : '/'}${imageUrl}` : ''
+  
+  // Generate blurDataURL if we have a valid src
+  const blurDataURL = src ? await getBlurDataUrl(src) : ''
+
+  // Convert content to a string or pass it as is
+  const contentString = typeof doc.content === 'string' 
+    ? doc.content 
+    : JSON.stringify(doc.content)
+
   return (
-    <div>
-    <h1 className="text-3xl font-bold underline text-black">{post.docs[0].title}</h1>
-    <h2>
-      {post.docs[0].description.root.children.map((child: any) => (
-        <span key={child.type}>{child.text}</span>
-      ))}
-    </h2>
-  </div>
-  )
-}
-
- */
-
-export const dynamic = 'force-dynamic'
-export default function Projects() {
-
-
-  return(
-    <h1>Dynamic post</h1>
+    <div className={`w-full mt-[73px] bg-white ${styles.main}`}>
+      <TextContent
+        title={doc.title || ''}
+        content={contentString}
+        src={src}
+        alt={doc.image?.alt || ''}
+        blurData={blurDataURL}
+        description={doc.image?.description || ''}
+      />
+    </div>
   )
 }

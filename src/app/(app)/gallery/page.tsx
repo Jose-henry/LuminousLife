@@ -26,7 +26,7 @@ import photos from '@/lib/photos';
   { id: 20, src: '/assets/child.jpg', alt: 'Image 10' },
 ]; */
 
-export const revalidate = 600 // Revalidate every 5 minutes
+export const revalidate = 400 // Revalidate every 5 minutes
 
 export default async function GalleryPage() {
  const data = await fetchImage()
