@@ -1,8 +1,22 @@
-'use server'
 import Link from 'next/link'
 import photos, { Photo } from '@/lib/photos'
 import PhotoCard from '@/components/gallery_components/PhotoCard'
 import { fetchImage } from '@/lib/actions/image';
+
+
+
+
+
+
+export async function generateStaticParams() {
+  const data = await fetchImage()
+  return data.map((photo: Photo) => ({
+    id: photo.id
+  }))
+}
+
+
+
 
 export default async function PhotoPage({
   params: { id }

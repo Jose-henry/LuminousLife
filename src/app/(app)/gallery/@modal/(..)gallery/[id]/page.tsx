@@ -1,8 +1,22 @@
-"use server"
 import Modal from '@/components/gallery_components/Modal'
 import PhotoCard from '@/components/gallery_components/PhotoCard'
-import photos, { Photo } from '@/lib/photos'
+import { Photo } from '@/lib/photos'
 import { fetchImage } from '@/lib/actions/image';
+
+
+
+
+export async function generateStaticParams() {
+  const data = await fetchImage()
+  return data.map((photo: Photo) => ({
+    id: photo.id
+  }))
+}
+
+
+
+
+
 export default async function PhotoModal({
   params: { id }
 }: {
