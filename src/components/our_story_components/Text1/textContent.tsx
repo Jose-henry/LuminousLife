@@ -1,19 +1,13 @@
 'use client';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import styles from './text1.module.css';
-import Link from 'next/link';
-
-
-
-export const revalidate = 1800;
 
 export const customLoader = ({ src, width, quality }: { src: string; width: number; quality?: number }) => {
     return `${src}?w=${width}&q=${quality || 80}`;
-  };
+};
 
-
-interface content{
+interface Content {
     title?: string;
     content?: string;
     src?: string;
@@ -21,12 +15,13 @@ interface content{
     description?: string;
     blurData?: string;
 }
-function TextContent({ title, content, src, alt, description, blurData }: content) {
+
+function TextContent({ title, content, src, alt, description, blurData }: Content) {
     const [selectedImage, setSelectedImage] = useState<string | null>(null); 
     const [showOverlay, setShowOverlay] = useState(false); 
 
     const handleGoBack = () => {
-        window.history.back(); // Navigate back using browser's history
+        window.history.back();
     };
     
     const handleCloseClick = () => {
@@ -34,43 +29,54 @@ function TextContent({ title, content, src, alt, description, blurData }: conten
         setSelectedImage(null); 
     };
 
+    // Parse content if it's a JSON string
+    let parsedContent;
+    if (typeof content === 'string') {
+        try {
+            parsedContent = JSON.parse(content);
+        } catch (e) {
+            parsedContent = content;
+        }
+    } else {
+        parsedContent = content;
+    }
+
+    // Function to render content
+    const renderContent = (content: any) => {
+        if (typeof content === 'string') {
+            return <p>{content}</p>;
+        }
+        if (content && content.root && content.root.children) {
+            return content.root.children.map((child: any, index: number) => {
+                if (child.type === 'paragraph') {
+                    const textNode = child.children && child.children[0] ? child.children[0].text : '';
+                    return <p key={index}>{textNode}</p>;
+                }
+                // Add more conditions here for other types of content
+                return null;
+            });
+        }
+        return null;
+    };
+
     return (
         <div className={`bg-[#fafafa] pt-[60px] pb-[80px] relative ${styles.main}`}>
-            <div className={styles.picOverlay} style={{ display: showOverlay ? 'block' : 'none' }}>
-                <div className={styles.inside_container}>
-                    <Image src="/assets/white_close.svg" width={25} height={25} alt="close" className='ml-auto cursor-pointer shadow-2xl' onClick={handleCloseClick} />
-                    <div className={styles.overlayContent}>
-                        {selectedImage && (
-                            <Image
-                                src={selectedImage}
-                                alt="Image"
-                                fill
-                                quality={100}
-                                style={{ objectFit: 'cover', objectPosition: 'center' }}
-                                className={styles.image}
-                            />
-                        )}
-                    </div>
-                </div>
-            </div>
-            <button onClick={handleGoBack} className={styles.navigate}>
-                <Image src="/assets/back.png" alt="Go Back" width={40} height={40} className='shadow-md rounded-full active:shadow-none' />
-                <p>Back</p>
-            </button>
-
             <div className={styles.main_container}>
                 <div className={styles.div1}>
                     <h1>{title}</h1>
                     <div className={`${styles.pic_container} shadow-2xl`}>
-                        <Image src={src || ""} alt={alt || ""} fill style={{ objectFit: 'cover', objectPosition: 'center' }}
-                        placeholder='blur'
-                        blurDataURL={blurData}
-                        loader={customLoader}
+                        <Image 
+                            src={src || ""} 
+                            alt={alt || ""} 
+                            fill 
+                            style={{ objectFit: 'cover', objectPosition: 'center' }}
+                            placeholder='blur'
+                            blurDataURL={blurData}
+                            loader={customLoader}
                         />
                     </div>
-
                     <div className={styles.text_div}>
-                        <div>{content}</div>
+                        {renderContent(parsedContent)}
                     </div>
                 </div>
             </div>
