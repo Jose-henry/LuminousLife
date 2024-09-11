@@ -1,10 +1,38 @@
-import { Metadata } from "next";
-import ClientGallery from "@/components/gallery_components/ClientGallery";
+import BentoGridGallery from '@/components/gallery_components/BentoGridGallery'
+import {BentoGridDemo} from '@/components/gallery_components/Bento'
+import Image from 'next/image';
 
-export const metadata: Metadata = {
-  title: "Gallery",
-};
 
-export default function Gallery() {
-    return <ClientGallery />;
+const images = [
+  { id: 1, src: '/assets/child.jpg', alt: 'Image 1' },
+  { id: 2, src: '/assets/child.jpg', alt: 'Image 2' },
+  { id: 3, src: '/assets/child.jpg', alt: 'Image 3' },
+  { id: 4, src: '/assets/child.jpg', alt: 'Image 4' },
+  { id: 5, src: '/assets/child.jpg', alt: 'Image 5' },
+  { id: 6, src: '/assets/child.jpg', alt: 'Image 6' },
+  { id: 7, src: '/assets/child.jpg', alt: 'Image 7' },
+  { id: 8, src: '/assets/child.jpg', alt: 'Image 8' },
+  { id: 9, src: '/assets/child.jpg', alt: 'Image 9' },
+  { id: 10, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 11, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 12, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 13, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 14, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 15, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 16, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 17, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 18, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 18, src: '/assets/child.jpg', alt: 'Image 10' },
+  { id: 20, src: '/assets/child.jpg', alt: 'Image 10' },
+];
+
+
+export default function GalleryPage() {
+  return (
+    <div className=' bg-white z-0'>
+    <div className="min-h-screen mt-[82px] ">
+      <BentoGridGallery images={images}/>
+    </div>
+    </div>
+  )
 }
