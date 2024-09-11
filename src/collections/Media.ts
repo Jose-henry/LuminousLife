@@ -23,6 +23,7 @@ export const Media: CollectionConfig = {
     {
       name: 'description',
       type: 'text',
+      required: true,
     },
   ],
   upload: true,
@@ -54,21 +55,5 @@ export const Media: CollectionConfig = {
         }
       },
     ],
-    /* afterOperation: [
-      async ({ result, operation }) => {
-        // Check if the result includes the document details and if it has an 'alt' field
-        if (result && result.doc && result.doc.alt) {
-          revalidateTag(result.doc.alt);  // Invalidate cache based on 'alt' field
-        } else if (result && result.docs) {
-          // Handle multiple documents if needed
-          result.docs.forEach((doc: any) => {
-            if (doc.alt) {
-              revalidateTag(doc.alt);  // Invalidate cache based on 'alt' field
-            }
-          });
-        }
-        console.log('Operation type:', operation);  // Debugging line
-      },
-    ], */
   },
 };

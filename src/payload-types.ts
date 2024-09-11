@@ -71,7 +71,7 @@ export interface User {
 export interface Media {
   id: string;
   alt?: string | null;
-  description?: string | null;
+  description: string;
   prefix?: string | null;
   updatedAt: string;
   createdAt: string;
