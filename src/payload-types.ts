@@ -53,7 +53,7 @@ export interface User {
   id: string;
   firstName: string;
   lastName: string;
-  roles?: 'admin'[] | null;
+  roles?: ('admin' | 'editor')[] | null;
   updatedAt: string;
   createdAt: string;
   email: string;

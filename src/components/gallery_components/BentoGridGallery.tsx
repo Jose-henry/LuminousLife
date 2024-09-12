@@ -54,33 +54,41 @@ const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
   useEffect(() => {
     const generateLayout = () => {
       const newLayout: ('small' | 'large')[][] = []
-      let remainingImages = [...images]
+      let remainingImages = images.length
 
-      while (remainingImages.length > 0) {
+      while (remainingImages > 0) {
         const row: ('small' | 'large')[] = []
         let rowWidth = 0
 
-        const hasRectangle = Math.random() > 0.2
+        if (remainingImages >= 4) {
+          const hasRectangle = Math.random() > 0.25
 
-        if (hasRectangle) {
-          const rectanglePosition = Math.floor(Math.random() * 3)
-          for (let i = 0; i < 3; i++) {
-            if (i === rectanglePosition) {
-              row.push('large')
-              rowWidth += 2
-            } else {
+          if (hasRectangle) {
+            const rectanglePosition = Math.floor(Math.random() * 3)
+            for (let i = 0; i < 3; i++) {
+              if (i === rectanglePosition) {
+                row.push('large')
+                rowWidth += 2
+              } else {
+                row.push('small')
+                rowWidth += 1
+              }
+            }
+          } else {
+            for (let i = 0; i < 4; i++) {
               row.push('small')
               rowWidth += 1
             }
           }
         } else {
-          for (let i = 0; i < 4 && remainingImages.length > 0; i++) {
+          // For last row, fill with remaining images as small size
+          for (let i = 0; i < remainingImages; i++) {
             row.push('small')
             rowWidth += 1
           }
         }
 
-        remainingImages.splice(0, rowWidth)
+        remainingImages -= rowWidth
         newLayout.push(row)
       }
 
@@ -99,15 +107,18 @@ const BentoGridGallery: React.FC<BentoGridGalleryProps> = ({ images }) => {
     <>
       <div className="flex flex-col gap-4 mx-auto" style={{ maxWidth: '1300px', padding: '0 50px' }}>
         {layout.map((row, rowIndex) => (
-          <div className="flex justify-between gap-4" key={rowIndex}>
+          <div className={`flex ${row.length < 4 ? 'justify-start' : 'justify-between'} gap-4`} key={rowIndex}>
             {row.map((size, colIndex) => {
-              const image = images[rowIndex * 4 + colIndex]
+              const imageIndex = layout.slice(0, rowIndex).reduce((sum, r) => sum + r.length, 0) + colIndex
+              const image = images[imageIndex]
               if (!image) return null
 
               return (
                 <div
                   key={image.id}
-                  className={`transition-transform duration-300 hover:scale-105 rounded-md relative ${size === 'large' ? 'w-[600px] h-[300px]' : 'w-[300px] h-[300px]'} bg-gray-200 group overflow-hidden cursor-pointer`}
+                  className={`transition-transform duration-300 hover:scale-105 rounded-md relative ${
+                    size === 'large' ? 'w-[600px] h-[300px]' : 'w-[300px] h-[300px]'
+                  } bg-gray-200 group overflow-hidden cursor-pointer`}
                   onClick={() => setSelectedImage(image)}
                 >
                   <Image
