@@ -25,7 +25,7 @@ export default buildConfig({
   collections: [Users, Media, Pages, ProjectMedia],
   upload: {
     limits: {
-      fileSize: (50 * 1024 * 1024), // 50MB, written in bytes
+      fileSize: (50000000), // 5 MB, written in bytes
     },
   },
   editor: lexicalEditor(),
