@@ -23,6 +23,11 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Pages, ProjectMedia],
+  upload: {
+    limits: {
+      fileSize: (50 * 1024 * 1024), // 50MB, written in bytes
+    },
+  },
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
