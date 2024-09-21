@@ -16,13 +16,13 @@
 
 .link {
     font-family: var(--font-finlandacia);
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     color: black;
 }
 
 .link:hover {
-    text-decoration: underline;
+    font-weight: 900;
 }
 
 .donate {
@@ -37,7 +37,13 @@
 }
 
 .donate:hover {
-    box-shadow: 1px 1px 2px 0px #ffe76a;
+    box-shadow: 1px 1px 2px 0px #ffa;
+}
+
+.active {
+    color: #000; /* black color */
+    border-bottom: 3px solid #ffc93c; /* yellow border bottom */
+    font-weight: 900;
 }
 
 .donate:active {

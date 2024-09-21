@@ -9,7 +9,7 @@ import Update from "@/components/home_components/UpdateSection/update";
 
 export default function Home() {
   return (
-    <div className="relative w-full bg-[#ffe76a]">
+    <div className="relative w-full bg-[#ffa]">
       <Hero/>
       <About/>
       <Mission/>

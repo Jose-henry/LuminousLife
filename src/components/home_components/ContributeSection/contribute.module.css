@@ -1,5 +1,5 @@
 .main_container {
-    background: linear-gradient(180deg, #fdffcd, white);
+background-color: #ffa;
     padding-top: 60px;
     padding-bottom: 80px;
 }
@@ -57,7 +57,7 @@
 }
 
 .link:hover {
-    box-shadow: 3px 3px 0px 0px #ffe76a;
+    box-shadow: 3px 3px 0px 0px #ffa;
 }
 
 .link:active {

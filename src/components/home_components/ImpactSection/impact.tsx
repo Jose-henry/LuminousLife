@@ -78,7 +78,7 @@ export default function Impact() {
 
   return (
     <div ref={ref} className={`w-full ${styles.main_container}`}>
-      <h2>OUR IMPACT TO DATE</h2>
+      <h2>Our Impact till Date</h2>
       <div className={styles.impactDiv}>
         <div>
           <h3>{lamps}<sup>+</sup></h3>

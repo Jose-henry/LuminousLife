@@ -36,7 +36,7 @@
 .link {
     font-family: var(--font-finlandacia);
     padding: 7px 10px;
-    color: #402a23;
+    color: white;
     border-radius: 2px;
     transition: background-color 0.3s;
     font-weight: 700;
@@ -46,7 +46,7 @@
     margin: auto;
     text-align: center;
     margin-top: 10px;
-    background-color: #fff;
+    background-color: #402a23;
 }
 
 .link:active {

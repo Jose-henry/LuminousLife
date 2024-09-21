@@ -1,5 +1,5 @@
 .footer_container {
-    background-color: white;
+    background-color: #402a23;
     padding: 35px 0;
     width: 100%;
     z-index: 29;
@@ -38,6 +38,7 @@
     font-weight: 700;
     font-size: 13px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
 }
 
 .subscribe:active {
@@ -53,12 +54,12 @@
 
 .newsletter p {
     font-size: 14px;
-    color: black;
+    color: white;
     margin-bottom: 10px;
 }
 
 .nav p {
-    color: #402a23;
+    color: white;
     font-size: 13px;
     opacity: 50%;
 }
@@ -91,9 +92,9 @@
 
 .link {
     font-family: var(--font-finlandacia);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
-    color: black;
+    color: white;
 }
 
 .link:hover {

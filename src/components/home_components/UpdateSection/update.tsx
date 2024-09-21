@@ -6,7 +6,7 @@ import Typewriter from 'typewriter-effect';
 
 export default function Update() {
   return (
-    <div className="relative w-full mt-[35px] pb-[100px]">
+    <div className="relative w-full pb-[100px] bg-white border">
         <h2 className={styles.text}>
             <Typewriter
             options={{
