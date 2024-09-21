@@ -1,5 +1,5 @@
 .main_container {
-background-color: #ffa;
+background-color: black;
     padding-top: 60px;
     padding-bottom: 80px;
 }
@@ -21,7 +21,7 @@ background-color: #ffa;
 }
 
 .intro h2 {
-    color: #402a23;
+    color: whitesmoke;
     font-size: 30px;
     text-align: center;
     line-height: normal;
@@ -32,10 +32,6 @@ background-color: #ffa;
     font-size: 16px;
     line-height: 28px;
     text-align: center;
-}
-
-.intro p {
-    font-size: 17px;
 }
 
 .main_container h3 {

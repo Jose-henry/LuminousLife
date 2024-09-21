@@ -35,7 +35,7 @@
 
 .link {
     font-family: var(--font-finlandacia);
-    padding: 7px 10px;
+    padding: 10px 0px;
     color: white;
     border-radius: 2px;
     transition: background-color 0.3s;

@@ -35,7 +35,9 @@ export default function About() {
                 <div className={styles._div}>
                     <h2>Get to Know Us</h2>
                     <p>Discover more about the Luminous Life Foundation, who we are, how we started and the vision that drives our mission</p>
-                    <Link href="/about" className={styles.link}>About Us</Link>
+                    <div className='w-full h-full border border-black flex justify-center items-center mt-4'>
+                        <Link href="/about" className={styles.link}>About Us</Link>
+                    </div>
                 </div>
 
             </div>

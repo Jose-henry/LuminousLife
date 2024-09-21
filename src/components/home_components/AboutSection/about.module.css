@@ -85,7 +85,7 @@
     border-radius: 2px;
     margin-top: 5px;
     font-size: 15px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     font-weight: 700;
     width: fit-content;
 }

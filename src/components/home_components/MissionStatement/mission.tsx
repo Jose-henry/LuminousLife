@@ -11,11 +11,11 @@ export default function Mission() {
             <div className={styles.overlay}></div>
             <div>
                 <h2>Our Mission Satement</h2>
-                <p><span className='text-[30px] font-bold'>"</span>Our mission is to provide reliable, clean, and affordable energy to unserved & underserved communities, fostering socio-economic development and enhancing quality of life.<span className='text-[30px] font-bold'>"</span></p>
+                <p>Our mission is to provide reliable, clean, and affordable energy to unserved & underserved communities, fostering socio-economic development and enhancing quality of life.</p>
             </div>
             <div>
                 <h2>Our Vision</h2>
-                <p><span className='text-[30px] font-bold'>"</span>Our vision is to build a Nigeria where everyone, regardless of socio-economic class, has access to clean, consistent, and reliable energy.<span className='text-[30px] font-bold'>"</span></p>
+                <p>Our vision is to build a Nigeria where everyone, regardless of socio-economic class, has access to clean, consistent, and reliable energy.</p>
             </div>
         </div>
     </div>

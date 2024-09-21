@@ -83,7 +83,7 @@ export default function FooterDiv() {
               <Image src="/assets/icon2.svg" alt="Instagram" width={20} height={20} />
             </Link>
             <Link href="https://x.com/luminous_life_f?s=11">
-              <Image src="/assets/icon4.svg" alt="Twitter" width={20} height={20} />
+              <Image src="/assets/twitterx.svg" alt="Twitter" width={20} height={20} />
             </Link>
             <Link href="https://www.linkedin.com/company/luminous-life-foundation/">
               <Image src="/assets/icon3.svg" alt="Linkedin" width={20} height={20} />

@@ -18,7 +18,7 @@ const Topbar: React.FC = () => {
                         alt="Logo icon"
                         className="rounded-[3px] absolute"
                     />
-                    <h3 className="text-[#622D25] font-bold text-[18px] leading-5 pl-[44px]">Luminous Life Foundation</h3>
+                    <h3 className="text-white font-bold text-[18px] leading-5 pl-[44px]">Luminous Life Foundation</h3>
                 </div>
             </div>
             </Link>

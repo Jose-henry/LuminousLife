@@ -19,7 +19,6 @@ export default function Contribute() {
         <div className={styles.wrapper}>
             <div className={styles.intro}>
                 <h2>Together, we can light up the dark places</h2>
-                <p>This is how how you can help us!</p>
             </div>
             <div className={styles.picDiv}>
                 <div className={styles.textDiv}>
@@ -38,7 +37,7 @@ export default function Contribute() {
                         <p>100% of your donation brings solar energy to homes in need.</p>
                 </div>
                 <div className={styles.ImgDiv}>
-                    <Image src="/assets/kero.jpg" alt="Lamp" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                    <Image src="/assets/real6.JPG" alt="Lamp" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
                 </div>
             </div>
         </div>

@@ -22,7 +22,7 @@
 .link {
     background-color: #402a23;
     font-family: var(--font-finlandacia);
-    padding: 8px 50px;
+    padding: 10px 50px;
     color: white;
     border-radius: 2px;
     transition: background-color 0.3s;
