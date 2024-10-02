@@ -38,7 +38,7 @@ export default function Project() {
         <div style={{
             position: 'relative',
             }}>
-                <Image src="/assets/teach.jpg" alt="Test" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src="/assets/teach.JPG" alt="Test" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
             </div>
             <div className={styles.second_project}>
                 <div>

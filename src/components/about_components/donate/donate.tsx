@@ -44,7 +44,7 @@ export default function Donate() {
       <h2 className={styles.donate_text}>Donation</h2>
       <div className={styles.main_container}>
         <div className={styles.picture}>
-          <Image src="/assets/donate-pic.jpg" alt="Test" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+          <Image src="/assets/donate-pic.JPG" alt="Test" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
         </div>
         <div className={styles.div2}>
           <p className={styles.p}>Empower Change Today!</p>
