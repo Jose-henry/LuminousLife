@@ -50,7 +50,7 @@ const Gallery: React.FC = () => {
   };
 
   return (
-    <main className="py-4 pb-2">
+    <main className="py-4 pb-0 bg-[#f2f2f2]">
       <div className="relative">
         <button
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10"
@@ -65,7 +65,7 @@ const Gallery: React.FC = () => {
           <AiOutlineRight size={24} />
         </button>
         <div
-          className={`flex gap-4 overflow-x-scroll overflow-y-hidden ${styles.no_scrollbar}`}
+          className={`flex gap-4 overflow-x-scroll bg-[#f2f2f2] overflow-y-hidden ${styles.no_scrollbar}`}
           ref={scrollRef}
         >
           {images.map((item, idx) => (

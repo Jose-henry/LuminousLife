@@ -24,17 +24,19 @@ export default function Contribute() {
                 <div className={styles.textDiv}>
                         <div>
                             <Image src="/assets/bulb.jpg" alt="Logo" height={50} width={50} className='mx-auto'></Image>
-                            <h3>From Kerosene to Solar</h3>
-                            <p>
-                                Your donation helps rural communities transition from costly and harmful kerosene to affordable, clean solar energy. Solar lights reduce household expenses, improve health, and brighten lives, making sustainable living a reality.
-                            </p>
+                            <h3>Change starts with me and you!</h3>
+                            <p>With just a 2000 naira, you can make a life-changing difference:</p>
                         </div>
-                        <p>Your donation can provide solar-powered lights to a family, transforming their nights and enabling a brighter future.</p>
+                        <ul className='list-disc list-inside w-[95%] m-auto flex flex-col gap-2 text-justify max-w-[480px]'>
+                            <li>Transition a family from costly and unhealthy kerosene lamps to sustainable and reliable solar lanterns.</li>
+                            <li>Ensure students can read and complete their homework every night without interruption.</li>
+                            <li>Ensure young children can sleep without poisonous kerosene fumes affecting them</li>
+                        </ul>
                         <div className={styles.linkDiv}>
                             <Link href="/about#donate" className={styles.link} onClick={handleDonateClick}>Donate</Link>
                             <Link href="https://forms.gle/xzP3CLSgd9cAS2EQ9" className={styles.link}>Volunteer</Link>
                         </div>
-                        <p>100% of your donation brings solar energy to homes in need.</p>
+                        <p>A single donation is worth more than you can imagine!</p>
                 </div>
                 <div className={styles.ImgDiv}>
                     <Image src="/assets/real6.JPG" alt="Lamp" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>

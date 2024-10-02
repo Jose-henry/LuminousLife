@@ -24,7 +24,7 @@ const Picture: React.FC = () => {
                     opacity: isLoaded ? 1 : 0, // Ensure opacity is 0 until the fade-in effect starts
                 }}
             >
-                <Image src="/assets/office2.jpg" alt="Office" quality={100} fill style={{ objectFit: 'cover', objectPosition: 'center' }} />
+                <Image src="/assets/real6.jpg" alt="Office" quality={100} fill style={{ objectFit: 'cover', objectPosition: 'center' }} />
             </div>
         </div>
     );

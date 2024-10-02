@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Topbar: React.FC = () => {
     return (
-        <div className={styles.topbarContainer}>
+        <div className={`${styles.topbarContainer} shadow-sm`}>
             <Link href="/">
             <div className={styles.logoContainer}>
                 <div className="flex items-center gap-[10px] relative">
@@ -18,7 +18,7 @@ const Topbar: React.FC = () => {
                         alt="Logo icon"
                         className="rounded-[3px] absolute"
                     />
-                    <h3 className="text-white font-bold text-[18px] leading-5 pl-[44px]">Luminous Life Foundation</h3>
+                    <h3 className="text-[#402a23] font-bold text-[18px] leading-5 pl-[44px]">Luminous Life Foundation</h3>
                 </div>
             </div>
             </Link>

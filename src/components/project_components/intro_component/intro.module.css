@@ -1,6 +1,6 @@
 .main_container {
     width: 100%;
-    background-color: #fbf2d5;
+    background-color: white;
     padding: 100px 10px;
     position: relative; /* Add this */
 }

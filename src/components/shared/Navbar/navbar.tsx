@@ -155,7 +155,7 @@ const NavBar: React.FC = () => {
                             }}
                             className={styles.design}
                         >
-                            <Link href="/about#donate" className={`${styles._link} ${isActiveLink("/about#donate") ? styles.active : ""}`}>DONATE</Link>
+                            <Link href="/about#donate" className={`${styles._link} ${isActiveLink("/about#donate") ? styles.active : ""}`}>Donate</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13} />
                         </Link>
                     </div>

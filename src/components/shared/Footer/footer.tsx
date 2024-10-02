@@ -74,7 +74,7 @@ export default function FooterDiv() {
               alt="Logo icon"
               className="rounded-[3px] absolute"
             />
-            <h3 className="text-white font-bold text-[16px] leading-5 pl-[44px]">
+            <h3 className="text-black font-bold text-[16px] leading-5 pl-[44px]">
               Luminous Life Foundation
             </h3>
           </div>
@@ -83,7 +83,7 @@ export default function FooterDiv() {
               <Image src="/assets/icon2.svg" alt="Instagram" width={20} height={20} />
             </Link>
             <Link href="https://x.com/luminous_life_f?s=11">
-              <Image src="/assets/twitterx.svg" alt="Twitter" width={20} height={20} />
+              <Image src="/assets/icon4.svg" alt="Twitter" width={20} height={20} />
             </Link>
             <Link href="https://www.linkedin.com/company/luminous-life-foundation/">
               <Image src="/assets/icon3.svg" alt="Linkedin" width={20} height={20} />

@@ -61,7 +61,7 @@
 .cont_img {
     height: 100%;
     width: 100%;
-    background-color: #FBF6EF;
+    background-color: #f2f2f2;
     border-radius: 2px;
     display: grid;
     grid-template-rows: 2fr 1fr;

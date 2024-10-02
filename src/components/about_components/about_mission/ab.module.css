@@ -1,7 +1,7 @@
 .wrapper {
     width: 100%;
     position: relative;
-    background: linear-gradient(180deg, #FBF6EF, white, white, white, #FBF6EF);
+    background: white;
 }
 
 .change {

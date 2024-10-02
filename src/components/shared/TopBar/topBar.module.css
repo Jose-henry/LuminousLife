@@ -1,6 +1,6 @@
 .topbarContainer {
     padding: 20px 15px;
-    background-color: black;
+    background-color: white;
     width: 100%;
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@
     /* Styles for the logo text */
     font-size: 15px;
     margin-left: 10px;
-    color: #FBF6EF;
+    color: #402a23;
 }
 
 @media screen and (max-width: 720px) {
@@ -48,7 +48,7 @@
 @media screen and (max-width: 374px) {
     /* CSS rules for screens with a maximum width of 1000px */
     .logoContainer h3 {
-        color: white;
+        color: #402a23;
         font-size: 2px;
     }
 }

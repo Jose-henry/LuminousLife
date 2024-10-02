@@ -18,7 +18,7 @@
     font-family: var(--font-finlandacia);
     font-size: 14px;
     font-weight: 500;
-    color: white;
+    color: #402a23;
 }
 
 .link:hover {
@@ -30,11 +30,10 @@
     font-family: var(--font-finlandacia);
     padding: 6px 30px;
     color: white;
-    border-radius: 2px;
+    border-radius: 4px;
     transition: background-color 0.3s;
     font-weight: 800;
     font-size: 14px;
-    border: 2px solid white;
 }
 
 .donate:hover {

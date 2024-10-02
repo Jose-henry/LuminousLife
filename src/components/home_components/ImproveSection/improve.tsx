@@ -20,7 +20,8 @@ export default function Improve() {
         <div className={styles.wrapper}>
             <div className={styles.textDiv}>
                 <h2>Help Us Improve!</h2>
-                <p>We value your input! Your feedback is crucial in helping us enhance our efforts and make a greater impact. Please take a moment to share your thoughts, suggestions, or any areas where we can do better. Together, we can light up more lives!</p>
+                <p>At the Luminous Life Foundation, we love Feedback! Your feedback is crucial in helping us enhance our efforts and make a greater impact.
+                Take a moment to share your thoughts, suggestions and secommendations. Together, we can light up lives!</p>
                 <Link href="/contact#contact" className={styles.link} onClick={handleContactClick}>Give Your Input</Link>
             </div>
             <div className={styles.loveDiv}>

@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 export default function Team() {
   return (
       <div className={`w-full pb-7 mt-[73px] relative ${styles.container}`}>
-        <div className="w-full h-[400px] bg-[#FBF6EF] absolute -z-10"></div>
+        <div className="w-full h-[400px] bg-[#ffde74] absolute -z-10"></div>
         <Picture/>
         <Join/>
-        <div className="w-full h-[400px] bg-[#FBF6EF] absolute -z-10 bottom-0"></div>
+        <div className="w-full h-[400px] bg-[#ffde74] absolute -z-10 bottom-0"></div>
       </div>
   );
 }

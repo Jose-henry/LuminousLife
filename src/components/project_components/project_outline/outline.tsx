@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Outline() {
   return (
-      <div className="w-full pt-[60px] bg-[#f6eedf] pb-[80px]">
+      <div className="w-full pt-[60px] bg-[#ffde74] pb-[80px]">
         <div className={styles.main_container}>
             <div className={styles.text}>
                 <h2>Project Outline</h2>

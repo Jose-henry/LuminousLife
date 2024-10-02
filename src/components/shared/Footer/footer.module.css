@@ -1,5 +1,5 @@
 .footer_container {
-    background-color: black;
+    background-color: white;
     padding: 100px 0;
     width: 100%;
     z-index: 29;
@@ -13,7 +13,6 @@
 }
 
 .input input {
-    border: 2px solid #402a23;
     color: #402a23;
     font-family: var(--font-finlandacia);
     font-size: 13px;
@@ -21,6 +20,7 @@
     padding: 5px 10px;
     border-radius: 2px;
     outline: none;
+    border: 2px solid #402a23;
 }
 
 .input {
@@ -38,7 +38,6 @@
     font-weight: 700;
     font-size: 13px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid white;
 }
 
 .subscribe:active {
@@ -54,12 +53,12 @@
 
 .newsletter p {
     font-size: 14px;
-    color: white;
+    color: black;
     margin-bottom: 10px;
 }
 
 .nav p {
-    color: white;
+    color: black;
     font-size: 13px;
     opacity: 50%;
 }
@@ -94,7 +93,7 @@
     font-family: var(--font-finlandacia);
     font-size: 14px;
     font-weight: 600;
-    color: white;
+    color: black;
 }
 
 .link:hover {

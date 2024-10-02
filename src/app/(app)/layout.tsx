@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full w-[100%] overflow-x-hidden">
+    <html lang="en" className="h-full w-[100%] overflow-x-hidden]">
       <body className={`h-full flex flex-col justify-between w-[100%] overflow-x-hidden ${finlandacia.className}`}>
         <Topbar/>
         <LenisScroll/>

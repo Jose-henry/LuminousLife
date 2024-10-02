@@ -18,11 +18,13 @@
 
 .main_container h3 {
     font-size: 23px;
+    color: #402a23;
 }
 
 .main_container h4 {
     font-size: 16px;
     font-family: var(--font-finlandacia);
+    color: #402a23;
 }
 
 .line {
@@ -54,8 +56,7 @@
 }
 
 .card3 {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 5px;
     height: 600px;
     align-self: center;
     position: relative;
@@ -85,25 +86,25 @@
 }
 
 .project {
-    border: 2px solid #622D25;
     padding: 8px 15px;
     font-family: var(--font-finlandacia);
     align-self: start;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
-    border-radius: 3px;
+    border-radius: 2px;
+    background-color: white;
 }
 
 .project:hover {
-    background-color: #E5C9A2;
+    background-color: whitesmoke;
 }
 
 .project:active {
-    background-color: #f6eedf;
+    background-color: white;
 }
 
 .first_project {
-    background-color: #f6eedf;
+    background-color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -113,10 +114,11 @@
 .first_project p {
     font-size: 15px;
     line-height: 28px;
+    color: #402a23;
 }
 
 .second_project {
-    background-color: #f6eedf;
+    background-color: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -126,6 +128,7 @@
 .second_project p {
     font-size: 15px;
     line-height: 28px;
+    color: #402a23;
 }
 
 @media (max-width: 897px) {

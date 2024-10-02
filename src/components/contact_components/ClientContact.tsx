@@ -32,7 +32,7 @@ export default function ClientContact() {
       }, []);
 
   return (
-    <div>
+    <div className='bg-[#ffde74]'>
       <Picture/>
       <div id="contact-form">
         <Form/>

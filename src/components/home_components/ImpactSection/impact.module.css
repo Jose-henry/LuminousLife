@@ -37,10 +37,10 @@
     background-color: #402a23;
     color: white;
     font-family: var(--font-finlandacia);
-    padding: 10px 50px;
+    padding: 12px 50px;
     display: flex;
     align-items: center;
-    border-radius: 2px;
+    border-radius: 5px;
     margin-top: 5px;
     font-size: 15px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);

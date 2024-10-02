@@ -2,7 +2,7 @@
     max-width: 1000px;
     width: 95%;
     border-radius: 3px;
-    background-color: #FBF6EF;
+    background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin: auto;
     padding: 80px 20px;
@@ -10,7 +10,7 @@
 }
 
 .div2 {
-    width: 60%;
+    width: 65%;
     height: 100%;
     margin-left: auto;
 }
@@ -18,8 +18,8 @@
 .div2 form {
     margin-top: 10px;
     padding: 10px;
-    background-color: #E5C9A2;
-    border-radius: 3px;
+    background-color: #ffde74;
+    border-radius: 2px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -30,7 +30,8 @@
     top: 50%;
     transform: translateY(-50%);
     left: -100px;
-    border-radius: 3px;
+    border-radius: 6px;
+    overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }  
 
@@ -66,13 +67,14 @@
     font-size: 13px;
     color: #622D25;
     outline: none;
+    border: 1px solid #e0e0e0;
 }
 
 .btn {
     font-size: 13px;
-    background-color: #622D25;
+    background-color: #402a23;
     color: white;
-    padding: 5px;
+    padding: 7px 5px;
     width: 100px;
     display: flex;
     justify-content: center;
