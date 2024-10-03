@@ -27,7 +27,7 @@ export default function Contribute() {
                             <h3>Change starts with me and you!</h3>
                             <p>With just a 2000 naira, you can make a life-changing difference:</p>
                         </div>
-                        <ul className='list-inside w-[95%] m-auto text-[15px] flex flex-col gap-2 text-center max-w-[480px]'>
+                        <ul className='list-inside w-[95%] m-auto text-[15px] leading-loose flex flex-col gap-2 text-[#402a23] text-center max-w-[480px]'>
                             <li>Transition a family from costly and unhealthy kerosene lamps to sustainable and reliable solar lanterns.</li>
                             <li>Ensure students can read and complete their homework every night without interruption.</li>
                             <li>Ensure young children can sleep without poisonous kerosene fumes affecting them</li>
