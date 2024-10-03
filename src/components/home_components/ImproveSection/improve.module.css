@@ -80,6 +80,7 @@
     .wrapper {
         grid-template-columns: 1fr;
         gap: 6%;
+        padding-bottom: 50px;
     }
 
     .loveDiv {
