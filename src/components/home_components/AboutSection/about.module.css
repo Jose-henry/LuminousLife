@@ -10,7 +10,8 @@
 
 .get {
     border: 2px solid white;
-    padding: 3%;
+    padding: 10px;
+    width: 100%;
 }
 
 .story_div {
@@ -119,7 +120,7 @@
         position: absolute;
         max-width: 400px;
         width: 100%;
-        bottom: -180px;
+        bottom: -250px;
     }
 
     .main_container {
@@ -187,7 +188,7 @@
 
 @media (max-width: 353px) {
     .get {
-        bottom: -320px;
+        bottom: -250px;
     }
 }
 
@@ -206,5 +207,20 @@
         align-items: center;
         margin: auto;
         margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .get {
+        border: none;
+        padding: none;
+        bottom: -250px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+
+    ._div {
+        border: 2px solid white;
+        padding: 5%;
     }
 }

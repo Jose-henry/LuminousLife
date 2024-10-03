@@ -90,10 +90,15 @@
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 580px) {
     .impactDiv {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .main_container {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     .main_container span {
