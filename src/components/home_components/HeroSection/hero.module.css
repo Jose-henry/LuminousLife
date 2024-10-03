@@ -10,6 +10,7 @@
     background: url('/assets/real1.JPG');
     background-size: cover;
     background-position: center;
+    overflow-x: hidden;
 }
 
 .overlay {
