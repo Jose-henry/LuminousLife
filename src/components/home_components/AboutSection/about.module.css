@@ -8,6 +8,11 @@
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
+.get {
+    border: 2px solid white;
+    padding: 3%;
+}
+
 .story_div {
     position: absolute;
     z-index: 10;
@@ -36,7 +41,7 @@
     flex-direction: column;
     gap: 20px;
     position: relative;
-    background-color: white;
+    background-color: #ffde74;
     padding: 70px 3%;
 }
 
@@ -199,5 +204,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: auto;
+        margin-top: 20px;
     }
 }

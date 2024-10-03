@@ -8,7 +8,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 700px;
     position: relative;
     padding: 5%;
 }
@@ -34,4 +33,15 @@
     line-height: 35px;
     position: relative;
     z-index: 20;
+}
+
+@media (max-width: 900px) {
+    .div1 {
+        margin-top: 30px;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        gap: 1px;
+    }
 }
