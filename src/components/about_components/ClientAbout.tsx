@@ -45,7 +45,7 @@ export default function ClientAbout() {
 
 
   return (
-    <div className={`w-full pt-[10px] bg-[#ffde74]`}>
+    <div className={`w-full pt-[10px] bg-[#ffde74] overflow-x-hidden`}>
       <AB />
       <div id="our-story">
         <Story />
