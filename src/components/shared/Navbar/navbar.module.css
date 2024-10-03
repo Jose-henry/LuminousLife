@@ -75,9 +75,9 @@
 }
 
 ._link {
-    font-size: 16px;
+    font-size: 14px;
     font-family: var(--font-finlandacia);
-    color: black;
+    color: #402a23;
     font-weight: 700;
 }
 

@@ -14,7 +14,7 @@ const Picture: React.FC = () => {
     return (
         <div>
             <div 
-                className={`${styles['fade-in']} ${styles.mar}`}
+                className={`${styles['fade-in']} ${styles.mar} border-t-[4px] border-t-[#ffa]`}
                 style={{ 
                     position: 'relative',
                     width: '100%',

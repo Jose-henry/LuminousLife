@@ -128,23 +128,23 @@ const NavBar: React.FC = () => {
                             <Image src="/assets/ng.svg" alt="Flag" quality={100} fill style={{ objectFit: "cover", objectPosition: "center" }} />
                         </div>
                         <Link href="/" className={`${styles.design} border-t-[1px] border-t-[#ececec]`} onClick={handleLinkClick}>
-                            <Link href="/" className={`${styles._link} ${isActiveLink("/") ? styles.active : ""}`}>Home</Link>
+                            <Link href="/" className={`${styles._link} ${isActiveLink("/") ? styles.active : ""}`}>HOME</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13} />
                         </Link>
                         <Link href="/about" className={styles.design} onClick={handleLinkClick}>
-                            <Link href="/about" className={`${styles._link} ${isActiveLink("/about") ? styles.active : ""}`}>About</Link>
+                            <Link href="/about" className={`${styles._link} ${isActiveLink("/about") ? styles.active : ""}`}>ABOUT</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13} />
                         </Link>
                         <Link href="/team" className={styles.design} onClick={handleLinkClick}>
-                            <Link href="/team" className={`${styles._link} ${isActiveLink("/team") ? styles.active : ""}`}>Teams</Link>
+                            <Link href="/team" className={`${styles._link} ${isActiveLink("/team") ? styles.active : ""}`}>TEAMS</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13} />
                         </Link>
                         <Link href="/projects" className={styles.design} onClick={handleLinkClick}>
-                            <Link href="/projects" className={`${styles._link} ${isActiveLink("/projects") ? styles.active : ""}`}>Projects</Link>
+                            <Link href="/projects" className={`${styles._link} ${isActiveLink("/projects") ? styles.active : ""}`}>PROJECTS</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13} />
                         </Link>
                         <Link href="/contact" className={styles.design} onClick={handleLinkClick}>
-                            <Link href="/contact" className={`${styles._link} ${isActiveLink("/contact") ? styles.active : ""}`}>Contact</Link>
+                            <Link href="/contact" className={`${styles._link} ${isActiveLink("/contact") ? styles.active : ""}`}>CONTACT</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13} />
                         </Link>
                         <Link
@@ -155,7 +155,7 @@ const NavBar: React.FC = () => {
                             }}
                             className={styles.design}
                         >
-                            <Link href="/about#donate" className={`${styles._link} ${isActiveLink("/about#donate") ? styles.active : ""}`}>Donate</Link>
+                            <Link href="/about#donate" className={`${styles._link} ${isActiveLink("/about#donate") ? styles.active : ""}`}>DONATE</Link>
                             <Image src="/assets/move.svg" alt="Go icon" height={13} width={13} />
                         </Link>
                     </div>
