@@ -37,7 +37,6 @@ export default function About() {
                     <p>Discover more about the Luminous Life Foundation, who we are, how we started and the vision that drives our mission</p>
                     <Link href="/about" className={styles.link}>About Us</Link>
                 </div>
-
             </div>
         </div>
     </div>
