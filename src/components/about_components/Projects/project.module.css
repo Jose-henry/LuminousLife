@@ -92,7 +92,8 @@
     font-size: 14px;
     font-weight: 700;
     border-radius: 2px;
-    background-color: white;
+    background-color: #402a23;
+    color: white;
 }
 
 .project:hover {
