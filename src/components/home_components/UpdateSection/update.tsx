@@ -26,7 +26,7 @@ export default function Update() {
               </div>
               <h3>INSTAGRAM POST</h3>
               <p>This post highlights some key info regarding electricity.</p>
-              <Link href="https://www.instagram.com/p/C7zu9fjNVFY/?igsh=bm96M2x5c20xejJ6" className={styles.link}>View Post</Link>
+              <Link href="https://www.instagram.com/p/C7zu9fjNVFY/?igsh=bm96M2x5c20xejJ6" className={styles.link} target='_blank'>View Post</Link>
           </div>
 
           <div>
@@ -35,16 +35,16 @@ export default function Update() {
               </div>
               <h3>LINKEDIN POST</h3>
               <p>Did you know? There are currently 28 power generating plants connected to the national grid, of which 25 are gas-fired plants...</p>
-              <Link href="https://www.linkedin.com/posts/favour-oguibe-0a4081195_did-you-know-there-are-currently-28-activity-7109549264250310656-5wAy?utm_source=share&utm_medium=member_ios" className={styles.link}>Read More</Link>
+              <Link href="https://www.linkedin.com/posts/favour-oguibe-0a4081195_did-you-know-there-are-currently-28-activity-7109549264250310656-5wAy?utm_source=share&utm_medium=member_ios" className={styles.link} target='_blank'>Learn More</Link>
           </div>
 
           <div>
             <div className={styles.div}>
-                <Image src="/assets/post3.jpg" alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
+                <Image src="/assets/screenshot.jpg" alt="Post" fill quality={100} style={{objectFit: 'cover', objectPosition: 'center'}}></Image>
               </div>
-              <h3>YOUTUBE VIDEO</h3>
-              <p>Our first youtube video!</p>
-              <Link href="https://youtube.com/shorts/2vsJfwSK97o?si=zzsyxttOjnAJ6owH" className={styles.link}>Watch Video</Link>
+              <h3>NEWS COVERAGE</h3>
+              <p>We are on the news!</p>
+              <Link href="https://saharareporters.com/2024/09/30/communities-blighted-blackout-get-lighting-system-following-civic-media-lab-report" className={styles.link} target='_blank'>Read More</Link>
           </div>
 
         </div>

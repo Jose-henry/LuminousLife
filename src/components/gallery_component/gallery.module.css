@@ -1,0 +1,107 @@
+.galleryContainer {
+    padding: 40px;
+    background-color: #fff;
+    margin-top: 73px;
+    padding-bottom: 120px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .pageTitle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+    animation: fadeInTitle 1s ease-in-out forwards;
+    width: 500px;
+  }
+  
+  .highlight {
+    color: #ff7f50;
+  }
+  
+  @keyframes fadeInTitle {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .cardImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .cardContent {
+    padding: 20px;
+  }
+  
+  .cardTitle {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #111;
+    line-height: normal;
+  }
+  
+  .cardDescription {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .cardDate {
+    font-size: 0.875rem;
+    color: #888;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pageTitle {
+      font-size: 2rem;
+    }
+  
+    .cardTitle {
+      font-size: 1.25rem;
+    }
+  
+    .cardDescription {
+      font-size: 0.875rem;
+    }
+  }
+  
