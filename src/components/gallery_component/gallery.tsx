@@ -7,73 +7,73 @@ const GalleryPage = () => {
     {
       title: 'Lamp Distribution',
       description: 'Distributing the solar lamp to the children of the community to help in their studying',
-      date: 'September 15, 2023',
+      date: 'August 31st, 2024',
       imgSrc: '/assets/real6.JPG'
     },
     {
       title: 'Solar Lamps in Action',
       description: 'Explaining to a member of the community on the working principles of the lamp.',
-      date: 'August 22, 2023',
+      date: 'August 31st, 2024',
       imgSrc: '/assets/1 (10).JPG'
     },
     {
       title: 'Abandoned School',
       description: 'A picture of an abandoned school building in the community. Children still learn here because it is all they have.',
-      date: 'July 10, 2023',
+      date: 'July 10th, 2024',
       imgSrc: '/assets/1 (17).JPG'
     },
     {
       title: 'The Founder',
       description: 'A picture of the founder and a child in the community.',
-      date: 'September 15, 2023',
+      date: 'August 31st, 2024',
       imgSrc: '/assets/empower.JPG'
     },
     {
       title: 'Communty Leader',
       description: 'Here, we took a picture with one of the community leaders.',
-      date: 'August 22, 2023',
+      date: 'July 10th, 2024',
       imgSrc: '/assets/gberefu13.jpeg'
     },
     {
       title: 'Fisherman',
       description: 'Apicture of a community member making a fishing net.',
-      date: 'July 10, 2023',
+      date: 'July 10th, 2024',
       imgSrc: '/assets/gberefu14.JPG'
     },
     {
       title: 'Ojoti Nepa',
       description: "This locally made lamps is the community's source of light.",
-      date: 'September 15, 2023',
+      date: 'July 10th, 2024',
       imgSrc: '/assets/gberefu15.jpg'
     },
     {
       title: 'Thatched House',
       description: 'This is the kind of house the communty members reside.',
-      date: 'August 22, 2023',
+      date: 'July 10th, 2024',
       imgSrc: '/assets/gallery1.JPG'
     },
     {
       title: 'Children',
       description: 'A picture of some of the children in the community and their pet cat.',
-      date: 'July 10, 2023',
+      date: 'August 31st, 2024',
       imgSrc: '/assets/gallery2.JPG'
     },
     {
       title: 'Children Empowerment',
       description: 'A picture with some of the children we empower with technical knowledge as well as solar energy.',
-      date: 'September 15, 2023',
-      imgSrc: '/assets/teach2.JPG'
+      date: 'June 5th, 2024',
+      imgSrc: '/assets/teach2.jpg'
     },
     {
       title: 'By the Riverside',
       description: 'Thatched houses by the riverside.',
-      date: 'August 22, 2023',
+      date: 'July 10th, 2024',
       imgSrc: '/assets/gberefu10.jpg'
     },
     {
       title: 'Welcome Post',
       description: 'A post with a message welcoming visitors to the community',
-      date: 'July 10, 2023',
+      date: 'July 10th, 2024',
       imgSrc: '/assets/gberefu2.jpg'
     }
   ];
