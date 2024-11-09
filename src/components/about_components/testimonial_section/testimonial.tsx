@@ -16,56 +16,38 @@ const Testimonial: React.FC = () => {
             name: "Tope Salako",
             position: "Community Leader",
             location: "Lagos",
-            testimony: '"Thanks to the solar panels provided by Luminous Life Foundation, our community now has reliable electricity. Children can study at night, and our health clinic operates smoothly even after dark."'
+            testimony: '"We truly appreciate the good work Luminous Life has started in our community. Thanks to the solar lamps they provided, our homes now have reliable lighting. Children can study at night, and we can sell for a few hours after dark. We look forward to even more solar solutions to help us in other aspects."'
         },
         {
-            name: "Sarah Adebayo",
+            name: " Faula Kamalideen",
             position: "Teacher",
-            location: "Abuja",
-            testimony: '"The new water pumps have transformed our school. Students can stay hydrated, and the school garden is flourishing. We are so grateful for this support."'
+            location: "Lagos",
+            testimony: '"The pump price of oil that has ballooned has made the solar lanterns even more useful and timely. The solar lanterns help us see well at night and also assist my children study because when they return from school, it is usually dark"'
         },
         {
-            name: "David Okafor",
+            name: "Victoria Hungbo",
             position: "Farmer",
-            location: "Kano",
-            testimony: '"With the irrigation system funded by Luminous Life Foundation, our crop yields have increased significantly. Our community is more food secure and our incomes have improved."'
+            location: "Lagos",
+            testimony: '“We deeply appreciate this gesture as it helps us sell our farm produce after dark, letting us earn even more. We hope for a solar farm that can power a pumping system to help irrigate our farmlands”'
         },
         {
-            name: "Grace Eze",
-            position: "Healthcare Worker",
-            location: "Enugu",
-            testimony: '"The medical supplies and training provided have greatly improved our clinic’s capacity to care for patients. We can now handle emergencies more effectively and save more lives."'
+            name: "Eberongbe Muyiba",
+            position: "Trader",
+            location: "Lagos",
+            testimony: '"The solar lamps have been very helpful for my family and me. My children now complete their assignments easily. The lamps work well, and we also use them to sell after dark."'
         },
         {
-            name: "Abdullahi Musa",
-            position: "Student",
-            location: "Maiduguri",
-            testimony: '"Thanks to the scholarship from Luminous Life Foundation, I can now pursue my dream of becoming a doctor. This opportunity has changed my life and inspired many others in my community."'
+            name: "Ashade",
+            position: "Mother",
+            location: "Lagos",
+            testimony: '"My children use it to read when they get back from school, but we hope for better solutions that can last over 4 hours"'
         },
         {
-            name: "Fatima Ibrahim",
-            position: "Community Organizer",
-            location: "Sokoto",
-            testimony: '"The vocational training programs supported by Luminous Life Foundation have empowered women in our community to start their own businesses. Now, we have more economic independence and stability."'
-        },
-        {
-            name: "Emeka Chukwu",
-            position: "Youth Leader",
-            location: "Port Harcourt",
-            testimony: '"The sports equipment donated by Luminous Life Foundation has brought our community closer together. We now have a thriving youth sports program that keeps children engaged and active."'
-        },
-        {
-            name: "Amina Bello",
-            position: "Entrepreneur",
-            location: "Kaduna",
-            testimony: '"The microfinance support from Luminous Life Foundation allowed me to expand my tailoring business. I am now employing others in my community and contributing to local economic growth."'
-        },
-        {
-            name: "Isaac Okonkwo",
+            name: "Idowu Mauyon",
             position: "Fisherman",
-            location: "Calabar",
-            testimony: '"The fishing equipment provided by Luminous Life Foundation has not only increased our catch but also improved our fishing techniques. Our fishing cooperative is now more sustainable and profitable."'
-        }
+            location: "Lagos",
+            testimony: '"The lamp is working well, I do not need to purchase kerosene like I used to before"'
+        },
     ];
     
 

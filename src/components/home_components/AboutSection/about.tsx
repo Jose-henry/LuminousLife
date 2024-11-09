@@ -19,8 +19,8 @@ export default function About() {
     <div className={styles.main_container}>
         <div className={styles.div1}>
             <h2>Who We Are</h2>
-            <p>The Luminous Life Foundation is a non-profit organization founded in May 2024, established with the vision of harnessing Renewable Energy to ensure that every individual, regardless of their socio-economic status, has universal energy access.
-            Founded by 12 Nigerian youths, our mission goes beyond merely delivering power. We aim to foster an environment where renewable energy becomes a stepping stone to improving the quality of life for all residents of underserved & unserved communities.
+            <p>The Luminous Life Foundation is a non-profit organization founded in March 2024, established with the vision of harnessing Renewable Energy to ensure that every individual, regardless of their socio-economic status, has universal energy access.
+            Founded by Favour Oguibe and his college course mates David OJ and Nelson Elijah, our mission goes beyond merely delivering power. We aim to foster an environment where renewable energy becomes a stepping stone to improving the quality of life for all residents of underserved & unserved communities.
             </p>
         </div>
 
