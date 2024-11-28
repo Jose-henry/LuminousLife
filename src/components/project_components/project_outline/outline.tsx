@@ -15,8 +15,8 @@ export default function Outline() {
                 <div className={styles.project}>
                     <div className={styles.div1}>
                         <div>
-                        <h3 className={styles.projectText}>1: Gebrefu in the Dark: Two Decades Without Electricity</h3>
-                        <p>Nestled in the heart of Badagry, the Gebrefu Community has endured an astonishing 24 years without access to electricity. Yet, amidst the darkness, there is a growing spark of hope.</p>
+                        <h3 className={styles.projectText}>1: Gebrefu in the Dark: Five Decades Without Electricity</h3>
+                        <p>Nestled in the heart of Badagry, the Gebrefu Community has endured an astonishing 50 years without access to electricity. Yet, amidst the darkness, there is a growing spark of hope.</p>
                         <h4><span className='font-bold'>Category</span>: Community</h4>
                         </div>
                         <Link href="/projects/article2" className={styles.btn}>
