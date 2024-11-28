@@ -61,13 +61,13 @@ function GberefuVisit() {
 
             <div className={styles.main_container}>
                 <div className={styles.div1}>
-                    <h1>Gberefu In the Dark: Two Decades Without Electricity</h1>
+                    <h1>Gberefu In the Dark: Five Decades Without Electricity</h1>
                     <div className={`${styles.pic_container} shadow-2xl`}>
                         <Image src="/assets/blackout.jpg" alt="Journey" fill style={{ objectFit: 'cover', objectPosition: 'center' }} />
                     </div>
 
                     <div className={styles.text_div}>
-                        <p>Electricity is a cornerstone of modern life, powering homes, schools, hospitals, and businesses. For many, the flick of a switch or the glow of a light bulb is taken for granted. However, for the Gebrefu Community in Badagry, Lagos, this basic amenity has been out of reach for an astonishing 24 years. This article delves into the heart of Gebrefu, a community that has endured the hardships of living without electricity, highlighting the challenges faced and the resilience shown. It also brings to light the hope sparked by the efforts of the Luminous Life Foundation, an NGO dedicated to empowering underserved communities through sustainable energy solutions. Through personal stories, community engagement, and sustainable initiatives, we explore how the introduction of solar energy is transforming lives and providing a beacon of hope for a brighter future.</p>
+                        <p>Electricity is a cornerstone of modern life, powering homes, schools, hospitals, and businesses. For many, the flick of a switch or the glow of a light bulb is taken for granted. However, for the Gebrefu Community in Badagry, Lagos, this basic amenity has been out of reach for an astonishing 50 years. This article delves into the heart of Gebrefu, a community that has endured the hardships of living without electricity, highlighting the challenges faced and the resilience shown. It also brings to light the hope sparked by the efforts of the Luminous Life Foundation, an NGO dedicated to empowering underserved communities through sustainable energy solutions. Through personal stories, community engagement, and sustainable initiatives, we explore how the introduction of solar energy is transforming lives and providing a beacon of hope for a brighter future.</p>
                         <div className={styles.outline}>
                             <h3 className={styles.outline_intro}>Outline:</h3>
                             <h2><Link href="#introduction" className={`font-normal text-[15px] hover:text-[#24527a] ${styles.h2}`}>1. Introduction</Link></h2>
@@ -82,7 +82,7 @@ function GberefuVisit() {
                             <h3>Introduction:</h3>
                             <div className='flex flex-col gap-3'>
                                 <div>
-                                    <p>Nestled in the heart of Badagry, Lagos, the Gebrefu Community stands as a stark reminder of the inequalities that persist in access to basic amenities. For 24 long years, the people of Gebrefu have lived without electricity, a reality that is almost unimaginable in the modern world. This prolonged period of darkness has cast a shadow over the community, affecting every aspect of daily life and hindering progress and development.</p>
+                                    <p>Nestled in the heart of Badagry, Lagos, the Gebrefu Community stands as a stark reminder of the inequalities that persist in access to basic amenities. For 50 long years, the people of Gebrefu have lived without electricity, a reality that is almost unimaginable in the modern world. This prolonged period of darkness has cast a shadow over the community, affecting every aspect of daily life and hindering progress and development.</p>
                                 </div>
                                 <div>
                                     <h4>i.  Importance of Electricity</h4>
@@ -114,7 +114,7 @@ function GberefuVisit() {
                                 <div>
                                     <h4>i.  Timeline of Darkness</h4>
                                     <div className='flex flex-col gap-2'>
-                                        <p>Despite its historical significance and vibrant community, Gberefu Island has endured an extended period without electricity. For over two decades, the community has been plunged into darkness due to a combination of factors including inadequate infrastructure development, neglect by governmental authorities, and logistical challenges associated with providing electricity to an island community.</p>
+                                        <p>Despite its historical significance and vibrant community, Gberefu Island has endured an extended period without electricity. For over five decades, the community has been plunged into darkness due to a combination of factors including inadequate infrastructure development, neglect by governmental authorities, and logistical challenges associated with providing electricity to an island community.</p>
                                         <p>The lack of electricity in Gberefu can be traced back to the late 1990s when infrastructural developments in surrounding areas did not extend to the island. Over the years, attempts to bring electricity to the island have been sporadic and often unsuccessful due to bureaucratic hurdles and the high costs involved in laying underwater cables or setting up alternative power sources.</p>
                                     </div>
                                 </div>
@@ -176,7 +176,7 @@ function GberefuVisit() {
                         <div id='conclusion'>
                             <h3>Conclusion</h3>
                             <div className='flex flex-col gap-2'>
-                                <p>The journey of the Gberefu community from darkness to light is a testament to resilience, hope, and the transformative power of sustainable energy. Overcoming 24 years without electricity, the community has embraced solar energy solutions, significantly improving their quality of life. The Luminous Life Foundation's efforts have not only provided immediate relief but have also laid the groundwork for long-term sustainable development.</p>
+                                <p>The journey of the Gberefu community from darkness to light is a testament to resilience, hope, and the transformative power of sustainable energy. Overcoming 50 years without electricity, the community has embraced solar energy solutions, significantly improving their quality of life. The Luminous Life Foundation's efforts have not only provided immediate relief but have also laid the groundwork for long-term sustainable development.</p>
                                 <p>We encourage readers to support this cause, whether through donations, volunteering, or spreading awareness. Your contributions can help extend the reach of this initiative, bringing light and hope to more communities in need.</p>
                                 <p>Reflecting on Gberefu's story highlights the importance of community resilience and the pivotal role that sustainable energy plays in transforming lives. By empowering communities with clean and reliable energy, we can pave the way for a brighter and more sustainable future for all.</p>
                             </div>
