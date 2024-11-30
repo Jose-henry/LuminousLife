@@ -77,9 +77,6 @@ const Picture: React.FC = () => {
             ],
         },
         // Add other members as needed
-    ];
-
-    const operationalTeam: TeamMember[] = [
         {
             name: 'Stephanie Nwangwu',
             role: 'General Secretary',
@@ -89,6 +86,9 @@ const Picture: React.FC = () => {
                 { name: 'Instagram', url: 'https://www.instagram.com/s.wangwu?igsh=cGlhb29mbGQ3YTE2&utm_source=qr', icon: '/assets/_instagram.svg' },
             ],
         },
+    ];
+
+    const operationalTeam: TeamMember[] = [
         {
             name: 'Joba',
             role: 'Financial Secretary',
